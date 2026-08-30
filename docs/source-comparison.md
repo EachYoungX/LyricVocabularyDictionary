@@ -48,18 +48,21 @@ The ten lists contain 17,216 non-filtered source lines. The local pipeline:
 - adds stable IDs, provenance URLs, license, phrase type and translation
   status fields.
 
-This produces 8,126 retained candidates and 336 rejected lines. The original
+This produces 8,013 retained candidates and 452 rejected lines. The original
 filter rejects 191 overlong phrases and 27 non-phrase/shape cases: five contain
-unsupported commas and 22 are single-token words or compounds. A subsequent
-review pass has corrected 95 malformed candidates to stable canonical phrases,
-approved 125 stable multi-sense or placeholder templates, and explicitly
-excluded 93 candidates whose intended correction was ambiguous or unreliable;
-some of those decisions apply to more than one raw source line.
+unsupported commas and 22 are single-token words or compounds. Subsequent
+review passes corrected malformed candidates to stable canonical phrases,
+approved stable multi-sense or placeholder templates, and explicitly excluded
+candidates whose intended correction was ambiguous or unreliable; some of
+those decisions apply to more than one raw source line.
 The decisions are recorded in
 [`review-decisions.json`](../sources/2ndla/review-decisions.json).
 Re-running
 `processing/scripts/prepare_2ndla.py --review-file sources/2ndla/review-decisions.json`
 against `sources/2ndla/raw` reproduces the checked-in `entries.jsonl`,
 `rejected.json` and manifest byte-for-byte. The review passes have processed
-302 of the old 435-row backlog. The remaining 133 review rows are still
-unchanged and are not eligible for later SQLite import until resolved.
+The old 435-row review backlog is fully resolved. In the final pass, 44 of the
+133 incomplete-structure rows were corrected or completed and 89 were
+explicitly excluded. The normalized entries and full translation output now
+contain 8,013 rows, all with `GENERATED` translation status; no
+`REVIEW_REQUIRED` rows remain for SQLite import.

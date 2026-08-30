@@ -1,9 +1,44 @@
 [
   {
     "list": "junior",
+    "line": 163,
+    "value": "be in",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
+    "line": 184,
+    "value": "be on",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
+    "line": 268,
+    "value": "by doing",
+    "reason": "Generic gerund fragment rather than a stable standalone expression.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
     "line": 360,
     "value": "discuss about",
     "reason": "Nonstandard complement with no reason to retain the malformed form.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
+    "line": 456,
+    "value": "free with",
+    "reason": "Incomplete construction; the accompanying object is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
+    "line": 600,
+    "value": "have off",
+    "reason": "Truncated construction, possibly related to have a day off.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -40,6 +75,13 @@
     "line": 901,
     "value": "on the top of",
     "reason": "Ambiguous correction: on top of or at the top of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
+    "line": 957,
+    "value": "practice with",
+    "reason": "Incomplete construction; the practice object or context is missing.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -102,6 +144,20 @@
   },
   {
     "list": "senior",
+    "line": 418,
+    "value": "beat up and down",
+    "reason": "Low-frequency and context-dependent expression with no reliable meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 420,
+    "value": "become of",
+    "reason": "Incomplete fragment, normally occurring in what became of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 477,
     "value": "bring pressure to bear on sb."
   },
@@ -117,9 +173,30 @@
   },
   {
     "list": "senior",
+    "line": 542,
+    "value": "can't but",
+    "reason": "Archaic incomplete construction; the following verb is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 546,
+    "value": "can't help to",
+    "reason": "Incomplete and nonstandard complement with multiple possible corrections.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 547,
     "value": "can't help to do",
     "reason": "Ambiguous between cannot help doing and cannot help but do.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 576,
+    "value": "catch eye",
+    "reason": "Ambiguous between catch one's eye and catch somebody's eye.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -131,9 +208,30 @@
   },
   {
     "list": "senior",
+    "line": 595,
+    "value": "change for",
+    "reason": "Incomplete and polysemous construction; the exchanged object is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 651,
+    "value": "come of",
+    "reason": "Incomplete fragment, normally occurring in what came of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 712,
     "value": "count one's thumbs",
     "reason": "Unstable expression, possibly confused with twiddle one's thumbs.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 747,
+    "value": "day in",
+    "reason": "Incomplete fragment, possibly part of day in, day out.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -145,9 +243,23 @@
   },
   {
     "list": "senior",
+    "line": 820,
+    "value": "do by",
+    "reason": "Incomplete construction; the object and manner complement are missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 824,
     "value": "do for",
     "reason": "Highly context-dependent and polysemous fragment.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 911,
+    "value": "eat of",
+    "reason": "Archaic and context-dependent expression with no stable standalone meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -168,6 +280,13 @@
     "list": "senior",
     "line": 1074,
     "value": "from the bottom of one's heart"
+  },
+  {
+    "list": "senior",
+    "line": 1173,
+    "value": "go hard with",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "senior",
@@ -234,6 +353,13 @@
   },
   {
     "list": "senior",
+    "line": 2059,
+    "value": "only to do",
+    "reason": "Context-dependent infinitive fragment requiring a preceding clause.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 2087,
     "value": "out of sight, out of mind"
   },
@@ -254,6 +380,13 @@
   },
   {
     "list": "senior",
+    "line": 2258,
+    "value": "receive for an answer",
+    "reason": "Incomplete and malformed construction with unclear intended verb.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 2286,
     "value": "remind sb. not to do sth."
   },
@@ -268,6 +401,13 @@
     "list": "senior",
     "line": 2519,
     "value": "take the trouble to do sth."
+  },
+  {
+    "list": "senior",
+    "line": 2627,
+    "value": "treat out of",
+    "reason": "Unstable or malformed expression with unclear intended meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "senior",
@@ -298,6 +438,13 @@
   },
   {
     "list": "senior",
+    "line": 2781,
+    "value": "without day",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 2795,
     "value": "would like sb. to do sth."
   },
@@ -310,6 +457,13 @@
     "list": "senior",
     "line": 2807,
     "value": "year in, year out"
+  },
+  {
+    "list": "cet4",
+    "line": 85,
+    "value": "and so",
+    "reason": "Context-dependent connective fragment with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet4",
@@ -327,6 +481,13 @@
   },
   {
     "list": "cet4",
+    "line": 99,
+    "value": "anything like",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 120,
     "value": "as for as",
     "reason": "Malformed comparative/connective expression with no unique correction.",
@@ -334,9 +495,93 @@
   },
   {
     "list": "cet4",
+    "line": 205,
+    "value": "at that",
+    "reason": "Context-dependent fragment that requires surrounding text.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 329,
+    "value": "be very useful at",
+    "reason": "Unstable collocation with multiple possible corrections.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 343,
+    "value": "beat up and down",
+    "reason": "Low-frequency and context-dependent expression with no reliable meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 344,
+    "value": "become of",
+    "reason": "Incomplete fragment, normally occurring in what became of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 412,
+    "value": "bring home to",
+    "reason": "Incomplete construction; the recipient and recognized fact are missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 462,
+    "value": "by all nerves",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 487,
+    "value": "by pressed for",
+    "reason": "Malformed expression, possibly confused with pressed for time.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 489,
+    "value": "by reason that",
+    "reason": "Unstable connective structure requiring a complete clause.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 619,
+    "value": "come of",
+    "reason": "Incomplete fragment, normally occurring in what came of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 640,
+    "value": "come up for",
+    "reason": "Incomplete phrasal construction; the following object is required.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 655,
+    "value": "coordinate one's efforts to",
+    "reason": "Incomplete purpose construction; the following action is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 724,
     "value": "do for",
     "reason": "Highly context-dependent and polysemous fragment.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 793,
+    "value": "eat of",
+    "reason": "Archaic and context-dependent expression with no stable standalone meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -351,6 +596,20 @@
     "line": 800,
     "value": "end off",
     "reason": "Unstable expression, possibly confused with end or end up.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 907,
+    "value": "for anything",
+    "reason": "Context-dependent phrase with several unrelated meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 931,
+    "value": "for the rest",
+    "reason": "Context-dependent phrase whose intended time or remainder sense is unclear.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -381,6 +640,13 @@
   },
   {
     "list": "cet4",
+    "line": 1555,
+    "value": "look as",
+    "reason": "Incomplete phrase, possibly look as if or look as though.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 1558,
     "value": "look black",
     "reason": "Ambiguous: literal look black or a possible look back typo.",
@@ -388,8 +654,22 @@
   },
   {
     "list": "cet4",
+    "line": 1615,
+    "value": "make down",
+    "reason": "Low-frequency expression with no reliable modern meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 1734,
     "value": "not have a leg to stand on"
+  },
+  {
+    "list": "cet4",
+    "line": 1762,
+    "value": "of sort",
+    "reason": "Ambiguous between of a sort and of sorts.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet4",
@@ -401,6 +681,20 @@
     "line": 1957,
     "value": "piece up",
     "reason": "Uncertain phrase and correction.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2041,
+    "value": "put to",
+    "reason": "Overly short and context-dependent fragment.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2052,
+    "value": "rack with",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -433,9 +727,30 @@
   },
   {
     "list": "cet4",
+    "line": 2293,
+    "value": "so much as that",
+    "reason": "Incomplete and unstable connective structure.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 2404,
     "value": "tail after",
     "reason": "Unstable or concatenated expression with no unique correction.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2454,
+    "value": "take order to do",
+    "reason": "Malformed concatenation of take orders and in order to do.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2455,
+    "value": "take order with",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -450,9 +765,23 @@
   },
   {
     "list": "cet4",
+    "line": 2600,
+    "value": "track out",
+    "reason": "Unstable phrasal expression with no reliable intended meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 2702,
     "value": "win up",
     "reason": "Ambiguous correction: wind up or win over.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2717,
+    "value": "without day",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -471,14 +800,42 @@
   },
   {
     "list": "cet6",
+    "line": 41,
+    "value": "abate up discontent",
+    "reason": "Malformed collocation; intended verb and complement cannot be established.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 123,
     "value": "an excess of expenditure over income"
+  },
+  {
+    "list": "cet6",
+    "line": 124,
+    "value": "analogy between",
+    "reason": "Incomplete construction; the two compared objects are missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 131,
+    "value": "anything like",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
     "line": 165,
     "value": "as regard",
     "reason": "Ambiguous correction: as regards or with regard to.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 232,
+    "value": "at one",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -490,6 +847,13 @@
     "list": "cet6",
     "line": 291,
     "value": "be a consistent friend to sb."
+  },
+  {
+    "list": "cet6",
+    "line": 294,
+    "value": "be about to down",
+    "reason": "Unstable or malformed collocation; intended verb is unclear.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -533,6 +897,13 @@
   },
   {
     "list": "cet6",
+    "line": 439,
+    "value": "become of",
+    "reason": "Incomplete fragment, normally occurring in what became of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 495,
     "value": "box inquire",
     "reason": "Unstable or concatenated source text; intended phrase cannot be established.",
@@ -540,9 +911,23 @@
   },
   {
     "list": "cet6",
+    "line": 518,
+    "value": "bring home to",
+    "reason": "Incomplete construction; the recipient and recognized fact are missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 598,
     "value": "by occasion of",
     "reason": "Uncertain correction: on the occasion of or another expression.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 633,
+    "value": "capability for",
+    "reason": "Incomplete noun-preposition phrase; the object is missing.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -556,6 +941,62 @@
     "list": "cet6",
     "line": 671,
     "value": "catch the drift of an argument"
+  },
+  {
+    "list": "cet6",
+    "line": 719,
+    "value": "cold closet",
+    "reason": "Low-frequency literal collocation with no stable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 762,
+    "value": "come to run into",
+    "reason": "Unstable concatenation of multiple verb constructions.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 769,
+    "value": "come up for",
+    "reason": "Incomplete phrasal construction; the following object is required.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 786,
+    "value": "compensation for",
+    "reason": "Incomplete noun-preposition phrase; the compensated object is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 794,
+    "value": "complaint and claims",
+    "reason": "Unstable coordination with unclear intended structure.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 797,
+    "value": "comprehensive mind",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 851,
+    "value": "coordinate one's efforts to",
+    "reason": "Incomplete purpose construction; the following action is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 921,
+    "value": "deliver of",
+    "reason": "Rare incomplete construction; the intended subject and complement are unclear.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -599,6 +1040,13 @@
   },
   {
     "list": "cet6",
+    "line": 1187,
+    "value": "for anything",
+    "reason": "Context-dependent phrase with several unrelated meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 1228,
     "value": "from the bottom of one's heart"
   },
@@ -618,6 +1066,13 @@
     "list": "cet6",
     "line": 1384,
     "value": "go with the current of the times"
+  },
+  {
+    "list": "cet6",
+    "line": 1389,
+    "value": "good and",
+    "reason": "Incomplete intensifier construction requiring a following adjective or verb.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -644,6 +1099,41 @@
     "line": 1467,
     "value": "have no scent for",
     "reason": "Uncertain correction and meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 1545,
+    "value": "impression on",
+    "reason": "Incomplete noun-preposition phrase; the governing verb is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 1548,
+    "value": "in a blaze",
+    "reason": "Context-dependent literal phrase without a stable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 1644,
+    "value": "in flank",
+    "reason": "Unstable prepositional phrase; the intended military expression is unclear.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 1676,
+    "value": "in mortgage",
+    "reason": "Unstable phrase, possibly confused with under mortgage.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 1731,
+    "value": "in sequence of",
+    "reason": "Ambiguous between in a sequence of and in sequence.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -689,6 +1179,13 @@
   },
   {
     "list": "cet6",
+    "line": 2024,
+    "value": "look as",
+    "reason": "Incomplete phrase, possibly look as if or look as though.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 2102,
     "value": "make inquiries of sb. about sth."
   },
@@ -708,6 +1205,13 @@
     "list": "cet6",
     "line": 2211,
     "value": "not have a leg to stand on"
+  },
+  {
+    "list": "cet6",
+    "line": 2244,
+    "value": "of sort",
+    "reason": "Ambiguous between of a sort and of sorts.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -749,6 +1253,13 @@
   },
   {
     "list": "cet6",
+    "line": 2631,
+    "value": "rack with",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 2687,
     "value": "resist to",
     "reason": "Ambiguous between resist and be resistant to.",
@@ -765,6 +1276,13 @@
     "list": "cet6",
     "line": 2833,
     "value": "shield one's eyes with one's hand"
+  },
+  {
+    "list": "cet6",
+    "line": 2867,
+    "value": "side referee",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -828,6 +1346,20 @@
     "value": "with the click of a mouse"
   },
   {
+    "list": "cet6",
+    "line": 3453,
+    "value": "without sake",
+    "reason": "Malformed fragment, possibly confused with for the sake of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
+    "line": 60,
+    "value": "anything like",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
     "list": "tem4",
     "line": 72,
     "value": "arrange for sb. to do sth."
@@ -836,6 +1368,13 @@
     "list": "tem4",
     "line": 133,
     "value": "at the comer of a street"
+  },
+  {
+    "list": "tem4",
+    "line": 175,
+    "value": "be caught",
+    "reason": "Incomplete and polysemous fragment; the intended sense is unclear.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem4",
@@ -866,6 +1405,27 @@
   },
   {
     "list": "tem4",
+    "line": 318,
+    "value": "be without enough of",
+    "reason": "Incomplete structure with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
+    "line": 324,
+    "value": "before in time",
+    "reason": "Unstable expression with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
+    "line": 361,
+    "value": "by going through",
+    "reason": "Generic and incomplete manner fragment with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
     "line": 369,
     "value": "by occasion of",
     "reason": "Uncertain correction: on the occasion of or another expression.",
@@ -887,6 +1447,20 @@
   },
   {
     "list": "tem4",
+    "line": 496,
+    "value": "exert on",
+    "reason": "Incomplete construction; the exerted influence, pressure, or effect is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
+    "line": 528,
+    "value": "for certain of",
+    "reason": "Incomplete and unstable prepositional phrase.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
     "line": 704,
     "value": "in mature",
     "reason": "Uncertain phrase and correction.",
@@ -901,6 +1475,13 @@
   },
   {
     "list": "tem4",
+    "line": 902,
+    "value": "on no consideration",
+    "reason": "Unstable phrase, possibly confused with on no account.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
     "line": 917,
     "value": "on the comer of a street"
   },
@@ -909,6 +1490,13 @@
     "line": 932,
     "value": "on the watch against",
     "reason": "Ambiguous between on the watch for and on guard against.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
+    "line": 1029,
+    "value": "run take risk of",
+    "reason": "Malformed concatenation of multiple risk expressions.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -958,8 +1546,22 @@
   },
   {
     "list": "tem8",
+    "line": 152,
+    "value": "anything like",
+    "reason": "Context-dependent fragment with multiple possible meanings.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 168,
     "value": "arrange for sb. to do sth."
+  },
+  {
+    "list": "tem8",
+    "line": 172,
+    "value": "arrive on",
+    "reason": "Incomplete prepositional construction; the required object is missing.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -985,6 +1587,13 @@
     "list": "tem8",
     "line": 329,
     "value": "be brought up in a honey jar"
+  },
+  {
+    "list": "tem8",
+    "line": 335,
+    "value": "be caught",
+    "reason": "Incomplete and polysemous fragment; the intended sense is unclear.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -1043,6 +1652,13 @@
   },
   {
     "list": "tem8",
+    "line": 488,
+    "value": "be not so much as",
+    "reason": "Incomplete or malformed structure; the intended comparison is unclear.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 491,
     "value": "be of great concern to sb."
   },
@@ -1075,8 +1691,22 @@
   },
   {
     "list": "tem8",
+    "line": 610,
+    "value": "be without enough of",
+    "reason": "Incomplete structure with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 614,
     "value": "bear a grudge against sb. sth."
+  },
+  {
+    "list": "tem8",
+    "line": 624,
+    "value": "before in time",
+    "reason": "Unstable expression with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -1089,6 +1719,13 @@
     "list": "tem8",
     "line": 675,
     "value": "bring sb. out of one's shell"
+  },
+  {
+    "list": "tem8",
+    "line": 703,
+    "value": "by going through",
+    "reason": "Generic and incomplete manner fragment with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -1128,6 +1765,20 @@
   },
   {
     "list": "tem8",
+    "line": 773,
+    "value": "come by knowledge",
+    "reason": "Low-frequency collocation with unclear intended meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 798,
+    "value": "comic star",
+    "reason": "Ambiguous literal collocation without a stable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 802,
     "value": "commit a matter to a committee"
   },
@@ -1136,6 +1787,13 @@
     "line": 822,
     "value": "concern oneself about with",
     "reason": "Ambiguous correction: concern oneself about or with.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 834,
+    "value": "confirm in",
+    "reason": "Incomplete construction; the role, identity, or scope is missing.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1179,6 +1837,13 @@
   },
   {
     "list": "tem8",
+    "line": 992,
+    "value": "exert on",
+    "reason": "Incomplete construction; the exerted influence, pressure, or effect is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 1005,
     "value": "express one's gratitude to sb. for sth."
   },
@@ -1191,6 +1856,13 @@
     "list": "tem8",
     "line": 1044,
     "value": "firmly-determined"
+  },
+  {
+    "list": "tem8",
+    "line": 1064,
+    "value": "for certain of",
+    "reason": "Incomplete and unstable prepositional phrase.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -1347,6 +2019,13 @@
   },
   {
     "list": "tem8",
+    "line": 1514,
+    "value": "into force",
+    "reason": "Incomplete phrase, possibly come into force or enter into force.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 1522,
     "value": "job-hopping"
   },
@@ -1384,6 +2063,13 @@
   },
   {
     "list": "tem8",
+    "line": 1637,
+    "value": "merit reference",
+    "reason": "Unstable collocation with unclear intended meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 1649,
     "value": "multi-directional"
   },
@@ -1392,6 +2078,13 @@
     "line": 1697,
     "value": "on condition that if",
     "reason": "Duplicated conditional structure with no unique correction.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 1709,
+    "value": "on no consideration",
+    "reason": "Unstable phrase, possibly confused with on no account.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1485,6 +2178,13 @@
     "line": 1952,
     "value": "resume one's spirit",
     "reason": "Uncertain correction: resume or restore one's spirit.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 1971,
+    "value": "run take risk of",
+    "reason": "Malformed concatenation of multiple risk expressions.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1632,6 +2332,13 @@
   },
   {
     "list": "tem8",
+    "line": 2332,
+    "value": "up with",
+    "reason": "Overly short fragment requiring another governing verb.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 2347,
     "value": "vogue world",
     "reason": "Unstable combination, possibly confused with fashion world.",
@@ -1689,6 +2396,13 @@
   },
   {
     "list": "gre",
+    "line": 29,
+    "value": "by common consent of",
+    "reason": "Incomplete prepositional structure; the intended complement is unclear.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "gre",
     "line": 30,
     "value": "by crook",
     "reason": "Incomplete fragment of by hook or by crook.",
@@ -1699,6 +2413,13 @@
     "line": 32,
     "value": "by hook",
     "reason": "Incomplete fragment of by hook or by crook.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "gre",
+    "line": 52,
+    "value": "elect for",
+    "reason": "Incomplete construction; the elected office or object is missing.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1716,6 +2437,48 @@
     "line": 103,
     "value": "resisit boldly the authority",
     "reason": "Spelling can be corrected, but the phrase structure and intended collocation remain uncertain.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "ielts",
+    "line": 40,
+    "value": "arrive on",
+    "reason": "Incomplete prepositional construction; the required object is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "ielts",
+    "line": 72,
+    "value": "be capable of being",
+    "reason": "Incomplete complement structure; the required predicate is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "ielts",
+    "line": 95,
+    "value": "before in time",
+    "reason": "Unstable expression with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "ielts",
+    "line": 119,
+    "value": "counting everyone",
+    "reason": "Context-dependent participial fragment with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "ielts",
+    "line": 120,
+    "value": "counting everything",
+    "reason": "Context-dependent participial fragment with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "ielts",
+    "line": 123,
+    "value": "for certain of",
+    "reason": "Incomplete and unstable prepositional phrase.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1766,6 +2529,20 @@
   },
   {
     "list": "npee",
+    "line": 620,
+    "value": "claim for",
+    "reason": "Incomplete construction; the claimed object or purpose is missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 696,
+    "value": "compose oneself to do",
+    "reason": "Unnatural and incomplete construction with unclear intended verb pattern.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
     "line": 841,
     "value": "easy game",
     "reason": "Literal collocation with no stable fixed meaning without context.",
@@ -1785,6 +2562,20 @@
   },
   {
     "list": "npee",
+    "line": 1096,
+    "value": "go the round",
+    "reason": "Unstable or malformed expression, possibly confused with go the rounds.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1097,
+    "value": "go the round of",
+    "reason": "Incomplete and unstable construction with a missing object.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
     "line": 1159,
     "value": "have have got to",
     "reason": "Duplicated auxiliary structure; intended form cannot be established.",
@@ -1795,6 +2586,20 @@
     "line": 1177,
     "value": "have to got to",
     "reason": "Duplicated complement structure; intended form cannot be established.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1211,
+    "value": "home question",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1370,
+    "value": "in scale",
+    "reason": "Low-frequency and context-dependent phrase with no stable fixed meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1886,6 +2691,13 @@
     "line": 1925,
     "value": "owe…a spite",
     "reason": "Malformed or obscure construction with no reliable intended meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1952,
+    "value": "pay deal",
+    "reason": "Unstable collocation with no reliable fixed meaning.",
     "reviewAction": "EXCLUDE"
   },
   {
