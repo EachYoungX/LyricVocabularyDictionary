@@ -28,6 +28,6 @@ file hashes are recorded in `manifest.json`.
 The source preparation keeps phrases longer than five tokens out, expands the
 source line `expend time/money on sb.` into two entries, applies the reviewed
 corrections in `review-decisions.json`, and excludes candidates whose intended
-correction cannot be established. The current normalized set has 8,207 entries
-and 268 rejected source lines. The full translation output has 7,853 generated
-rows and 354 remaining review rows.
+correction cannot be established. The current normalized set has 8,149 entries
+and 332 rejected source lines. The full translation output has 7,887 generated
+rows and 262 remaining review rows.

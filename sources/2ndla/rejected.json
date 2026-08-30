@@ -1,6 +1,20 @@
 [
   {
     "list": "junior",
+    "line": 360,
+    "value": "discuss about",
+    "reason": "Nonstandard complement with no reason to retain the malformed form.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
+    "line": 689,
+    "value": "in the front of",
+    "reason": "Ambiguous between in front of and at the front of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "junior",
     "line": 820,
     "value": "make up one's mind to do"
   },
@@ -37,6 +51,27 @@
     "list": "junior",
     "line": 962,
     "value": "prefer to do sth. rather than do sth."
+  },
+  {
+    "list": "senior",
+    "line": 40,
+    "value": "admire to do",
+    "reason": "Nonstandard complement; admire doing and another construction are possible.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 91,
+    "value": "and that",
+    "reason": "Incomplete connective fragment; meaning depends on surrounding context.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 98,
+    "value": "answer up",
+    "reason": "Low-frequency and unstable expression; intended phrase cannot be established.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "senior",
@@ -82,9 +117,51 @@
   },
   {
     "list": "senior",
+    "line": 547,
+    "value": "can't help to do",
+    "reason": "Ambiguous between cannot help doing and cannot help but do.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
     "line": 581,
     "value": "catch one's attention to",
     "reason": "Ambiguous correction: catch/call or draw one's attention to.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 712,
+    "value": "count one's thumbs",
+    "reason": "Unstable expression, possibly confused with twiddle one's thumbs.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 778,
+    "value": "despite of",
+    "reason": "Ambiguous between despite and in spite of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 824,
+    "value": "do for",
+    "reason": "Highly context-dependent and polysemous fragment.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 912,
+    "value": "eat off",
+    "reason": "Low-frequency phrasal expression with unstable meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 922,
+    "value": "end off",
+    "reason": "Unstable expression, possibly confused with end or end up.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -96,6 +173,20 @@
     "list": "senior",
     "line": 1234,
     "value": "have a good sense of humour"
+  },
+  {
+    "list": "senior",
+    "line": 1539,
+    "value": "in the front of",
+    "reason": "Ambiguous between in front of and at the front of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "senior",
+    "line": 1579,
+    "value": "in work",
+    "reason": "Context-dependent fragment with no stable standalone meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "senior",
@@ -222,6 +313,48 @@
   },
   {
     "list": "cet4",
+    "line": 88,
+    "value": "and that",
+    "reason": "Incomplete connective fragment; meaning depends on surrounding context.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 94,
+    "value": "answer up",
+    "reason": "Low-frequency and unstable expression; intended phrase cannot be established.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 120,
+    "value": "as for as",
+    "reason": "Malformed comparative/connective expression with no unique correction.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 724,
+    "value": "do for",
+    "reason": "Highly context-dependent and polysemous fragment.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 794,
+    "value": "eat off",
+    "reason": "Low-frequency phrasal expression with unstable meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 800,
+    "value": "end off",
+    "reason": "Unstable expression, possibly confused with end or end up.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 1333,
     "value": "in the behalf of",
     "reason": "Ambiguous correction: on behalf of or in behalf of.",
@@ -229,8 +362,22 @@
   },
   {
     "list": "cet4",
+    "line": 1340,
+    "value": "in the end of",
+    "reason": "Ambiguous between in the end and at the end of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 1462,
     "value": "kill two birds with one stone"
+  },
+  {
+    "list": "cet4",
+    "line": 1533,
+    "value": "listen into",
+    "reason": "Ambiguous between listen to and listen in on.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet4",
@@ -258,9 +405,37 @@
   },
   {
     "list": "cet4",
+    "line": 2083,
+    "value": "resist to",
+    "reason": "Ambiguous between resist and be resistant to.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2149,
+    "value": "scheme out",
+    "reason": "Low-frequency expression with no reliable intended meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
     "line": 2204,
     "value": "set light by",
     "reason": "Uncertain correction: set little by or another expression.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2279,
+    "value": "smell about",
+    "reason": "Ambiguous between smell around and sniff around.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet4",
+    "line": 2404,
+    "value": "tail after",
+    "reason": "Unstable or concatenated expression with no unique correction.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -278,6 +453,13 @@
     "line": 2702,
     "value": "win up",
     "reason": "Ambiguous correction: wind up or win over.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 6,
+    "value": "a drastic debate",
+    "reason": "Unstable collocation; no reliable fixed meaning can be established.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -311,6 +493,34 @@
   },
   {
     "list": "cet6",
+    "line": 307,
+    "value": "be apart from the context",
+    "reason": "Unstable expression; out of context and be separate from the context are different possibilities.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 326,
+    "value": "be comprehensive of",
+    "reason": "Nonstandard collocation with no unique correction.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 370,
+    "value": "be in the vein for",
+    "reason": "Ambiguous between in the vein of and in the mood for.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 382,
+    "value": "be low of comprehension",
+    "reason": "Unstable collocation with unclear intended structure.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 388,
     "value": "be obliged to sb. for sth."
   },
@@ -319,6 +529,13 @@
     "line": 407,
     "value": "be satisfied of",
     "reason": "Ambiguous correction: be satisfied with or be convinced of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 495,
+    "value": "box inquire",
+    "reason": "Unstable or concatenated source text; intended phrase cannot be established.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -342,9 +559,23 @@
   },
   {
     "list": "cet6",
+    "line": 978,
+    "value": "do for",
+    "reason": "Highly context-dependent and polysemous fragment.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 1021,
     "value": "drop up",
     "reason": "Uncertain correction: drop by, drop in, or another expression.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 1080,
+    "value": "execute a purpose",
+    "reason": "Unnatural collocation with no unique correction.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -417,6 +648,13 @@
   },
   {
     "list": "cet6",
+    "line": 1764,
+    "value": "in the end of",
+    "reason": "Ambiguous between in the end and at the end of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 1778,
     "value": "in the interim out of tune"
   },
@@ -424,6 +662,13 @@
     "list": "cet6",
     "line": 1779,
     "value": "in the interim out of tune with"
+  },
+  {
+    "list": "cet6",
+    "line": 1845,
+    "value": "inside facts",
+    "reason": "Unstable collocation, possibly confused with inside information.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -478,8 +723,36 @@
   },
   {
     "list": "cet6",
+    "line": 2378,
+    "value": "one's attitude to",
+    "reason": "Free combination with an unresolved object, not a stable standalone entry.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 2379,
+    "value": "one's attitude towards",
+    "reason": "Free combination with an unresolved object, not a stable standalone entry.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 2604,
     "value": "put in a good word for"
+  },
+  {
+    "list": "cet6",
+    "line": 2687,
+    "value": "resist to",
+    "reason": "Ambiguous between resist and be resistant to.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 2756,
+    "value": "scheme out",
+    "reason": "Low-frequency expression with no reliable intended meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "cet6",
@@ -491,6 +764,13 @@
     "line": 3075,
     "value": "tackle to",
     "reason": "Incomplete structure; the object and intended construction are missing.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
+    "line": 3077,
+    "value": "tail after",
+    "reason": "Unstable or concatenated expression with no unique correction.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -607,8 +887,22 @@
   },
   {
     "list": "tem4",
+    "line": 776,
+    "value": "in the view of",
+    "reason": "Ambiguous between in view of and in the view of someone.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem4",
     "line": 917,
     "value": "on the comer of a street"
+  },
+  {
+    "list": "tem4",
+    "line": 932,
+    "value": "on the watch against",
+    "reason": "Ambiguous between on the watch for and on guard against.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem4",
@@ -779,6 +1073,13 @@
   },
   {
     "list": "tem8",
+    "line": 672,
+    "value": "breed a tragedy",
+    "reason": "Low-frequency collocation with no reliable fixed meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 675,
     "value": "bring sb. out of one's shell"
   },
@@ -842,8 +1143,22 @@
   },
   {
     "list": "tem8",
+    "line": 914,
+    "value": "dispose of get rid of",
+    "reason": "Two synonymous phrases concatenated into one unstable entry.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 930,
     "value": "do sth. for the simple reason that"
+  },
+  {
+    "list": "tem8",
+    "line": 960,
+    "value": "enjoy popularity on everybody's lips",
+    "reason": "Unstable concatenation of two different expressions.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -922,6 +1237,13 @@
   },
   {
     "list": "tem8",
+    "line": 1163,
+    "value": "give rise to lead to",
+    "reason": "Two synonymous structures concatenated into one unstable entry.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 1164,
     "value": "give sb. a stab in the back"
   },
@@ -994,6 +1316,13 @@
   },
   {
     "list": "tem8",
+    "line": 1444,
+    "value": "in the course",
+    "reason": "Incomplete fragment, usually requiring of or a larger context.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 1468,
     "value": "in the prime of one's age"
   },
@@ -1001,6 +1330,13 @@
     "list": "tem8",
     "line": 1473,
     "value": "in the twinkling of an eye"
+  },
+  {
+    "list": "tem8",
+    "line": 1476,
+    "value": "in the view of",
+    "reason": "Ambiguous between in view of and in the view of someone.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -1046,6 +1382,13 @@
   },
   {
     "list": "tem8",
+    "line": 1697,
+    "value": "on condition that if",
+    "reason": "Duplicated conditional structure with no unique correction.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 1725,
     "value": "on the comer of a street"
   },
@@ -1053,6 +1396,27 @@
     "list": "tem8",
     "line": 1750,
     "value": "on the spur of the moment"
+  },
+  {
+    "list": "tem8",
+    "line": 1751,
+    "value": "on the watch against",
+    "reason": "Ambiguous between on the watch for and on guard against.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 1762,
+    "value": "one's own brand of humor",
+    "reason": "Free noun phrase rather than a stable fixed expression.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 1764,
+    "value": "one's taste",
+    "reason": "Free combination with multiple unrelated meanings.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "tem8",
@@ -1210,6 +1574,13 @@
   },
   {
     "list": "tem8",
+    "line": 2220,
+    "value": "the most of",
+    "reason": "Ambiguous between most of and make the most of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
     "line": 2230,
     "value": "there be no limits to sth."
   },
@@ -1250,6 +1621,13 @@
     "line": 2327,
     "value": "unscrupulous attachs",
     "reason": "Spelling and intended noun are uncertain.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "tem8",
+    "line": 2347,
+    "value": "vogue world",
+    "reason": "Unstable combination, possibly confused with fashion world.",
     "reviewAction": "EXCLUDE"
   },
   {
@@ -1301,6 +1679,20 @@
     "list": "tem8",
     "line": 2421,
     "value": "world-renowned"
+  },
+  {
+    "list": "gre",
+    "line": 30,
+    "value": "by crook",
+    "reason": "Incomplete fragment of by hook or by crook.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "gre",
+    "line": 32,
+    "value": "by hook",
+    "reason": "Incomplete fragment of by hook or by crook.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "gre",
@@ -1360,8 +1752,57 @@
   },
   {
     "list": "npee",
+    "line": 841,
+    "value": "easy game",
+    "reason": "Literal collocation with no stable fixed meaning without context.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
     "line": 849,
     "value": "elbow sb. out of the way"
+  },
+  {
+    "list": "npee",
+    "line": 1159,
+    "value": "have have got to",
+    "reason": "Duplicated auxiliary structure; intended form cannot be established.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1177,
+    "value": "have to got to",
+    "reason": "Duplicated complement structure; intended form cannot be established.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1401,
+    "value": "in the front of",
+    "reason": "Ambiguous between in front of and at the front of.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1405,
+    "value": "in the hand of",
+    "reason": "Singular/plural construction is context-dependent and cannot be normalized safely.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1453,
+    "value": "influence with",
+    "reason": "Ambiguous between influence on and wield influence with.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
+    "line": 1458,
+    "value": "insolate from",
+    "reason": "Rare and unstable construction; intended meaning cannot be established.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "npee",
@@ -1384,6 +1825,13 @@
     "list": "npee",
     "line": 1769,
     "value": "notwithstanding"
+  },
+  {
+    "list": "npee",
+    "line": 1788,
+    "value": "omit to do",
+    "reason": "Unstable complement; omit doing is a different construction.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "npee",
