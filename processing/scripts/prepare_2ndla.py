@@ -88,7 +88,20 @@ def normalize_phrases(line: str) -> list[str]:
     return [candidate for candidate in normalized if candidate is not None]
 
 
-def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[dict], dict[str, str]]:
+def load_review_decisions(path: Path | None) -> dict[str, dict[str, str]]:
+    if path is None:
+        return {"corrections": {}, "exclusions": {}}
+    decisions = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        "corrections": decisions.get("corrections", {}),
+        "exclusions": decisions.get("exclusions", {}),
+    }
+
+
+def build_entries(
+    source_dir: Path | None, review_decisions: dict[str, dict[str, str]] | None = None
+) -> tuple[list[dict], Counter, list[dict], dict[str, str]]:
+    review_decisions = review_decisions or {"corrections": {}, "exclusions": {}}
     memberships: defaultdict[str, set[str]] = defaultdict(set)
     source_forms: defaultdict[str, set[str]] = defaultdict(set)
     raw_counts: Counter = Counter()
@@ -113,8 +126,22 @@ def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[di
                     rejected.append({"list": list_name, "line": line_number, "value": line.strip()})
                 continue
             for phrase in phrases:
-                memberships[phrase].add(list_name)
-                source_forms[phrase].add(re.sub(r"\s+", " ", unicodedata.normalize("NFKC", line).strip()))
+                if phrase in review_decisions["exclusions"]:
+                    rejected.append(
+                        {
+                            "list": list_name,
+                            "line": line_number,
+                            "value": line.strip(),
+                            "reason": review_decisions["exclusions"][phrase],
+                            "reviewAction": "EXCLUDE",
+                        }
+                    )
+                    continue
+                canonical_phrase = review_decisions["corrections"].get(phrase, phrase)
+                memberships[canonical_phrase].add(list_name)
+                source_forms[canonical_phrase].add(
+                    re.sub(r"\s+", " ", unicodedata.normalize("NFKC", line).strip())
+                )
 
     entries = []
     for phrase in sorted(memberships):
@@ -173,9 +200,11 @@ def main() -> None:
     parser.add_argument("--pilot-count", type=int, default=1)
     parser.add_argument("--pilot-output", default="translation-pilot-input.jsonl")
     parser.add_argument("--exclude-file", type=Path)
+    parser.add_argument("--review-file", type=Path, help="Apply reviewed corrections and exclusions.")
     args = parser.parse_args()
 
-    entries, raw_counts, rejected, raw_hashes = build_entries(args.source_dir)
+    review_decisions = load_review_decisions(args.review_file)
+    entries, raw_counts, rejected, raw_hashes = build_entries(args.source_dir, review_decisions)
     write_jsonl(args.output_dir / "entries.jsonl", entries)
     excluded_ids = read_ids(args.exclude_file)
     pilot_entries = [entry for entry in entries if entry["id"] not in excluded_ids]
@@ -210,6 +239,7 @@ def main() -> None:
                     "slashExpansion": "A single slash token is expanded into one entry per alternative.",
                     "placeholders": "sb./sth. placeholders and unicode ellipsis templates are retained.",
                 },
+                "reviewDecisions": str(args.review_file) if args.review_file else None,
                 "translationPolicy": "meaningZh is populated only by an explicit phrase translation step; ECDICT is not used to infer phrases.",
             },
             ensure_ascii=False,

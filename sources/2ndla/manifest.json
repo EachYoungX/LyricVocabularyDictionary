@@ -41,8 +41,8 @@
     "toefl": 158,
     "npee": 2731
   },
-  "uniqueEntries": 8275,
-  "rejectedEntries": 218,
+  "uniqueEntries": 8207,
+  "rejectedEntries": 268,
   "normalization": {
     "case": "casefold",
     "whitespace": "collapse",
@@ -54,5 +54,6 @@
     "slashExpansion": "A single slash token is expanded into one entry per alternative.",
     "placeholders": "sb./sth. placeholders and unicode ellipsis templates are retained."
   },
+  "reviewDecisions": "sources/2ndla/review-decisions.json",
   "translationPolicy": "meaningZh is populated only by an explicit phrase translation step; ECDICT is not used to infer phrases."
 }

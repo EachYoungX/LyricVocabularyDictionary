@@ -14,6 +14,8 @@ Files:
 - `raw/*.txt`: the ten upstream list files at the pinned source commit.
 - `entries.jsonl`: deduplicated 2–5 token phrase entries, including
   `sb.`/`sth.` placeholders and ellipsis templates.
+- `review-decisions.json`: reviewed corrections and explicit exclusions for
+  malformed candidates.
 - `translation-pilot-input.jsonl`: first pilot batch for explicit translation.
 - `manifest.json`: source, normalization, and license metadata.
 - `rejected.json`: source lines excluded by the conservative filter.
@@ -23,6 +25,9 @@ source attribution when redistributing the derived dataset.
 The complete license text is retained in [`LICENSE`](LICENSE), and the raw
 file hashes are recorded in `manifest.json`.
 
-The source preparation keeps phrases longer than five tokens out, expands
-the source line `expend time/money on sb.` into two entries, and leaves
-translation review artifacts unchanged.
+The source preparation keeps phrases longer than five tokens out, expands the
+source line `expend time/money on sb.` into two entries, applies the reviewed
+corrections in `review-decisions.json`, and excludes candidates whose intended
+correction cannot be established. The current normalized set has 8,207 entries
+and 268 rejected source lines. The full translation output has 7,853 generated
+rows and 354 remaining review rows.
