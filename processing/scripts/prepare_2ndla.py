@@ -32,8 +32,10 @@ LISTS = (
     "toefl",
     "npee",
 )
-PLACEHOLDER_TOKEN = re.compile(r"^(?:sb|sth)\.?$", re.IGNORECASE)
-ALLOWED_PHRASE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9'’.-]*(?: [A-Za-z0-9][A-Za-z0-9'’.-]*)+$")
+ALLOWED_PHRASE = re.compile(
+    r"^[A-Za-z0-9][A-Za-z0-9'’.-]*(?: [A-Za-z0-9][A-Za-z0-9'’.-]*)+$"
+)
+ELLIPSIS_SENTINEL = "\ue000"
 
 
 def fetch(url: str) -> str:
@@ -43,16 +45,47 @@ def fetch(url: str) -> str:
 
 
 def normalize_phrase(line: str) -> str | None:
-    phrase = unicodedata.normalize("NFKC", line).strip()
+    phrase = normalize_text(line)
+    validation_phrase = phrase.replace("...", " ")
+    validation_phrase = re.sub(r"\s+", " ", validation_phrase).strip()
     phrase = re.sub(r"\s+", " ", phrase)
-    if not phrase or "/" in phrase or not ALLOWED_PHRASE.fullmatch(phrase):
+    if not phrase or not ALLOWED_PHRASE.fullmatch(validation_phrase):
         return None
-    tokens = phrase.split(" ")
-    if not 2 <= len(tokens) <= 5:
-        return None
-    if any(PLACEHOLDER_TOKEN.fullmatch(token) for token in tokens):
+    if not 2 <= phrase_token_count(phrase) <= 5:
         return None
     return phrase.casefold().replace("’", "'")
+
+
+def phrase_token_count(phrase: str) -> int:
+    phrase = phrase.replace("…", " ").replace("...", " ")
+    return len(re.findall(r"[A-Za-z0-9][A-Za-z0-9'’.-]*", phrase))
+
+
+def normalize_text(line: str) -> str:
+    protected = line.replace("…", ELLIPSIS_SENTINEL)
+    phrase = unicodedata.normalize("NFKC", protected).strip()
+    phrase = re.sub(r"\s+", " ", phrase)
+    phrase = phrase.replace(ELLIPSIS_SENTINEL, "...")
+    return re.sub(r"\.{4,}", "...", phrase)
+
+
+def normalize_phrases(line: str) -> list[str]:
+    """Normalize a line, expanding a single slash template into alternatives."""
+    phrase = normalize_text(line)
+    if not phrase:
+        return []
+    if "/" not in phrase:
+        normalized = normalize_phrase(phrase)
+        return [normalized] if normalized is not None else []
+
+    slash_tokens = [token for token in phrase.split(" ") if token.count("/") == 1]
+    if phrase.count("/") != 1 or len(slash_tokens) != 1:
+        return []
+    token = slash_tokens[0]
+    alternatives = token.split("/")
+    expanded = [phrase.replace(token, alternative, 1) for alternative in alternatives]
+    normalized = [normalize_phrase(candidate) for candidate in expanded]
+    return [candidate for candidate in normalized if candidate is not None]
 
 
 def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[dict], dict[str, str]]:
@@ -74,13 +107,14 @@ def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[di
         lines = content.splitlines()
         raw_counts[list_name] = len(lines)
         for line_number, line in enumerate(lines, start=1):
-            phrase = normalize_phrase(line)
-            if phrase is None:
+            phrases = normalize_phrases(line)
+            if not phrases:
                 if line.strip():
                     rejected.append({"list": list_name, "line": line_number, "value": line.strip()})
                 continue
-            memberships[phrase].add(list_name)
-            source_forms[phrase].add(re.sub(r"\s+", " ", unicodedata.normalize("NFKC", line).strip()))
+            for phrase in phrases:
+                memberships[phrase].add(list_name)
+                source_forms[phrase].add(re.sub(r"\s+", " ", unicodedata.normalize("NFKC", line).strip()))
 
     entries = []
     for phrase in sorted(memberships):
@@ -89,7 +123,7 @@ def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[di
             {
                 "id": f"2ndla:{phrase}",
                 "canonicalPhrase": phrase,
-                "tokenCount": len(phrase.split()),
+                "tokenCount": phrase_token_count(phrase),
                 "phraseType": "SOURCE_CANDIDATE",
                 "source": REPOSITORY,
                 "sourceForms": sorted(source_forms[phrase]),
@@ -172,7 +206,9 @@ def main() -> None:
                     "case": "casefold",
                     "whitespace": "collapse",
                     "tokenCount": "2-5",
-                    "excluded": ["slash templates", "sb./sth. placeholders", "unsupported punctuation"],
+                    "excluded": ["more than 5 tokens", "unsupported punctuation/shape"],
+                    "slashExpansion": "A single slash token is expanded into one entry per alternative.",
+                    "placeholders": "sb./sth. placeholders and unicode ellipsis templates are retained.",
                 },
                 "translationPolicy": "meaningZh is populated only by an explicit phrase translation step; ECDICT is not used to infer phrases.",
             },

@@ -37,16 +37,21 @@ The ten lists contain 17,216 non-filtered source lines. The local pipeline:
 
 - applies NFKC normalization, trimming and whitespace collapsing;
 - converts curly apostrophes to straight apostrophes and case-folds keys;
-- retains only 2–5-token phrases with supported punctuation;
-- rejects slash templates, `sb`/`sth` placeholders and unsupported forms;
+- retains 2–5-token phrases with supported punctuation;
+- retains `sb.`/`sth.` placeholders and ellipsis templates, normalizing
+  ellipses to `...` in canonical phrases;
+- expands the single slash template `expend time/money on sb.` into
+  `expend time on sb.` and `expend money on sb.`; and
+- rejects phrases longer than five tokens or with unsupported punctuation;
 - deduplicates phrases while preserving source-list membership and source
   forms; and
 - adds stable IDs, provenance URLs, license, phrase type and translation
   status fields.
 
-This produces 7,200 retained candidates and 1,612 rejected lines. Re-running
+This produces 8,275 retained candidates and 218 rejected lines. The rejected
+lines are 191 overlong phrases and 27 unsupported punctuation/shape cases.
+Re-running
 `processing/scripts/prepare_2ndla.py` against `sources/2ndla/raw` reproduces
 the checked-in `entries.jsonl`, `rejected.json` and manifest byte-for-byte.
-The separate translation layer contains 6,765 generated full-dataset entries
-and 435 entries marked for review; it is kept outside the source candidate
-table.
+The existing translation artifacts were not reviewed or regenerated in this
+change; the 435 previously marked review entries remain untouched.

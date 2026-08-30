@@ -12,7 +12,8 @@ word-level dictionary and is intentionally not used to infer phrase meanings.
 Files:
 
 - `raw/*.txt`: the ten upstream list files at the pinned source commit.
-- `entries.jsonl`: deduplicated 2–5 token phrase entries.
+- `entries.jsonl`: deduplicated 2–5 token phrase entries, including
+  `sb.`/`sth.` placeholders and ellipsis templates.
 - `translation-pilot-input.jsonl`: first pilot batch for explicit translation.
 - `manifest.json`: source, normalization, and license metadata.
 - `rejected.json`: source lines excluded by the conservative filter.
@@ -21,3 +22,7 @@ The source data is licensed under CC BY-SA 4.0. Keep this notice and the
 source attribution when redistributing the derived dataset.
 The complete license text is retained in [`LICENSE`](LICENSE), and the raw
 file hashes are recorded in `manifest.json`.
+
+The source preparation keeps phrases longer than five tokens out, expands
+the source line `expend time/money on sb.` into two entries, and leaves
+translation review artifacts unchanged.

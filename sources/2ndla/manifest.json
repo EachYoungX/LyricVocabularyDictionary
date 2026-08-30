@@ -41,17 +41,18 @@
     "toefl": 158,
     "npee": 2731
   },
-  "uniqueEntries": 7200,
-  "rejectedEntries": 1612,
+  "uniqueEntries": 8275,
+  "rejectedEntries": 218,
   "normalization": {
     "case": "casefold",
     "whitespace": "collapse",
     "tokenCount": "2-5",
     "excluded": [
-      "slash templates",
-      "sb./sth. placeholders",
-      "unsupported punctuation"
-    ]
+      "more than 5 tokens",
+      "unsupported punctuation/shape"
+    ],
+    "slashExpansion": "A single slash token is expanded into one entry per alternative.",
+    "placeholders": "sb./sth. placeholders and unicode ellipsis templates are retained."
   },
   "translationPolicy": "meaningZh is populated only by an explicit phrase translation step; ECDICT is not used to infer phrases."
 }
