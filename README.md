@@ -32,13 +32,24 @@ docs/
 发布 SQLite 至少应包含：
 
 ```text
-dictionary             # ECDICT 单词表，兼容主项目的单词查询
+dictionary_entry       # ECDICT 单词表，使用明确字段名
+dictionary             # 兼容主项目旧字段名的只读视图
 phrase_entry           # 短语主表
 phrase_pattern_token   # 短语匹配 token
+phrase_anchor          # 短语检索锚点
 dictionary_meta        # 版本、来源、许可证和生成信息
 ```
 
 SQLite 发布前应更新 `release/manifest.json`，记录 schema 版本、来源版本、条目数量、生成时间和 SHA-256。主项目通过 `APP_DICTIONARY_DB_URL` 指向该文件；词典项目不需要修改主项目代码即可发布数据更新。
+
+构建发布库：
+
+```text
+python3 processing/scripts/build_sqlite.py \
+  --ecdict-csv /path/to/extracted/stardict.csv
+```
+
+默认生成 `release/lyric-dictionary.sqlite` 和 `release/manifest.json`。构建脚本会在短语无法编译时生成 `release/build_error.jsonl` 并终止，不会静默丢弃条目。
 
 `sources/ecdict/ecdict.sqlite` 作为本地源文件保留并被 Git 忽略；由于文件体积较大，正式共享应使用 Git LFS、Release 附件或对象存储，并在 manifest 中记录下载地址和校验值。
 

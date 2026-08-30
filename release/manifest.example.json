@@ -19,8 +19,11 @@
     }
   ],
   "tables": {
-    "dictionary": 0,
+    "dictionary_entry": 0,
+    "dictionary": "compatibility_view",
     "phrase_entry": 0,
-    "phrase_pattern_token": 0
+    "phrase_pattern_token": 0,
+    "phrase_anchor": 0,
+    "dictionary_meta": 0
   }
 }
