@@ -417,7 +417,7 @@
 {"id":"2ndla:as mentioned above","canonicalPhrase":"as mentioned above","meaningZh":"如上所述","usageNoteZh":"用于指代前文已经提到的信息","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:as much","canonicalPhrase":"as much","meaningZh":"同样多；同样程度","usageNoteZh":"表示数量或程度相同，具体含义取决于上下文","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:as much as","canonicalPhrase":"as much as","meaningZh":"多达；和……一样多；尽管","usageNoteZh":"可表示数量相等、数量达到某值，或用于让步","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:as much...as","canonicalPhrase":"as much...as","meaningZh":"","usageNoteZh":"比较结构模板，缺少比较两端的具体成分","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:as much...as","canonicalPhrase":"as much...as","meaningZh":"和……一样多；尽可能多","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:as often as not","canonicalPhrase":"as often as not","meaningZh":"往往；通常","usageNoteZh":"表示某事发生的可能性至少不低于不发生","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:as opposed to","canonicalPhrase":"as opposed to","meaningZh":"而不是；与……相对","usageNoteZh":"用于对比两个选择、事物或概念","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:as regards","canonicalPhrase":"as regards","meaningZh":"关于；至于","usageNoteZh":"用于引出所谈论的主题","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1350,8 +1350,8 @@
 {"id":"2ndla:be under pledge of secrecy","canonicalPhrase":"be under pledge of secrecy","meaningZh":"受保密承诺约束","usageNoteZh":"表示已经承诺对某事保密，不得泄露","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:be under repair","canonicalPhrase":"be under repair","meaningZh":"正在维修","usageNoteZh":"表示设备、建筑或设施目前正在修理，暂时不能正常使用","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:be under siege","canonicalPhrase":"be under siege","meaningZh":"遭到围攻；处于困境或压力下","usageNoteZh":"可指军事包围，也可比喻受到持续攻击或压力","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:be under the delusion that...","canonicalPhrase":"be under the delusion that...","meaningZh":"","usageNoteZh":"含省略号的模板化片段，需根据 that 后的具体从句确定完整释义","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:be under the illusion that...","canonicalPhrase":"be under the illusion that...","meaningZh":"","usageNoteZh":"含省略号的模板化片段，需根据 that 后的具体从句确定完整释义","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:be under the delusion that...","canonicalPhrase":"be under the delusion that...","meaningZh":"误以为……；陷入……的错觉","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:be under the illusion that...","canonicalPhrase":"be under the illusion that...","meaningZh":"误以为……；抱有……的错觉","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:be under the impression that","canonicalPhrase":"be under the impression that","meaningZh":"以为；认为","usageNoteZh":"that 后接从句，表示某人形成了某种看法或印象","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:be undertaken by government","canonicalPhrase":"be undertaken by government","meaningZh":"由政府承担；由政府实施","usageNoteZh":"表示某项工作、计划或行动由政府负责开展","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:be unfamiliar with","canonicalPhrase":"be unfamiliar with","meaningZh":"不熟悉；不了解","usageNoteZh":"表示缺乏对某人某事的知识、经验或接触","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1404,8 +1404,7 @@
 {"id":"2ndla:bear up","canonicalPhrase":"bear up","meaningZh":"坚强地承受；振作起来","usageNoteZh":"表示在困难、痛苦或压力下保持勇气和情绪稳定","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:bear upon","canonicalPhrase":"bear upon","meaningZh":"与……有关；对……产生影响","usageNoteZh":"表示某事直接涉及或影响另一件事，较正式","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:bear with","canonicalPhrase":"bear with","meaningZh":"耐心对待；请容忍","usageNoteZh":"用于请求对方在等待、解释或处理困难时保持耐心","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:bear...a spite","canonicalPhrase":"bear...a spite","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少明确固定结构，无法确定稳定释义","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:bear...in mind","canonicalPhrase":"bear...in mind","meaningZh":"","usageNoteZh":"含省略号的模板化候选，省略部分可能改变结构，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:bear...in mind","canonicalPhrase":"bear...in mind","meaningZh":"牢记……；记住……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:beat about the bush","canonicalPhrase":"beat about the bush","meaningZh":"拐弯抹角；旁敲侧击；不直截了当地说","usageNoteZh":"表示故意避免直接谈论真正想说的事情","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:beat around the bush","canonicalPhrase":"beat around the bush","meaningZh":"拐弯抹角；旁敲侧击；不直截了当地说","usageNoteZh":"与 beat about the bush 同义，表示回避直接说明重点","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:beat at","canonicalPhrase":"beat at","meaningZh":"反复敲打；不断攻击","usageNoteZh":"表示连续敲击或试图打击某物，通常需要结合宾语理解","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -1415,7 +1414,7 @@
 {"id":"2ndla:beat up","canonicalPhrase":"beat up","meaningZh":"殴打；痛打；把……打得破旧不堪","usageNoteZh":"可表示猛烈殴打某人，也可表示反复使用使物品变得破旧","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:beat up and down","canonicalPhrase":"beat up and down","meaningZh":"","usageNoteZh":"结构不常见且缺少语境，无法确认是移动、航海还是其他用法","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:beat...at","canonicalPhrase":"beat...at","meaningZh":"beat... at","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:beat...to the punch","canonicalPhrase":"beat...to the punch","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少明确主语和宾语，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:beat...to the punch","canonicalPhrase":"beat...to the punch","meaningZh":"抢在……之前；先发制人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:because of","canonicalPhrase":"because of","meaningZh":"因为；由于","usageNoteZh":"引出导致某种结果或情况的原因，后接名词或名词性成分","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:because of anxiety about","canonicalPhrase":"because of anxiety about","meaningZh":"由于对……的焦虑；因为担心……","usageNoteZh":"表示某种结果源于对某人或某事的忧虑，about 后接担忧对象","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:become concerned","canonicalPhrase":"become concerned","meaningZh":"开始担心；变得忧虑","usageNoteZh":"表示由不担心转为因某人或某事而感到不安","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1459,9 +1458,8 @@
 {"id":"2ndla:best of all","canonicalPhrase":"best of all","meaningZh":"最重要的是；尤其好的是","usageNoteZh":"用于强调一组优点中最值得注意或最令人满意的一项","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:betray information to sb.","canonicalPhrase":"betray information to sb.","meaningZh":"向某人泄露信息","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:better off","canonicalPhrase":"better off","meaningZh":"处境更好；生活更富裕","usageNoteZh":"用于比较某人的经济状况、生活处境或总体状态有所改善","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:between and","canonicalPhrase":"between and","meaningZh":"","usageNoteZh":"介词结构缺少两端对象，属于不完整模板，无法确定完整释义","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:between jobs","canonicalPhrase":"between jobs","meaningZh":"暂时失业；处于两份工作之间","usageNoteZh":"委婉表示目前没有工作但可能正在寻找下一份工作","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:between...and...","canonicalPhrase":"between...and...","meaningZh":"介于...和...","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:between...and...","canonicalPhrase":"between...and...","meaningZh":"在……和……之间","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:beyond a doubt","canonicalPhrase":"beyond a doubt","meaningZh":"毫无疑问；无疑","usageNoteZh":"用于强调某事确定无疑","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:beyond all question","canonicalPhrase":"beyond all question","meaningZh":"毫无疑问；毋庸置疑","usageNoteZh":"表示某事完全确定，不存在合理疑问，较正式","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:beyond all reason","canonicalPhrase":"beyond all reason","meaningZh":"毫无道理；超出理性范围","usageNoteZh":"表示行为或想法极不合理，无法用正常理性解释","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1496,8 +1494,8 @@
 {"id":"2ndla:black out","canonicalPhrase":"black out","meaningZh":"停电；昏厥；封锁或删去信息","usageNoteZh":"可表示灯光熄灭、失去意识或对信息进行遮蔽，需结合语境","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:blame for","canonicalPhrase":"blame for","meaningZh":"因……责备；把……归咎于","usageNoteZh":"用于说明被指责的原因或应对某事负责的对象","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:blame on","canonicalPhrase":"blame on","meaningZh":"把……归咎于；归罪于","usageNoteZh":"表示将责任或过错归到某人或某事上","translationStatus":"GENERATED","confidence":"HIGH"}
+{"id":"2ndla:blame sb. for","canonicalPhrase":"blame sb. for","meaningZh":"因……责备某人；把……归咎于某人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:blame sb. for sth.","canonicalPhrase":"blame sb. for sth.","meaningZh":"将某事归咎于某人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:blame sb.for","canonicalPhrase":"blame sb.for","meaningZh":"","usageNoteZh":"缺少规范空格和完整宾语，疑似 blame somebody for 的模板化写法，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:blame sb.for sth.","canonicalPhrase":"blame sb.for sth.","meaningZh":"将某事归咎于某人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:blame sth. on","canonicalPhrase":"blame sth. on","meaningZh":"将某事归咎于","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:blame sth. on sb.","canonicalPhrase":"blame sth. on sb.","meaningZh":"将某事归咎于某人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -1542,9 +1540,8 @@
 {"id":"2ndla:born of","canonicalPhrase":"born of","meaningZh":"源于；由……产生","usageNoteZh":"表示某种想法、情感或结果由某种经历、原因或条件产生","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:borrow from","canonicalPhrase":"borrow from","meaningZh":"从……借用；借鉴","usageNoteZh":"表示借取某物使用，或从他人的作品、思想和方法中加以采用","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:borrow...from...","canonicalPhrase":"borrow...from...","meaningZh":"借……从……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:both and","canonicalPhrase":"both and","meaningZh":"","usageNoteZh":"缺少 both 与 and 所连接的两个并列成分，属于不完整模板，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:both...and","canonicalPhrase":"both...and","meaningZh":"...和...都","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:both...and...","canonicalPhrase":"both...and...","meaningZh":"...和...都","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:both...and...","canonicalPhrase":"both...and...","meaningZh":"既……又……；两者都……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:bounce back","canonicalPhrase":"bounce back","meaningZh":"恢复；反弹；东山再起","usageNoteZh":"表示从疾病、挫折或困难中恢复，也可表示物体弹回或情况回升","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:bound for","canonicalPhrase":"bound for","meaningZh":"前往；开往","usageNoteZh":"表示人、船、飞机或车辆正以某地为目的地","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:bounden duty","canonicalPhrase":"bounden duty","meaningZh":"义不容辞的责任；应尽的义务","usageNoteZh":"指道义上或责任上必须履行的义务，较正式或文学化","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1585,7 +1582,7 @@
 {"id":"2ndla:breathe a sigh of relief","canonicalPhrase":"breathe a sigh of relief","meaningZh":"松一口气；如释重负","usageNoteZh":"表示危险、担忧或紧张局面缓解后长舒一口气","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:breathe new life into sth.","canonicalPhrase":"breathe new life into sth.","meaningZh":"为某些事物注入新的活力","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:breeze through","canonicalPhrase":"breeze through","meaningZh":"轻松完成；轻松通过","usageNoteZh":"表示完成考试、任务或过程时几乎没有遇到困难","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:bridge the gap between...and...","canonicalPhrase":"bridge the gap between...and...","meaningZh":"","usageNoteZh":"含省略号的模板化结构，需补充两端对象后才能作为完整词条使用","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:bridge the gap between...and...","canonicalPhrase":"bridge the gap between...and...","meaningZh":"弥合……与……之间的差距","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:brighten up","canonicalPhrase":"brighten up","meaningZh":"变明亮；使高兴起来","usageNoteZh":"可表示光线增强，也可表示人的情绪变得更愉快","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:brim over with","canonicalPhrase":"brim over with","meaningZh":"充满；洋溢着","usageNoteZh":"表示容器装得满到边缘，也常比喻充满某种情感或特质","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:brim with","canonicalPhrase":"brim with","meaningZh":"充满；洋溢着","usageNoteZh":"表示某处或某人充满某物、情感或特质","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1635,10 +1632,10 @@
 {"id":"2ndla:bring up","canonicalPhrase":"bring up","meaningZh":"抚养；提出；提及；使呕吐","usageNoteZh":"可表示养育孩子、提出话题或使食物从胃中返回，需结合语境","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:bring up children","canonicalPhrase":"bring up children","meaningZh":"抚养孩子；教育子女","usageNoteZh":"表示照料孩子成长并对其进行教育","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:bring up the rear","canonicalPhrase":"bring up the rear","meaningZh":"走在最后；殿后","usageNoteZh":"表示在队伍或行列的最后位置行进或负责保护后方","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:bring...into effect","canonicalPhrase":"bring...into effect","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被实施的对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:bring...into operation","canonicalPhrase":"bring...into operation","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少明确对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:bring...into practice","canonicalPhrase":"bring...into practice","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少明确对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:bring...to a conclusion","canonicalPhrase":"bring...to a conclusion","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被结束的对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:bring...into effect","canonicalPhrase":"bring...into effect","meaningZh":"使……生效；实施……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:bring...into operation","canonicalPhrase":"bring...into operation","meaningZh":"使……开始运行","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:bring...into practice","canonicalPhrase":"bring...into practice","meaningZh":"将……付诸实践","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:bring...to a conclusion","canonicalPhrase":"bring...to a conclusion","meaningZh":"使……结束；使……得出结论","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:bring...to...","canonicalPhrase":"bring...to...","meaningZh":"带给","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:bristle with","canonicalPhrase":"bristle with","meaningZh":"充满；布满；因……而恼怒","usageNoteZh":"可表示表面布满尖物，也可表示充满某物或因某事显得敌意十足","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:broaden one's mind","canonicalPhrase":"broaden one's mind","meaningZh":"开阔某人的眼界；拓宽思路","usageNoteZh":"表示通过学习、经历或接触新事物扩大理解范围，one's 随主语变化","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1801,7 +1798,7 @@
 {"id":"2ndla:call to mind","canonicalPhrase":"call to mind","meaningZh":"使想起；使联想到","usageNoteZh":"表示某人或某事唤起记忆或联想","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:call up","canonicalPhrase":"call up","meaningZh":"打电话给；召集；使想起；征召入伍","usageNoteZh":"可表示打电话、召集人员、唤起记忆或征召服兵役，需结合语境","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:call upon","canonicalPhrase":"call upon","meaningZh":"拜访；号召；要求；请求","usageNoteZh":"与 call on 同义，但语气通常更正式","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:call...in question","canonicalPhrase":"call...in question","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被质疑的对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:call...in question","canonicalPhrase":"call...in question","meaningZh":"对……提出质疑","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:calm down","canonicalPhrase":"calm down","meaningZh":"平静下来；使镇定","usageNoteZh":"表示情绪或局面变得平静，也可用于劝某人冷静","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:came apart","canonicalPhrase":"came apart","meaningZh":"散开；破裂；崩溃","usageNoteZh":"表示物体分裂，也可表示计划、关系或情绪失控；came 是 come 的过去式","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:campaign for","canonicalPhrase":"campaign for","meaningZh":"为争取……而开展运动；竞选支持","usageNoteZh":"表示通过有组织的活动争取某项政策、事业或职位","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1841,13 +1838,12 @@
 {"id":"2ndla:carry over","canonicalPhrase":"carry over","meaningZh":"延续；结转；把……带入下一阶段","usageNoteZh":"表示影响、事项或金额从一个时期、情况或系统延续到另一个","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:carry through","canonicalPhrase":"carry through","meaningZh":"完成；贯彻到底；帮助渡过","usageNoteZh":"可表示坚持完成计划，也可表示帮助某人度过困难","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:carry weight","canonicalPhrase":"carry weight","meaningZh":"有分量；有影响力","usageNoteZh":"表示意见、证据或人物具有影响判断或决定的力量","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:carry...into effect","canonicalPhrase":"carry...into effect","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被实施的对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:carry...into practice","canonicalPhrase":"carry...into practice","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被实践的对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:carry...into effect","canonicalPhrase":"carry...into effect","meaningZh":"实施……；执行……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:carry...into practice","canonicalPhrase":"carry...into practice","meaningZh":"将……付诸实践","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:carve out","canonicalPhrase":"carve out","meaningZh":"开创； carve 出；分割出","usageNoteZh":"可表示雕刻出形状，也可表示经过努力获得空间、地位或新领域","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:carve up","canonicalPhrase":"carve up","meaningZh":"切开；瓜分","usageNoteZh":"可表示把食物切开，也可表示把土地、资源或利益分割给不同方面","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:carve...into","canonicalPhrase":"carve...into","meaningZh":"雕刻...成","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:carve...out from","canonicalPhrase":"carve...out from","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被分割或雕刻的对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:carve...out of","canonicalPhrase":"carve...out of","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少完整结构，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:carve...out of","canonicalPhrase":"carve...out of","meaningZh":"从……中雕刻出或开辟出……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:cash down","canonicalPhrase":"cash down","meaningZh":"现金支付；现款付清","usageNoteZh":"表示购买时立即以现金支付全部款项","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:cash in","canonicalPhrase":"cash in","meaningZh":"兑现；获利；把……兑换成现金","usageNoteZh":"可表示兑换票据或筹码，也可表示从某种机会中获利","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:cash in on","canonicalPhrase":"cash in on","meaningZh":"利用……获利；从……中捞取好处","usageNoteZh":"表示利用某种形势、事件或他人的困难赚钱或获益","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1870,7 +1866,7 @@
 {"id":"2ndla:cast oneself on","canonicalPhrase":"cast oneself on","meaningZh":"依靠；把自己托付给","usageNoteZh":"表示把希望、命运或生计寄托在某人或某事上，oneself 随主语变化","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:cast out","canonicalPhrase":"cast out","meaningZh":"驱逐；排斥；抛弃","usageNoteZh":"表示把某人赶出群体或地点，也可表示丢弃某物","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:cast round for","canonicalPhrase":"cast round for","meaningZh":"四处寻找；设法寻找","usageNoteZh":"表示广泛寻找所需的人、物或解决办法","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:cast...into prison","canonicalPhrase":"cast...into prison","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少被监禁对象，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:cast...into prison","canonicalPhrase":"cast...into prison","meaningZh":"把……投入监狱","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:catch a bus","canonicalPhrase":"catch a bus","meaningZh":"赶上公共汽车；乘坐公共汽车","usageNoteZh":"表示及时到达并乘上公交车","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:catch a cold","canonicalPhrase":"catch a cold","meaningZh":"患感冒；得感冒","usageNoteZh":"表示感染普通感冒","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:catch a glimpse of","canonicalPhrase":"catch a glimpse of","meaningZh":"瞥见；一眼看到","usageNoteZh":"表示短暂或不完整地看到某人或某物","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -1899,7 +1895,7 @@
 {"id":"2ndla:cause a sensation","canonicalPhrase":"cause a sensation","meaningZh":"引起轰动；造成轰动效应","usageNoteZh":"表示某人或某事因新奇、成功或惊人而引起广泛关注","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:cause sb. to believe","canonicalPhrase":"cause sb. to believe","meaningZh":"让别人相信","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:cause to experience","canonicalPhrase":"cause to experience","meaningZh":"","usageNoteZh":"缺少被造成体验的对象，通常需要 cause somebody to experience，当前结构不完整","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:cause...to experience","canonicalPhrase":"cause...to experience","meaningZh":"","usageNoteZh":"含省略号的模板化候选，缺少体验者及完整结构，需人工复核","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:cause...to experience","canonicalPhrase":"cause...to experience","meaningZh":"使……经历……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:caution sb. against doing sth.","canonicalPhrase":"caution sb. against doing sth.","meaningZh":"告诫某人不要去做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:caution sb. to do sth.","canonicalPhrase":"caution sb. to do sth.","meaningZh":"警告某人做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:cave in","canonicalPhrase":"cave in","meaningZh":"塌陷；坍塌；屈服；让步","usageNoteZh":"可表示建筑或地面坍塌，也可表示人在压力下放弃抵抗或同意","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -2487,8 +2483,7 @@
 {"id":"2ndla:dissent from sth.","canonicalPhrase":"dissent from sth.","meaningZh":"对某事的异议","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:distinct from","canonicalPhrase":"distinct from","meaningZh":"与……截然不同；有别于","usageNoteZh":"表示两个事物在性质、特征或身份上清楚地区分开来","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:distinguish between","canonicalPhrase":"distinguish between","meaningZh":"区分；辨别……之间的差异","usageNoteZh":"表示识别两个或多个对象之间的不同","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:distinguish between and","canonicalPhrase":"distinguish between and","meaningZh":"","usageNoteZh":"该结构缺少 between 后的对象，属于不完整的句型模板，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:distinguish between...and...","canonicalPhrase":"distinguish between...and...","meaningZh":"区分……和……","usageNoteZh":"表示辨别两个对象或概念之间的差异","translationStatus":"GENERATED","confidence":"HIGH"}
+{"id":"2ndla:distinguish between...and...","canonicalPhrase":"distinguish between...and...","meaningZh":"区分……和……","usageNoteZh":"表示辨别两个对象或概念之间的差异","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:distinguish from","canonicalPhrase":"distinguish from","meaningZh":"把……与……区分开；辨别","usageNoteZh":"表示通过特征识别某人或某物，使其与其他对象区分开来","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:distinguish...from","canonicalPhrase":"distinguish...from","meaningZh":"区分...从","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:distinguish...from...","canonicalPhrase":"distinguish...from...","meaningZh":"区分...从...","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -3294,7 +3289,6 @@
 {"id":"2ndla:get used to","canonicalPhrase":"get used to","meaningZh":"习惯于；适应","usageNoteZh":"表示逐渐适应某种新的情况、环境或行为","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:get used to doing","canonicalPhrase":"get used to doing","meaningZh":"习惯于做某事","usageNoteZh":"后接动名词，表示逐渐适应某种行为或活动","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:get used to doing sth.","canonicalPhrase":"get used to doing sth.","meaningZh":"习惯做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:get...by heart","canonicalPhrase":"get...by heart","meaningZh":"","usageNoteZh":"该形式包含省略号占位符，通常应根据具体动词和对象还原完整表达，无法单独可靠翻译","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:give a call","canonicalPhrase":"give a call","meaningZh":"打电话；打个电话","usageNoteZh":"表示给某人打电话或进行一次电话联系","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:give a concert","canonicalPhrase":"give a concert","meaningZh":"举办音乐会；举行演唱会","usageNoteZh":"表示音乐家或团体公开进行一场音乐演出","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:give a donation","canonicalPhrase":"give a donation","meaningZh":"捐赠；捐款","usageNoteZh":"表示向个人、组织或公益事业提供金钱或物品捐助","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -3441,7 +3435,7 @@
 {"id":"2ndla:go on an expedition","canonicalPhrase":"go on an expedition","meaningZh":"进行探险；参加考察旅行","usageNoteZh":"表示前往某地进行有组织的考察、探索或探险","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:go on doing","canonicalPhrase":"go on doing","meaningZh":"继续做","usageNoteZh":"表示持续进行同一项活动或继续保持某种行为","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:go on doing sth.","canonicalPhrase":"go on doing sth.","meaningZh":"继续做点什么","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:go on doing...","canonicalPhrase":"go on doing...","meaningZh":"","usageNoteZh":"带省略号的形式不完整，缺少具体语境，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:go on doing...","canonicalPhrase":"go on doing...","meaningZh":"继续做……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:go on duty","canonicalPhrase":"go on duty","meaningZh":"开始值班；上岗","usageNoteZh":"表示开始承担当班职责或正式上岗工作","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:go on holiday","canonicalPhrase":"go on holiday","meaningZh":"去度假；休假","usageNoteZh":"表示离开工作或日常生活去度假","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:go on show","canonicalPhrase":"go on show","meaningZh":"展出；公开展示","usageNoteZh":"表示某物被放置出来供公众观看或某节目开始上演","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -3540,12 +3534,11 @@
 {"id":"2ndla:had better do","canonicalPhrase":"had better do","meaningZh":"最好做……；应该做……","usageNoteZh":"表示强烈建议某人采取后面的行动，否则可能产生不良后果","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:had better do sth.","canonicalPhrase":"had better do sth.","meaningZh":"最好做点什么","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:had rather","canonicalPhrase":"had rather","meaningZh":"宁愿；更愿意","usageNoteZh":"较旧式的表达，表示选择或偏好某种做法","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:had rather than","canonicalPhrase":"had rather than","meaningZh":"","usageNoteZh":"该形式通常需要补充完整的比较结构，当前候选不完整，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:had rather...","canonicalPhrase":"had rather...","meaningZh":"","usageNoteZh":"带省略号的形式不完整，缺少具体动作或比较对象，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:had rather...than","canonicalPhrase":"had rather...than","meaningZh":"","usageNoteZh":"带省略号的比较结构不完整，缺少两项具体内容，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:had rather...","canonicalPhrase":"had rather...","meaningZh":"宁愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:had rather...than...","canonicalPhrase":"had rather...than...","meaningZh":"宁愿……而不愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:had sooner","canonicalPhrase":"had sooner","meaningZh":"宁愿；宁可","usageNoteZh":"较旧式的表达，表示更愿意选择某种行动或情况","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:had sooner...","canonicalPhrase":"had sooner...","meaningZh":"","usageNoteZh":"带省略号的形式不完整，缺少具体动作或比较对象，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:had sooner...than","canonicalPhrase":"had sooner...than","meaningZh":"","usageNoteZh":"带省略号的比较结构不完整，缺少两项具体内容，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:had sooner...","canonicalPhrase":"had sooner...","meaningZh":"宁愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:had sooner...than...","canonicalPhrase":"had sooner...than...","meaningZh":"宁愿……而不愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:hail from","canonicalPhrase":"hail from","meaningZh":"来自；出身于","usageNoteZh":"表示某人来自某地，或某物源自某个地方或背景","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:hammer away at","canonicalPhrase":"hammer away at","meaningZh":"不断努力做；反复攻击或强调","usageNoteZh":"表示持续而有力地处理某项工作、问题或目标","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:hammer out","canonicalPhrase":"hammer out","meaningZh":"反复协商达成；努力制定；敲打成形","usageNoteZh":"常表示通过反复讨论解决分歧并达成协议，也可指努力制定计划或方案","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -3748,11 +3741,11 @@
 {"id":"2ndla:have trust in","canonicalPhrase":"have trust in","meaningZh":"信任；相信","usageNoteZh":"表示相信某人或某事物值得依赖","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:have words with","canonicalPhrase":"have words with","meaningZh":"与……争吵；和……发生口角","usageNoteZh":"表示与某人发生言语争执或争吵","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:have words with sb.","canonicalPhrase":"have words with sb.","meaningZh":"与某人交谈","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:have...in common","canonicalPhrase":"have...in common","meaningZh":"","usageNoteZh":"省略号表示缺少主语或中间成分，当前模板不完整，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:have...in common with","canonicalPhrase":"have...in common with","meaningZh":"","usageNoteZh":"省略号表示缺少主语或中间成分，当前模板不完整，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:have...in common with...","canonicalPhrase":"have...in common with...","meaningZh":"","usageNoteZh":"省略号表示缺少比较双方和中间成分，当前模板不完整，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:have...in common","canonicalPhrase":"have...in common","meaningZh":"与……有共同点","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:have...in common with","canonicalPhrase":"have...in common with","meaningZh":"与……有共同之处","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:have...in common with...","canonicalPhrase":"have...in common with...","meaningZh":"……与……有共同点","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:have...off","canonicalPhrase":"have...off","meaningZh":"have... off","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:have...to do with","canonicalPhrase":"have...to do with","meaningZh":"","usageNoteZh":"省略号表示缺少主语或宾语，当前模板不完整，需结合原句确认","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:have...to do with","canonicalPhrase":"have...to do with","meaningZh":"与……有关","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:head for","canonicalPhrase":"head for","meaningZh":"前往；朝……方向走；导致","usageNoteZh":"可表示朝某地移动，也可表示某种情况正朝某结果发展","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:head on","canonicalPhrase":"head on","meaningZh":"迎头地；正面地；迎面相撞","usageNoteZh":"表示直接面对或正面发生碰撞，也可作副词表示迎头而来","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:head over heels","canonicalPhrase":"head over heels","meaningZh":"完全地；深深地；头朝下脚朝上","usageNoteZh":"常用于 head over heels in love，表示深深坠入爱河，也可表示翻滚或彻底陷入某状态","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -4534,8 +4527,7 @@
 {"id":"2ndla:just then","canonicalPhrase":"just then","meaningZh":"就在那时；恰在那时","usageNoteZh":"表示某事发生在所叙述的那个时刻。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:keen on","canonicalPhrase":"keen on","meaningZh":"热衷于；喜欢","usageNoteZh":"表示对某人、某物或某项活动很感兴趣。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:keep a balance","canonicalPhrase":"keep a balance","meaningZh":"保持平衡","usageNoteZh":"表示维持身体、数量、关系或各方面之间的平衡。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:keep a balance between and","canonicalPhrase":"keep a balance between and","meaningZh":"","usageNoteZh":"该结构缺少 between 与 and 之间的两个比较对象，属于不完整模板，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:keep a balance between...and...","canonicalPhrase":"keep a balance between...and...","meaningZh":"在……和……之间保持平衡","usageNoteZh":"模板化表达，between 和 and 后应分别填入两个对象。","translationStatus":"GENERATED","confidence":"HIGH"}
+{"id":"2ndla:keep a balance between...and...","canonicalPhrase":"keep a balance between...and...","meaningZh":"在……与……之间保持平衡","usageNoteZh":"模板化表达，between 和 and 后应分别填入两个对象。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:keep a close watch on","canonicalPhrase":"keep a close watch on","meaningZh":"密切监视；密切关注","usageNoteZh":"表示持续而仔细地观察或监控某人、某物或某事。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:keep a diary","canonicalPhrase":"keep a diary","meaningZh":"记日记","usageNoteZh":"表示定期记录日常经历、想法或事件。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:keep a hold on","canonicalPhrase":"keep a hold on","meaningZh":"抓住；控制住；保持对……的掌控","usageNoteZh":"可表示牢牢抓住某物，也可比喻维持控制。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -4628,10 +4620,10 @@
 {"id":"2ndla:keep up with","canonicalPhrase":"keep up with","meaningZh":"跟上；与……保持同步；了解……的最新情况","usageNoteZh":"表示在速度、进展或信息掌握方面不落后于某人或某事。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:keep within limits","canonicalPhrase":"keep within limits","meaningZh":"限制在范围内；保持适度","usageNoteZh":"表示使行为、数量或程度不超过规定范围。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:keep...from...","canonicalPhrase":"keep...from...","meaningZh":"v.预防","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:keep...in mind","canonicalPhrase":"keep...in mind","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入具体对象，完整结构为 keep something in mind，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:keep...in mind","canonicalPhrase":"keep...in mind","meaningZh":"记住……；把……牢记在心","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:keep...informed","canonicalPhrase":"keep...informed","meaningZh":"论坛订阅","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:keep...under close observation","canonicalPhrase":"keep...under close observation","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入被观察对象，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:keep...under observation","canonicalPhrase":"keep...under observation","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入被观察对象，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:keep...under close observation","canonicalPhrase":"keep...under close observation","meaningZh":"密切观察……；严密监视……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:keep...under observation","canonicalPhrase":"keep...under observation","meaningZh":"观察……；监视……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:key in","canonicalPhrase":"key in","meaningZh":"键入；输入","usageNoteZh":"表示使用键盘输入信息，后接要输入的内容或位置。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:key to","canonicalPhrase":"key to","meaningZh":"……的关键；解决……的要诀","usageNoteZh":"表示实现某个目标或理解某事的关键因素，后接名词。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:kick around","canonicalPhrase":"kick around","meaningZh":"随便讨论；漫游；踢来踢去","usageNoteZh":"可表示非正式地讨论想法，也可表示四处闲逛或踢动某物。","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -4665,7 +4657,7 @@
 {"id":"2ndla:know from","canonicalPhrase":"know from","meaningZh":"","usageNoteZh":"该形式通常需要 know one thing from another 等完整结构，单独列出时不完整，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:know of","canonicalPhrase":"know of","meaningZh":"听说过；知道有……","usageNoteZh":"表示听说或知道某人、某事的存在，但未必熟悉。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:know sb. by sight","canonicalPhrase":"know sb. by sight","meaningZh":"通过视觉认识某人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:know...by heart","canonicalPhrase":"know...by heart","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入要熟记的内容，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:know...by heart","canonicalPhrase":"know...by heart","meaningZh":"熟记……；背熟……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:know...from...","canonicalPhrase":"know...from...","meaningZh":"知道...从...","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:knowledge starts with practice","canonicalPhrase":"knowledge starts with practice","meaningZh":"知识始于实践","usageNoteZh":"表示真正的知识和能力需要通过实践开始并得到发展。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:knowledge-based economy","canonicalPhrase":"knowledge-based economy","meaningZh":"知识经济","usageNoteZh":"指以知识、信息和创新作为主要生产要素的经济形态。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -4717,9 +4709,9 @@
 {"id":"2ndla:lay the foundation for","canonicalPhrase":"lay the foundation for","meaningZh":"为……打下基础","usageNoteZh":"表示为未来的发展、成功或事件创造基础。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:lay to heart","canonicalPhrase":"lay to heart","meaningZh":"把……牢记在心；认真对待","usageNoteZh":"表示认真听取并深切记住某人的话或某件事。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:lay up","canonicalPhrase":"lay up","meaningZh":"储存；贮藏；使卧床；积蓄","usageNoteZh":"可表示储存物品，也可表示因病或受伤卧床。","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:lay...to heart","canonicalPhrase":"lay...to heart","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入要认真牢记的内容，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:lay...to heart","canonicalPhrase":"lay...to heart","meaningZh":"把……铭记于心；认真听取……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:lead a life","canonicalPhrase":"lead a life","meaningZh":"过着……的生活","usageNoteZh":"用于说明某人所过的生活类型，后接形容词或名词短语。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:lead a...life","canonicalPhrase":"lead a...life","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入生活的具体性质，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:lead a...life","canonicalPhrase":"lead a...life","meaningZh":"过着……的生活","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:lead off","canonicalPhrase":"lead off","meaningZh":"开始；率先进行；带头","usageNoteZh":"表示首先开始某项活动、讲话或行动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:lead on","canonicalPhrase":"lead on","meaningZh":"引导前进；诱骗；误导","usageNoteZh":"可表示带领某人继续前进，也可表示故意给人错误希望或信息。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:lead out","canonicalPhrase":"lead out","meaningZh":"带出去；引出；率先行动","usageNoteZh":"表示带领某人离开某处，或在行动、讨论中率先开始。","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -4739,8 +4731,8 @@
 {"id":"2ndla:learn of","canonicalPhrase":"learn of","meaningZh":"得知；听说","usageNoteZh":"表示获悉某人、某事或某个消息。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:learn off","canonicalPhrase":"learn off","meaningZh":"背熟；记住","usageNoteZh":"主要用于英式英语，表示通过记忆熟练掌握某段内容。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:learn the ropes","canonicalPhrase":"learn the ropes","meaningZh":"熟悉情况；学会基本诀窍","usageNoteZh":"表示了解一项工作或活动的基本规则和操作方法。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:learn...by heart","canonicalPhrase":"learn...by heart","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入要熟记的内容，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:learn...by oneself","canonicalPhrase":"learn...by oneself","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入学习内容，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:learn...by heart","canonicalPhrase":"learn...by heart","meaningZh":"熟记……；背熟……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:learn...by oneself","canonicalPhrase":"learn...by oneself","meaningZh":"独自学习……；自学……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:lease sth. from sb.","canonicalPhrase":"lease sth. from sb.","meaningZh":"从某人那里租借东西","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:lease sth. to sb.","canonicalPhrase":"lease sth. to sb.","meaningZh":"把东西租给别人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:least of all","canonicalPhrase":"least of all","meaningZh":"尤其不；最不；其中最少","usageNoteZh":"用于强调某人或某事在所列对象中最不符合前面的情况。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -4795,7 +4787,7 @@
 {"id":"2ndla:let up","canonicalPhrase":"let up","meaningZh":"减弱；停止；放松","usageNoteZh":"表示强度、压力或坏天气减弱，也可表示停止施压。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:let...alone","canonicalPhrase":"let...alone","meaningZh":"不要打扰","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:let...down","canonicalPhrase":"let...down","meaningZh":"放我下来！！","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:let...out of","canonicalPhrase":"let...out of","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入对象和所在场所，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:let...out of","canonicalPhrase":"let...out of","meaningZh":"把……从……放出","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:let...slide","canonicalPhrase":"let...slide","meaningZh":"let... slide","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:level off","canonicalPhrase":"level off","meaningZh":"变平；趋于稳定；保持水平","usageNoteZh":"表示上升或下降后达到稳定水平，也可表示使表面变平。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:level out","canonicalPhrase":"level out","meaningZh":"变得平稳；使平整；趋于相等","usageNoteZh":"表示差异、波动或高度逐渐变得均衡或稳定。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -4842,7 +4834,7 @@
 {"id":"2ndla:live a lie","canonicalPhrase":"live a lie","meaningZh":"生活在谎言中；以虚假面目生活","usageNoteZh":"表示长期隐瞒真相或按照虚假的信念、身份生活。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:live a life","canonicalPhrase":"live a life","meaningZh":"过着一种生活","usageNoteZh":"用于说明某人所过的生活方式或状态。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:live a miserable life","canonicalPhrase":"live a miserable life","meaningZh":"过着悲惨的生活","usageNoteZh":"表示生活长期充满痛苦、不幸或困难。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:live a...life","canonicalPhrase":"live a...life","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入生活的具体性质，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:live a...life","canonicalPhrase":"live a...life","meaningZh":"过着……的生活","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:live by","canonicalPhrase":"live by","meaningZh":"按照……生活；靠……为生；遵守","usageNoteZh":"可表示遵循某种原则，也可表示依靠某种收入或方式生活。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:live from hand to mouth","canonicalPhrase":"live from hand to mouth","meaningZh":"勉强糊口；过着现挣现吃的生活","usageNoteZh":"表示没有积蓄，只能依靠眼前收入维持生活。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:live in","canonicalPhrase":"live in","meaningZh":"居住在；住在工作地点","usageNoteZh":"可表示居住在某地，也可指住在雇主家中的工作人员。","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -4900,7 +4892,7 @@
 {"id":"2ndla:look like","canonicalPhrase":"look like","meaningZh":"看起来像；似乎会","usageNoteZh":"可用于比较外观，也可表示根据迹象推测情况。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:look on","canonicalPhrase":"look on","meaningZh":"旁观；看待；把……视为","usageNoteZh":"可表示站在一旁观看，也可表示以某种方式看待某事。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:look on as","canonicalPhrase":"look on as","meaningZh":"把……看作；把……视为","usageNoteZh":"表示认为某人或某物具有某种身份或性质。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:look on...as...","canonicalPhrase":"look on...as...","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入被看作的对象和身份，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:look on...as...","canonicalPhrase":"look on...as...","meaningZh":"把……看作……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:look out","canonicalPhrase":"look out","meaningZh":"当心；向外看；留神","usageNoteZh":"可作警告语表示小心，也可表示从里面向外看。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:look out for","canonicalPhrase":"look out for","meaningZh":"留意；照料；当心","usageNoteZh":"表示注意寻找某人或某物，也可表示照顾或提防。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:look out of","canonicalPhrase":"look out of","meaningZh":"从……向外看","usageNoteZh":"表示从窗户、门或其他开口向外观看。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -4918,7 +4910,7 @@
 {"id":"2ndla:look up to sth.","canonicalPhrase":"look up to sth.","meaningZh":"抬头看某样东西","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:look upon","canonicalPhrase":"look upon","meaningZh":"看待；视为；注视","usageNoteZh":"表示以某种方式看待某人或某事，upon 比 on 更正式。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:look upon as","canonicalPhrase":"look upon as","meaningZh":"把……视为；认为……是","usageNoteZh":"表示将某人或某物看作某种身份或性质。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:look upon...as...","canonicalPhrase":"look upon...as...","meaningZh":"","usageNoteZh":"带省略号的模板表达，通常需填入被看待的对象及其身份或性质，需结合原句复核。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:look upon...as...","canonicalPhrase":"look upon...as...","meaningZh":"把……看作……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:loosen up","canonicalPhrase":"loosen up","meaningZh":"放松；变得随和；放宽","usageNoteZh":"可表示身体放松、态度不拘谨，也可表示限制变宽松。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:lose all hope of","canonicalPhrase":"lose all hope of","meaningZh":"对……完全失去希望","usageNoteZh":"表示完全不再相信某事会发生或实现。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:lose balance","canonicalPhrase":"lose balance","meaningZh":"失去平衡","usageNoteZh":"表示身体或事物不再保持稳定。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5140,7 +5132,7 @@
 {"id":"2ndla:make use of","canonicalPhrase":"make use of","meaningZh":"利用；使用","usageNoteZh":"指使用某人或某物以达到目的。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:make way","canonicalPhrase":"make way","meaningZh":"让路；开路；前进","usageNoteZh":"可表示给别人让出通道，也可表示逐步前进或开辟道路。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:make way for","canonicalPhrase":"make way for","meaningZh":"为……让路；给……腾出位置","usageNoteZh":"指清除障碍以便某人或某物通过，也可指让新事物取代旧事物。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:make...a top priority","canonicalPhrase":"make...a top priority","meaningZh":"","usageNoteZh":"带省略号的模板结构，需结合缺失成分补全后使用。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:make...a top priority","canonicalPhrase":"make...a top priority","meaningZh":"把……列为最优先事项","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:manage to do","canonicalPhrase":"manage to do","meaningZh":"设法做成某事；成功做到","usageNoteZh":"表示经过努力最终完成某事。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:manage to do sth.","canonicalPhrase":"manage to do sth.","meaningZh":"设法做点什么","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:many a","canonicalPhrase":"many a","meaningZh":"许多；很多一个个的","usageNoteZh":"书面或正式表达，后接单数可数名词但意义为许多。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5251,7 +5243,7 @@
 {"id":"2ndla:name after","canonicalPhrase":"name after","meaningZh":"以……命名","usageNoteZh":"指用某人的名字为人或物命名。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:name for","canonicalPhrase":"name for","meaningZh":"以……命名；因……而得名","usageNoteZh":"指某人或某物的名称取自某个对象或原因。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:narrow escape","canonicalPhrase":"narrow escape","meaningZh":"死里逃生；险些遇险","usageNoteZh":"指勉强避开危险或灾难。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:narrow the gap between...and...","canonicalPhrase":"narrow the gap between...and...","meaningZh":"","usageNoteZh":"带省略号的模板结构，需补全两端对象后使用。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:narrow the gap between...and...","canonicalPhrase":"narrow the gap between...and...","meaningZh":"缩小……与……之间的差距","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:native to","canonicalPhrase":"native to","meaningZh":"原产于；本土的；土生于","usageNoteZh":"指某物种或事物原本来自某地。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:natural settings and tourist sites","canonicalPhrase":"natural settings and tourist sites","meaningZh":"自然环境和旅游景点","usageNoteZh":"指自然景观环境以及供游客参观的地点。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:near by","canonicalPhrase":"near by","meaningZh":"在附近；附近的","usageNoteZh":"表示距离很近；现代英语通常合写为 nearby。","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -5281,24 +5273,23 @@
 {"id":"2ndla:no fewer than","canonicalPhrase":"no fewer than","meaningZh":"不少于；多达","usageNoteZh":"用于强调数量至少达到某个数目。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no later than","canonicalPhrase":"no later than","meaningZh":"不迟于；最晚于","usageNoteZh":"表示某个截止时间。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no less than","canonicalPhrase":"no less than","meaningZh":"不少于；多达；不亚于","usageNoteZh":"可用于强调数量不少，也可强调程度或重要性不低。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:no less...than","canonicalPhrase":"no less...than","meaningZh":"","usageNoteZh":"带省略号的比较结构模板，需补全比较对象后使用。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:no less...than...","canonicalPhrase":"no less...than...","meaningZh":"不比……少；和……一样……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:no longer","canonicalPhrase":"no longer","meaningZh":"不再","usageNoteZh":"表示某种情况过去存在，但现在已经不存在。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no matter","canonicalPhrase":"no matter","meaningZh":"不论；无论；不要紧","usageNoteZh":"可表示无论情况如何，也可用于安慰或表示某事不重要。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no matter how","canonicalPhrase":"no matter how","meaningZh":"无论怎样；不管多么","usageNoteZh":"引导让步从句，表示方式或程度不影响结果。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no matter what","canonicalPhrase":"no matter what","meaningZh":"无论什么；不管怎样","usageNoteZh":"表示无论发生什么情况，结果或行动都不改变。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no matter when","canonicalPhrase":"no matter when","meaningZh":"无论何时","usageNoteZh":"表示发生时间不影响结果或行动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no matter where","canonicalPhrase":"no matter where","meaningZh":"无论在哪里；不管到哪里","usageNoteZh":"表示地点不影响结果或行动。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:no matter whether...or","canonicalPhrase":"no matter whether...or","meaningZh":"","usageNoteZh":"带省略号的模板结构，需补全 whether 与 or 两端的并列内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:no matter whether...or...","canonicalPhrase":"no matter whether...or...","meaningZh":"不论是……还是……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:no matter which","canonicalPhrase":"no matter which","meaningZh":"无论哪一个；不管哪个","usageNoteZh":"表示所选择的对象不同也不影响结果。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no matter who","canonicalPhrase":"no matter who","meaningZh":"无论谁；不管什么人","usageNoteZh":"表示人物不同也不影响结果或行动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no more","canonicalPhrase":"no more","meaningZh":"不再；不超过；仅仅","usageNoteZh":"根据语境可表示不再发生、数量不超过或不过是。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no more than","canonicalPhrase":"no more than","meaningZh":"不超过；仅仅","usageNoteZh":"表示数量或程度最多达到某个限度，也可强调数量少。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:no more...than","canonicalPhrase":"no more...than","meaningZh":"","usageNoteZh":"带省略号的比较结构模板，需补全比较两端的内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:no more...than...","canonicalPhrase":"no more...than...","meaningZh":"","usageNoteZh":"带省略号的比较结构模板，需补全比较两端的内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:no more...than...","canonicalPhrase":"no more...than...","meaningZh":"不比……更多；和……一样不……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:no other than","canonicalPhrase":"no other than","meaningZh":"正是；除了……没有别人或别的东西","usageNoteZh":"用于强调所指对象就是某人或某物，而不是其他对象。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no problem","canonicalPhrase":"no problem","meaningZh":"没问题；不麻烦；不用客气","usageNoteZh":"可表示没有困难、同意请求，或回应感谢。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no sooner than","canonicalPhrase":"no sooner than","meaningZh":"刚……就……；不早于","usageNoteZh":"可表示某事刚发生另一事就发生，也可表示时间不早于某点。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:no sooner...than","canonicalPhrase":"no sooner...than","meaningZh":"","usageNoteZh":"带省略号的固定句式模板，需补全两个先后发生的动作。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:no sooner...than","canonicalPhrase":"no sooner...than","meaningZh":"一……就……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:no thanks to","canonicalPhrase":"no thanks to","meaningZh":"并非由于……的帮助；多亏没有……","usageNoteZh":"常带讽刺意味，表示某结果不是因为所提及对象的帮助。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no way","canonicalPhrase":"no way","meaningZh":"没门；绝不；没有办法","usageNoteZh":"可用于强烈拒绝，也可表示没有可行办法或路径。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:no wonder","canonicalPhrase":"no wonder","meaningZh":"难怪；怪不得","usageNoteZh":"表示某结果因已知原因而完全可以理解。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5316,9 +5307,8 @@
 {"id":"2ndla:not any longer","canonicalPhrase":"not any longer","meaningZh":"不再","usageNoteZh":"表示某种情况过去存在，但现在已经停止。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not any more","canonicalPhrase":"not any more","meaningZh":"不再；不再有","usageNoteZh":"表示某事不再继续或数量不再增加。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not any more than","canonicalPhrase":"not any more than","meaningZh":"不比……更多；同样不……","usageNoteZh":"用于比较，常表示前后两者在某方面都不超过或都不成立。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:not as as","canonicalPhrase":"not as as","meaningZh":"","usageNoteZh":"比较结构不完整，缺少 as 之间的形容词或副词，需补全原始语境。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not as...as","canonicalPhrase":"not as...as","meaningZh":"","usageNoteZh":"带省略号的比较结构模板，需补全比较内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not as...as...","canonicalPhrase":"not as...as...","meaningZh":"","usageNoteZh":"带省略号的比较结构模板，需补全比较内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:not as...as","canonicalPhrase":"not as...as","meaningZh":"不如……；不像……那么……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:not as...as...","canonicalPhrase":"not as...as...","meaningZh":"不如……；不像……那么……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:not at all","canonicalPhrase":"not at all","meaningZh":"一点也不；完全不；别客气","usageNoteZh":"用于加强否定，也可用于回应感谢表示不必客气。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not but that","canonicalPhrase":"not but that","meaningZh":"并不是说……不；虽然……但是","usageNoteZh":"较旧式或正式表达，用于引出让步或补充说明。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:not in the least","canonicalPhrase":"not in the least","meaningZh":"一点也不；丝毫不","usageNoteZh":"用于强烈否定某种程度、感受或影响。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5327,26 +5317,22 @@
 {"id":"2ndla:not more than","canonicalPhrase":"not more than","meaningZh":"不超过；至多","usageNoteZh":"表示数量或程度的上限。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not much of a","canonicalPhrase":"not much of a","meaningZh":"","usageNoteZh":"该结构缺少后接名词，单独使用不完整，需结合原始语境核查。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:not nearly","canonicalPhrase":"not nearly","meaningZh":"远非；差得远；几乎不","usageNoteZh":"用于强调实际程度远低于某个标准或预期。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:not only but","canonicalPhrase":"not only but","meaningZh":"","usageNoteZh":"并列结构不完整，缺少 not only 与 but 后的成分，需补全原始语境。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not only but also","canonicalPhrase":"not only but also","meaningZh":"","usageNoteZh":"并列结构不完整，缺少 not only 与 but also 后的成分，需补全原始语境。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not only...but","canonicalPhrase":"not only...but","meaningZh":"","usageNoteZh":"带省略号的并列结构模板，需补全两组并列成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not only...but also","canonicalPhrase":"not only...but also","meaningZh":"","usageNoteZh":"带省略号的并列结构模板，需补全两组并列成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not only...but also...","canonicalPhrase":"not only...but also...","meaningZh":"","usageNoteZh":"带省略号的并列结构模板，需补全两组并列成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:not only...but also...","canonicalPhrase":"not only...but also...","meaningZh":"不仅……而且……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:not only...but...","canonicalPhrase":"not only...but...","meaningZh":"不仅……而且……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:not so as","canonicalPhrase":"not so as","meaningZh":"","usageNoteZh":"该候选结构不完整或不稳定，可能与 not so...as 或 not so much as 混淆。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:not so much as","canonicalPhrase":"not so much as","meaningZh":"甚至没有；连……都没有","usageNoteZh":"用于强调某事连最低程度或最基本的动作都没有发生。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:not so much...as","canonicalPhrase":"not so much...as","meaningZh":"","usageNoteZh":"带省略号的对比结构模板，需补全两端内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not so much...as...","canonicalPhrase":"not so much...as...","meaningZh":"","usageNoteZh":"带省略号的对比结构模板，需补全两端内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not so...as","canonicalPhrase":"not so...as","meaningZh":"","usageNoteZh":"带省略号的比较结构模板，需补全比较内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:not so much...as...","canonicalPhrase":"not so much...as...","meaningZh":"与其说……不如说……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:not so...as...","canonicalPhrase":"not so...as...","meaningZh":"不是……而是……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:not taking into account","canonicalPhrase":"not taking into account","meaningZh":"没有考虑到；未计入","usageNoteZh":"指在判断、计算或计划中没有把某因素考虑进去。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not think much of","canonicalPhrase":"not think much of","meaningZh":"不太看重；不认为……很好","usageNoteZh":"表示对某人或某事评价不高。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not to be sneezed at","canonicalPhrase":"not to be sneezed at","meaningZh":"不可小看；相当不错","usageNoteZh":"习语，表示某人或某事值得重视，不能轻视。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not to mention","canonicalPhrase":"not to mention","meaningZh":"更不用说；此外还","usageNoteZh":"用于补充一个使前述情况更加明显或严重的事实。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:not until","canonicalPhrase":"not until","meaningZh":"直到……才……","usageNoteZh":"表示某事在某个时间或事件之后才发生。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:not...any more","canonicalPhrase":"not...any more","meaningZh":"","usageNoteZh":"带省略号的否定模板，需补全主语和谓语等成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not...any more than","canonicalPhrase":"not...any more than","meaningZh":"","usageNoteZh":"带省略号的比较否定模板，需补全比较两端内容。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:not...at all","canonicalPhrase":"not...at all","meaningZh":"","usageNoteZh":"带省略号的否定模板，需补全被否定的成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:not...any more","canonicalPhrase":"not...any more","meaningZh":"不再……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:not...any more than","canonicalPhrase":"not...any more than","meaningZh":"不比……更……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:not...at all","canonicalPhrase":"not...at all","meaningZh":"一点也不……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:not...but...","canonicalPhrase":"not...but...","meaningZh":"不是…但是…","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:not...in the slightest","canonicalPhrase":"not...in the slightest","meaningZh":"","usageNoteZh":"带省略号的否定模板，需补全被否定的成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:not...in the slightest","canonicalPhrase":"not...in the slightest","meaningZh":"一点也不……；丝毫不……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:not...until...","canonicalPhrase":"not...until...","meaningZh":"不是…直到…","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:note down","canonicalPhrase":"note down","meaningZh":"记下；记录","usageNoteZh":"指把信息写下来以便记忆或日后查阅。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:nothing but","canonicalPhrase":"nothing but","meaningZh":"只是；仅仅；只有","usageNoteZh":"用于强调所指对象仅限于某人或某物。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5357,7 +5343,7 @@
 {"id":"2ndla:now and again","canonicalPhrase":"now and again","meaningZh":"偶尔；有时","usageNoteZh":"表示事情不时发生，但并不频繁。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:now and then","canonicalPhrase":"now and then","meaningZh":"偶尔；有时","usageNoteZh":"表示事情不时发生，但并不经常。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:now that","canonicalPhrase":"now that","meaningZh":"既然；由于现在……","usageNoteZh":"引导原因从句，说明某种新情况已经出现。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:now that...","canonicalPhrase":"now that...","meaningZh":"","usageNoteZh":"带省略号的从句模板，需补全既成事实及后续主句。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:now that...","canonicalPhrase":"now that...","meaningZh":"既然……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:nowhere near","canonicalPhrase":"nowhere near","meaningZh":"远不及；远没有；离……差得远","usageNoteZh":"用于强调程度、数量或距离远未达到某个标准。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:object to","canonicalPhrase":"object to","meaningZh":"反对；不赞成","usageNoteZh":"表示对某事不接受或持异议，后接名词或动名词。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:objection to","canonicalPhrase":"objection to","meaningZh":"对……的反对；异议","usageNoteZh":"指对某人、某事或某做法提出的反对意见。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5409,9 +5395,10 @@
 {"id":"2ndla:on a level with","canonicalPhrase":"on a level with","meaningZh":"与……处于同等水平；与……相当","usageNoteZh":"表示能力、地位或质量与某人某物相同。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on a minute-by-minute basis","canonicalPhrase":"on a minute-by-minute basis","meaningZh":"逐分钟地；每分钟持续关注地","usageNoteZh":"表示按分钟跟踪、记录或更新情况。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on a national scale","canonicalPhrase":"on a national scale","meaningZh":"在全国范围内；按国家规模","usageNoteZh":"表示覆盖整个国家或涉及全国层面。","translationStatus":"GENERATED","confidence":"HIGH"}
+{"id":"2ndla:on a scale of...to...","canonicalPhrase":"on a scale of...to...","meaningZh":"从……到……的比例或范围","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:on a small scale","canonicalPhrase":"on a small scale","meaningZh":"小规模地；小范围地","usageNoteZh":"表示涉及范围小、数量少或影响有限。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on a visit to","canonicalPhrase":"on a visit to","meaningZh":"在访问……期间；访问……时","usageNoteZh":"表示某人在访问某地或某人期间；具体含义依句子而定。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:on a...scale","canonicalPhrase":"on a...scale","meaningZh":"","usageNoteZh":"带省略号的模板结构，需补充 scale 前的具体程度或范围。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:on a...scale","canonicalPhrase":"on a...scale","meaningZh":"按……的规模或程度","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:on account","canonicalPhrase":"on account","meaningZh":"赊账；记账；由于","usageNoteZh":"根据语境可指赊购记账，也可出现在 on account of 的相关结构中。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:on account of","canonicalPhrase":"on account of","meaningZh":"由于；因为","usageNoteZh":"用于说明某事发生的原因，后接名词或名词短语。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on all accounts","canonicalPhrase":"on all accounts","meaningZh":"无论如何；在各方面；据各方面看来","usageNoteZh":"根据语境可表示无论如何、从各方面看或据说。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5567,7 +5554,6 @@
 {"id":"2ndla:on the road to","canonicalPhrase":"on the road to","meaningZh":"在通往……的道路上；正在走向……","usageNoteZh":"可按字面表示前往某地，也可比喻逐步接近某个目标或状态。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on the road to success","canonicalPhrase":"on the road to success","meaningZh":"走在成功的道路上","usageNoteZh":"比喻正在逐步取得成功。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on the run","canonicalPhrase":"on the run","meaningZh":"在逃；奔波忙碌；连续工作","usageNoteZh":"可指逃避追捕，也可指不停奔波或忙碌。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:on the scale of...to","canonicalPhrase":"on the scale of...to","meaningZh":"","usageNoteZh":"带省略号的范围模板，需补全尺度两端的数值或对象。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:on the shelf","canonicalPhrase":"on the shelf","meaningZh":"被搁置；闲置；在架上","usageNoteZh":"可按字面表示放在架上，也可比喻计划被搁置或人未婚。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on the side","canonicalPhrase":"on the side","meaningZh":"在一边；作为副业；另外提供","usageNoteZh":"根据语境可指在旁边、作为额外工作或另行提供。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:on the side of","canonicalPhrase":"on the side of","meaningZh":"站在……一边；在……一侧","usageNoteZh":"表示支持某人或某方，也可表示位于某物的一侧。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5621,7 +5607,7 @@
 {"id":"2ndla:one's regards to sb.","canonicalPhrase":"one's regards to sb.","meaningZh":"问候某人","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:one-time event","canonicalPhrase":"one-time event","meaningZh":"一次性事件；只发生一次的活动","usageNoteZh":"表示不会定期重复的事件或活动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:one...another...","canonicalPhrase":"one...another...","meaningZh":"彼此","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:one...the other...","canonicalPhrase":"one...the other...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对应成分，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:one...the other...","canonicalPhrase":"one...the other...","meaningZh":"一个……另一个……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:only if","canonicalPhrase":"only if","meaningZh":"只有在……条件下；只有当……时","usageNoteZh":"引出必要条件，表示后件成立的唯一条件。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:only that","canonicalPhrase":"only that","meaningZh":"只是；不过","usageNoteZh":"常用于补充限制或例外说明，具体译法依赖上下文。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:only to do","canonicalPhrase":"only to do","meaningZh":"","usageNoteZh":"不定式结构缺少上下文，单独作为短语无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
@@ -5717,7 +5703,6 @@
 {"id":"2ndla:overflow with","canonicalPhrase":"overflow with","meaningZh":"充满；洋溢着","usageNoteZh":"表示容器装满溢出，也可表示充满某种情感或特质。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:owe obligations to","canonicalPhrase":"owe obligations to","meaningZh":"对……负有义务","usageNoteZh":"表示对某人、组织或原则承担应履行的责任。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:owe to","canonicalPhrase":"owe to","meaningZh":"归因于；应归功于","usageNoteZh":"用于说明某结果由某人或某原因造成。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:owe...a spite","canonicalPhrase":"owe...a spite","meaningZh":"","usageNoteZh":"含省略号模板且搭配不完整，无法确定稳定语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:owe...to","canonicalPhrase":"owe...to","meaningZh":"欠……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:owe...to...","canonicalPhrase":"owe...to...","meaningZh":"欠……给……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:owing to","canonicalPhrase":"owing to","meaningZh":"由于；因为","usageNoteZh":"用于引出导致某结果的原因。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5752,7 +5737,7 @@
 {"id":"2ndla:pass off as","canonicalPhrase":"pass off as","meaningZh":"冒充；假装是","usageNoteZh":"表示把某人或某物冒充成另一种身份或事物。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:pass on","canonicalPhrase":"pass on","meaningZh":"传递；转交；继续前进；去世","usageNoteZh":"可表示传递信息或物品，也可表示离开、继续进行或去世。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:pass on to","canonicalPhrase":"pass on to","meaningZh":"转交给；传给；继续到","usageNoteZh":"表示把某物交给下一人，或从一个事项转到另一个事项。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:pass on...to...","canonicalPhrase":"pass on...to...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体宾语和接收者，无法确定完整词条语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:pass on...to...","canonicalPhrase":"pass on...to...","meaningZh":"把……传递给……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:pass one's verdict upon","canonicalPhrase":"pass one's verdict upon","meaningZh":"对……作出裁决；对……下判断","usageNoteZh":"表示对某人或某事作出正式判定；one's 为可替换的所有格形式。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:pass out","canonicalPhrase":"pass out","meaningZh":"昏倒；分发；毕业","usageNoteZh":"可表示失去知觉、把物品分给众人，或在军校等机构毕业。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:pass over","canonicalPhrase":"pass over","meaningZh":"忽略；跳过；不考虑；超过","usageNoteZh":"表示没有选择或注意某人某物，也可表示经过或越过。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5808,8 +5793,8 @@
 {"id":"2ndla:persist in","canonicalPhrase":"persist in","meaningZh":"坚持；执意继续","usageNoteZh":"表示持续做某事，常含不顾困难或反对的意味。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:persist with","canonicalPhrase":"persist with","meaningZh":"坚持采用；继续进行","usageNoteZh":"表示继续使用某种方法或继续处理某项事务。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:persist with sth.","canonicalPhrase":"persist with sth.","meaningZh":"坚持做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:persuade sb. to do","canonicalPhrase":"persuade sb. to do","meaningZh":"说服某人做……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:persuade sb. to do sth.","canonicalPhrase":"persuade sb. to do sth.","meaningZh":"说服某人做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:persuade to do","canonicalPhrase":"persuade to do","meaningZh":"","usageNoteZh":"缺少被说服者和具体动作，属于不完整的语法模板。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:pertain to","canonicalPhrase":"pertain to","meaningZh":"与……有关；属于……","usageNoteZh":"表示某事物与某主题、领域或对象相关。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:pervert the course of justice","canonicalPhrase":"pervert the course of justice","meaningZh":"妨碍司法公正；歪曲司法进程","usageNoteZh":"指通过欺骗、隐瞒或不当干预破坏公正的司法程序。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:phase in","canonicalPhrase":"phase in","meaningZh":"分阶段引入；逐步采用","usageNoteZh":"表示逐步而非一次性地开始使用某物或实行某措施。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5912,7 +5897,7 @@
 {"id":"2ndla:pour...into","canonicalPhrase":"pour...into","meaningZh":"倒入……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:pour...into...","canonicalPhrase":"pour...into...","meaningZh":"倒……进……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:poverty-stricken areas","canonicalPhrase":"poverty-stricken areas","meaningZh":"贫困地区","usageNoteZh":"指长期严重缺乏收入和基本资源的地区。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:practice doing","canonicalPhrase":"practice doing","meaningZh":"","usageNoteZh":"不定式或动名词结构缺少主语和具体动作，属于不完整语法模板。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:practice doing","canonicalPhrase":"practice doing","meaningZh":"练习做……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:practice doing sth.","canonicalPhrase":"practice doing sth.","meaningZh":"练习做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:practice with","canonicalPhrase":"practice with","meaningZh":"","usageNoteZh":"缺少练习对象或完整语境，单独作为词条语义不完整。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:praise for","canonicalPhrase":"praise for","meaningZh":"因……而赞扬；称赞……","usageNoteZh":"用于说明赞扬某人或某事的原因。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -5944,7 +5929,7 @@
 {"id":"2ndla:prevent from doing sth.","canonicalPhrase":"prevent from doing sth.","meaningZh":"防止做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:prevent sb. from doing sth.","canonicalPhrase":"prevent sb. from doing sth.","meaningZh":"阻止某人做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:prevent...from","canonicalPhrase":"prevent...from","meaningZh":"防止...","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:prevent...from doing","canonicalPhrase":"prevent...from doing","meaningZh":"","usageNoteZh":"含省略号语法模板，缺少具体对象和动作，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:prevent...from doing","canonicalPhrase":"prevent...from doing","meaningZh":"阻止……做……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:prevent...from doing sth.","canonicalPhrase":"prevent...from doing sth.","meaningZh":"阻止……做某事","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:prevent...from...","canonicalPhrase":"prevent...from...","meaningZh":"防止...从...","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:previous to","canonicalPhrase":"previous to","meaningZh":"在……以前；先于","usageNoteZh":"正式表达，表示某事发生在另一事件之前。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -6114,20 +6099,20 @@
 {"id":"2ndla:put up","canonicalPhrase":"put up","meaningZh":"举起；张贴；建造；提供住宿","usageNoteZh":"含义很多，可表示抬高、张贴、搭建或留某人住宿。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:put up with","canonicalPhrase":"put up with","meaningZh":"忍受；容忍","usageNoteZh":"表示接受令人不快的人、事或情况而不反抗。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:put up with sth.","canonicalPhrase":"put up with sth.","meaningZh":"忍受一些事情","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:put...down to","canonicalPhrase":"put...down to","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象和原因，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...in action","canonicalPhrase":"put...in action","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...in force","canonicalPhrase":"put...in force","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...in motion","canonicalPhrase":"put...in motion","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...in order","canonicalPhrase":"put...in order","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...in prison","canonicalPhrase":"put...in prison","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...into circulation","canonicalPhrase":"put...into circulation","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...into effect","canonicalPhrase":"put...into effect","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...into operation","canonicalPhrase":"put...into operation","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...into practice","canonicalPhrase":"put...into practice","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:put...down to","canonicalPhrase":"put...down to","meaningZh":"把……归因于……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...in action","canonicalPhrase":"put...in action","meaningZh":"使……开始实施；启动……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...in force","canonicalPhrase":"put...in force","meaningZh":"使……生效；实施……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...in motion","canonicalPhrase":"put...in motion","meaningZh":"启动……；使……运转","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...in order","canonicalPhrase":"put...in order","meaningZh":"整理……；使……井然有序","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...in prison","canonicalPhrase":"put...in prison","meaningZh":"把……投入监狱","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...into circulation","canonicalPhrase":"put...into circulation","meaningZh":"使……流通","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...into effect","canonicalPhrase":"put...into effect","meaningZh":"实施……；使……生效","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...into operation","canonicalPhrase":"put...into operation","meaningZh":"使……投入运行","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...into practice","canonicalPhrase":"put...into practice","meaningZh":"将……付诸实践","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:put...into...","canonicalPhrase":"put...into...","meaningZh":"放进","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:put...on the stage","canonicalPhrase":"put...on the stage","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...to death","canonicalPhrase":"put...to death","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:put...to use","canonicalPhrase":"put...to use","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:put...on the stage","canonicalPhrase":"put...on the stage","meaningZh":"把……搬上舞台","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...to death","canonicalPhrase":"put...to death","meaningZh":"处死……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:put...to use","canonicalPhrase":"put...to use","meaningZh":"使用……；利用……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:puzzle out","canonicalPhrase":"puzzle out","meaningZh":"想出；弄明白；解开谜题","usageNoteZh":"表示经过思考弄清楚问题或找出答案。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:puzzle over","canonicalPhrase":"puzzle over","meaningZh":"苦苦思考；反复琢磨","usageNoteZh":"表示长时间思考难题或不理解的事情。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:puzzle sth. out","canonicalPhrase":"puzzle sth. out","meaningZh":"拼出一些东西","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -6172,9 +6157,7 @@
 {"id":"2ndla:rake up","canonicalPhrase":"rake up","meaningZh":"耙集；重新提起；搜集","usageNoteZh":"可指用耙聚拢物品，也可指重新提起不愉快的话题或搜集信息。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:rally round","canonicalPhrase":"rally round","meaningZh":"团结支持；聚集在……周围","usageNoteZh":"表示人们团结起来支持某人、某团体或某项事业。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:range between","canonicalPhrase":"range between","meaningZh":"介于……之间；范围在……之间","usageNoteZh":"表示数值、程度或选择处于两个界限之间。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:range from to","canonicalPhrase":"range from to","meaningZh":"","usageNoteZh":"缺少两个范围端点，属于不完整的语法模板。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:range from...to","canonicalPhrase":"range from...to","meaningZh":"","usageNoteZh":"含省略号且缺少具体范围端点，无法作为完整词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:range from...to...","canonicalPhrase":"range from...to...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体范围端点，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:range from...to...","canonicalPhrase":"range from...to...","meaningZh":"范围从……到……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:range over","canonicalPhrase":"range over","meaningZh":"涉及；包括；在……范围内变化","usageNoteZh":"可表示覆盖一系列主题，也可表示数值在某范围内变动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:rank among","canonicalPhrase":"rank among","meaningZh":"名列……之中；属于……一类","usageNoteZh":"表示在某群体或类别中处于特定地位。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:rank sb. as","canonicalPhrase":"rank sb. as","meaningZh":"将某人排名为","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -6225,7 +6208,7 @@
 {"id":"2ndla:reckon upon","canonicalPhrase":"reckon upon","meaningZh":"指望；预计；依靠","usageNoteZh":"正式表达，表示把某人某事视为可能发生或可以依赖。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:reckon with","canonicalPhrase":"reckon with","meaningZh":"考虑到；面对；应付","usageNoteZh":"可表示把某因素纳入考虑，也可表示面对并处理困难对象。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:reckon...as","canonicalPhrase":"reckon...as","meaningZh":"认为……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:reckon...to be","canonicalPhrase":"reckon...to be","meaningZh":"","usageNoteZh":"含省略号模板，缺少评价对象和具体内容，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:reckon...to be","canonicalPhrase":"reckon...to be","meaningZh":"认为……是……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:recognize as","canonicalPhrase":"recognize as","meaningZh":"承认是；认可为","usageNoteZh":"表示承认某人或某物属于某种身份、类别或具有某种品质。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:recognize...as...","canonicalPhrase":"recognize...as...","meaningZh":"识别...为...","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:recommend doing","canonicalPhrase":"recommend doing","meaningZh":"建议做……","usageNoteZh":"表示建议采取某项行动。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -6248,8 +6231,8 @@
 {"id":"2ndla:refer to as","canonicalPhrase":"refer to as","meaningZh":"称……为；把……称作","usageNoteZh":"表示用某个名称或称谓指代某人或某物。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:refer to sb. as","canonicalPhrase":"refer to sb. as","meaningZh":"将某人称为","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:refer to sth. as","canonicalPhrase":"refer to sth. as","meaningZh":"称呼某事为","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:refer to...as","canonicalPhrase":"refer to...as","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体名称和对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:refer to...as...","canonicalPhrase":"refer to...as...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象和称谓，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:refer to...as","canonicalPhrase":"refer to...as","meaningZh":"把……称为……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:refer to...as...","canonicalPhrase":"refer to...as...","meaningZh":"把……称为……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:refer...to...","canonicalPhrase":"refer...to...","meaningZh":"参考 ,查问,提交, 涉及 ,移送","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:reflect on","canonicalPhrase":"reflect on","meaningZh":"思考；反思；反映","usageNoteZh":"可表示认真思考某事，也可表示某事反映出某种特征。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:reflect on sth.","canonicalPhrase":"reflect on sth.","meaningZh":"反思一些事情","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -6623,8 +6606,8 @@
 {"id":"2ndla:set the pace","canonicalPhrase":"set the pace","meaningZh":"定步调；领先；确定速度","usageNoteZh":"表示确定行动或竞争的速度和标准。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:set the world on fire","canonicalPhrase":"set the world on fire","meaningZh":"取得巨大成功；轰动世界","usageNoteZh":"习语，表示做出极其出色或引人注目的成绩。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:set up","canonicalPhrase":"set up","meaningZh":"建立；安排；安装；陷害","usageNoteZh":"含义很多，可表示建立组织、安排活动、安装设备或设计陷阱。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:set...in motion","canonicalPhrase":"set...in motion","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:set...on fire","canonicalPhrase":"set...on fire","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:set...in motion","canonicalPhrase":"set...in motion","meaningZh":"启动……；使……运转","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:set...on fire","canonicalPhrase":"set...on fire","meaningZh":"点燃……；使……着火","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:setbacks","canonicalPhrase":"setbacks","meaningZh":"挫折","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:settle down","canonicalPhrase":"settle down","meaningZh":"安定下来；安静下来；定居","usageNoteZh":"可表示停止喧闹、稳定生活或在某处定居。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:settle for","canonicalPhrase":"settle for","meaningZh":"勉强接受；满足于","usageNoteZh":"表示没有得到理想选择而接受较差的替代方案。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -6818,14 +6801,14 @@
 {"id":"2ndla:so as to","canonicalPhrase":"so as to","meaningZh":"以便；为了","usageNoteZh":"引出目的，后接动词原形。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:so far","canonicalPhrase":"so far","meaningZh":"到目前为止；迄今；如此远","usageNoteZh":"常用于说明截至现在的进展或结果。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:so far as","canonicalPhrase":"so far as","meaningZh":"就……而言；在……范围内","usageNoteZh":"用于限定讨论范围或表达程度。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:so far as...be concerned","canonicalPhrase":"so far as...be concerned","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体主题，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:so far as...is concerned","canonicalPhrase":"so far as...is concerned","meaningZh":"就……而言","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:so long","canonicalPhrase":"so long","meaningZh":"再见；这么久","usageNoteZh":"可作为告别语，也可表示持续很长时间。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:so long as","canonicalPhrase":"so long as","meaningZh":"只要；只要……就……","usageNoteZh":"引出条件，表示只要条件满足，后面的事情就成立。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:so much as that","canonicalPhrase":"so much as that","meaningZh":"","usageNoteZh":"搭配结构不完整且缺少上下文，无法确定稳定语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:so so","canonicalPhrase":"so so","meaningZh":"马马虎虎；一般般","usageNoteZh":"表示质量或感受普通，不好也不坏。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:so that","canonicalPhrase":"so that","meaningZh":"以便；因此；所以","usageNoteZh":"可引出目的，也可连接原因和结果。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:so to speak","canonicalPhrase":"so to speak","meaningZh":"可以说；打个比方说","usageNoteZh":"用于表示接下来的说法是比喻或不完全字面意义。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:so...as to","canonicalPhrase":"so...as to","meaningZh":"","usageNoteZh":"含省略号语法模板，缺少具体形容词和动作，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:so...as to","canonicalPhrase":"so...as to","meaningZh":"如此……以至于……；以便……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:so...that","canonicalPhrase":"so...that","meaningZh":"以便","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:so...that...","canonicalPhrase":"so...that...","meaningZh":"以便","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:soak up","canonicalPhrase":"soak up","meaningZh":"吸收；吸取；充分体验","usageNoteZh":"可表示吸收液体、知识或阳光，也可表示尽情享受环境。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -7352,18 +7335,17 @@
 {"id":"2ndla:take with","canonicalPhrase":"take with","meaningZh":"随身带着；与……一起带走","usageNoteZh":"表示带某物同行或把某物与另一物一起拿走。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:take your time","canonicalPhrase":"take your time","meaningZh":"慢慢来；别着急","usageNoteZh":"用于劝人按自己的速度完成事情。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:take...as","canonicalPhrase":"take...as","meaningZh":"take... as","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:take...by surprise","canonicalPhrase":"take...by surprise","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:take...by surprise","canonicalPhrase":"take...by surprise","meaningZh":"使……猝不及防；突袭……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:take...for","canonicalPhrase":"take...for","meaningZh":"take... for","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:take...for a walk","canonicalPhrase":"take...for a walk","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...for example","canonicalPhrase":"take...for example","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体例子对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...for granted","canonicalPhrase":"take...for granted","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...into account","canonicalPhrase":"take...into account","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...into consider","canonicalPhrase":"take...into consider","meaningZh":"","usageNoteZh":"含省略号且 consider 形式不完整，无法作为稳定固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...into consideration","canonicalPhrase":"take...into consideration","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...on oneself","canonicalPhrase":"take...on oneself","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:take...to heart","canonicalPhrase":"take...to heart","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:take...for a walk","canonicalPhrase":"take...for a walk","meaningZh":"带……散步","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:take...for example","canonicalPhrase":"take...for example","meaningZh":"以……为例","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:take...for granted","canonicalPhrase":"take...for granted","meaningZh":"想当然地认为……；把……视为理所当然","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:take...into account","canonicalPhrase":"take...into account","meaningZh":"考虑……；把……计入","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:take...into consideration","canonicalPhrase":"take...into consideration","meaningZh":"考虑……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:take...on oneself","canonicalPhrase":"take...on oneself","meaningZh":"承担……；把……担在自己身上","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:take...to heart","canonicalPhrase":"take...to heart","meaningZh":"把……放在心上","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:take...to...","canonicalPhrase":"take...to...","meaningZh":"带…去…","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:take...upon oneself","canonicalPhrase":"take...upon oneself","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:take...upon oneself","canonicalPhrase":"take...upon oneself","meaningZh":"承担……；主动负责……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:taking into account","canonicalPhrase":"taking into account","meaningZh":"考虑到；把……纳入考虑","usageNoteZh":"表示在判断或决定时考虑某个因素。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:talk about","canonicalPhrase":"talk about","meaningZh":"谈论；讨论","usageNoteZh":"表示谈及某人、某事或某个主题。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:talk back","canonicalPhrase":"talk back","meaningZh":"顶嘴；回嘴","usageNoteZh":"表示以无礼或反抗的方式回答。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -7444,7 +7426,7 @@
 {"id":"2ndla:the expense of","canonicalPhrase":"the expense of","meaningZh":"以……为代价；牺牲……","usageNoteZh":"表示获得某种利益所付出的费用或代价。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the exploited class","canonicalPhrase":"the exploited class","meaningZh":"被剥削阶级","usageNoteZh":"指在经济或社会关系中受到剥削的社会阶层。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the exploiting class","canonicalPhrase":"the exploiting class","meaningZh":"剥削阶级","usageNoteZh":"指在经济或社会关系中利用他人劳动获利的阶级。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:the former...the latter...","canonicalPhrase":"the former...the latter...","meaningZh":"","usageNoteZh":"含省略号的成对指代模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:the former...the latter...","canonicalPhrase":"the former...the latter...","meaningZh":"前者……后者……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:the function of","canonicalPhrase":"the function of","meaningZh":"……的功能；……的作用","usageNoteZh":"表示某人某物所承担的用途或作用。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the glass ceiling","canonicalPhrase":"the glass ceiling","meaningZh":"玻璃天花板；无形的晋升障碍","usageNoteZh":"指阻碍女性或少数群体晋升到高层的隐性制度障碍。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the great bulk of people","canonicalPhrase":"the great bulk of people","meaningZh":"绝大多数人；大部分人","usageNoteZh":"表示人群中占绝大多数的部分。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -7461,18 +7443,17 @@
 {"id":"2ndla:the mass of","canonicalPhrase":"the mass of","meaningZh":"大量的；大批的；……的主体","usageNoteZh":"可表示数量很大的群体，也可指某整体的主体部分。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the moment","canonicalPhrase":"the moment","meaningZh":"一……就……；那一刻","usageNoteZh":"可指特定时刻，也可作连词表示某事一发生就……。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the moment that","canonicalPhrase":"the moment that","meaningZh":"一……就……；在……的那一刻","usageNoteZh":"引出与另一事件同时或紧接发生的动作。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:the more the more","canonicalPhrase":"the more the more","meaningZh":"","usageNoteZh":"比较结构不完整，通常需要 the more..., the more... 的具体成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:the more...the more","canonicalPhrase":"the more...the more","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体内容，无法作为完整词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:the more...the more...","canonicalPhrase":"the more...the more...","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体内容，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:the more...the more","canonicalPhrase":"the more...the more","meaningZh":"越……越……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:the more...the more...","canonicalPhrase":"the more...the more...","meaningZh":"越……越……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:the other day","canonicalPhrase":"the other day","meaningZh":"前几天；不久前","usageNoteZh":"指过去不久的某一天。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the presence of","canonicalPhrase":"the presence of","meaningZh":"……的存在；……的出席","usageNoteZh":"表示某人某物存在于某处或出席某场合。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:the radio of...to","canonicalPhrase":"the radio of...to","meaningZh":"","usageNoteZh":"含省略号且比例结构不完整，缺少具体对象和数值。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:the rank and file","canonicalPhrase":"the rank and file","meaningZh":"普通成员；基层人员","usageNoteZh":"指组织中非领导、非管理层的普通成员。","translationStatus":"GENERATED","confidence":"HIGH"}
+{"id":"2ndla:the ratio of...to...","canonicalPhrase":"the ratio of...to...","meaningZh":"……与……的比例","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:the reach of","canonicalPhrase":"the reach of","meaningZh":"……的影响范围；……所能达到的范围","usageNoteZh":"表示某人的能力、影响或某物的作用范围。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the risk of","canonicalPhrase":"the risk of","meaningZh":"……的风险","usageNoteZh":"表示某事发生并造成不良结果的可能性。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the sake of","canonicalPhrase":"the sake of","meaningZh":"","usageNoteZh":"通常固定表达为 for the sake of，当前候选缺少介词，结构不完整。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:the same as","canonicalPhrase":"the same as","meaningZh":"与……相同","usageNoteZh":"表示两个对象在性质、身份或程度上相同。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:the same...as","canonicalPhrase":"the same...as","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体对象，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:the same...as","canonicalPhrase":"the same...as","meaningZh":"与……相同；和……一样","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:the side of","canonicalPhrase":"the side of","meaningZh":"……的一边；……一方","usageNoteZh":"表示位置上的一侧或争论中的某一方，具体含义依上下文而定。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:the sight of","canonicalPhrase":"the sight of","meaningZh":"看到……；……的景象","usageNoteZh":"表示看到某人某物，或指某个视觉场景。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:the talent-market","canonicalPhrase":"the talent-market","meaningZh":"人才市场","usageNoteZh":"指人才供求、招聘和流动形成的市场。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -7497,8 +7478,8 @@
 {"id":"2ndla:think nothing of it","canonicalPhrase":"think nothing of it","meaningZh":"别在意；不用谢","usageNoteZh":"用于表示某事不重要，也可作为对感谢的礼貌回应。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:think of","canonicalPhrase":"think of","meaningZh":"想起；考虑；认为","usageNoteZh":"可表示想到某人某事、考虑方案或对某事作出看法。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:think of as","canonicalPhrase":"think of as","meaningZh":"把……看作；认为是","usageNoteZh":"表示把某人或某物视为某种身份或性质。","translationStatus":"GENERATED","confidence":"MEDIUM"}
-{"id":"2ndla:think of...as","canonicalPhrase":"think of...as","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象和类别，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:think of...as...","canonicalPhrase":"think of...as...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体对象和类别，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:think of...as","canonicalPhrase":"think of...as","meaningZh":"把……看作……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:think of...as...","canonicalPhrase":"think of...as...","meaningZh":"把……看作……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:think out","canonicalPhrase":"think out","meaningZh":"仔细想出；全面考虑","usageNoteZh":"表示经过充分思考制定方案或找到解决办法。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:think out loud","canonicalPhrase":"think out loud","meaningZh":"自言自语地思考；把思路说出来","usageNoteZh":"表示把正在思考的内容直接说出声。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:think out of the box","canonicalPhrase":"think out of the box","meaningZh":"打破常规地思考；创新思考","usageNoteZh":"习语，表示不受传统方式限制地寻找新想法。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -7673,7 +7654,7 @@
 {"id":"2ndla:transform one's lives","canonicalPhrase":"transform one's lives","meaningZh":"改变某人的生活","usageNoteZh":"表示带来根本性、积极或深刻的生活变化；one's 为可替换的所有格形式。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:transform...into...","canonicalPhrase":"transform...into...","meaningZh":"化出","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:transition from","canonicalPhrase":"transition from","meaningZh":"从……过渡到；由……转变","usageNoteZh":"表示从一种状态、阶段或制度转向另一种。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:transition from...to","canonicalPhrase":"transition from...to","meaningZh":"","usageNoteZh":"含省略号的过渡结构模板，缺少起点和终点，无法作为完整词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:transition from...to","canonicalPhrase":"transition from...to","meaningZh":"从……过渡到……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:transition to","canonicalPhrase":"transition to","meaningZh":"过渡到；转变为","usageNoteZh":"表示进入新的状态、阶段或制度。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:translate into","canonicalPhrase":"translate into","meaningZh":"翻译成；转化为；导致","usageNoteZh":"可表示转换语言，也可表示转化为另一形式或结果。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:translate...into...","canonicalPhrase":"translate...into...","meaningZh":"翻译成","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
@@ -7859,8 +7840,7 @@
 {"id":"2ndla:vanish into the void","canonicalPhrase":"vanish into the void","meaningZh":"消失在虚空中；无影无踪","usageNoteZh":"可按字面或比喻表示完全消失、无从追寻。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:vanish like a bubble","canonicalPhrase":"vanish like a bubble","meaningZh":"像泡沫一样消失；转瞬即逝","usageNoteZh":"比喻某事物迅速而彻底地消失。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:vary from","canonicalPhrase":"vary from","meaningZh":"从……变化；与……不同","usageNoteZh":"表示数量、形式或情况在不同对象之间有所变化。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:vary from to","canonicalPhrase":"vary from to","meaningZh":"","usageNoteZh":"缺少两个变化端点，属于不完整的语法模板。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:vary from...to...","canonicalPhrase":"vary from...to...","meaningZh":"","usageNoteZh":"含省略号的范围模板，缺少具体端点，无法作为完整词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:vary from...to...","canonicalPhrase":"vary from...to...","meaningZh":"从……到……不等；因……而异","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:vent one's anger on sb.","canonicalPhrase":"vent one's anger on sb.","meaningZh":"向某人发泄愤怒","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:verge on","canonicalPhrase":"verge on","meaningZh":"接近；濒临；近乎","usageNoteZh":"表示处于某种状态的边缘或几乎达到某程度。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:versatile people","canonicalPhrase":"versatile people","meaningZh":"多才多艺的人；适应力强的人","usageNoteZh":"指能胜任多种工作或具有多方面才能的人。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -7972,7 +7952,7 @@
 {"id":"2ndla:when it comes to","canonicalPhrase":"when it comes to","meaningZh":"当谈到；就……而言","usageNoteZh":"用于引出讨论的具体主题或方面。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:whether or","canonicalPhrase":"whether or","meaningZh":"","usageNoteZh":"选择结构不完整，通常需要 whether...or... 的两个对应成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
 {"id":"2ndla:whether or not","canonicalPhrase":"whether or not","meaningZh":"是否；不论是否","usageNoteZh":"表示两种可能性，也可表示无论条件是否成立。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:whether...or not","canonicalPhrase":"whether...or not","meaningZh":"","usageNoteZh":"含省略号的选择结构模板，缺少具体内容，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:whether...or not","canonicalPhrase":"whether...or not","meaningZh":"是否……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:whether...or...","canonicalPhrase":"whether...or...","meaningZh":"无论是……还是……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:while away","canonicalPhrase":"while away","meaningZh":"消磨（时间）","usageNoteZh":"表示以某种活动打发时间。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:whip up","canonicalPhrase":"whip up","meaningZh":"迅速制作；煽动；搅打","usageNoteZh":"可表示快速准备食物或计划，也可表示煽动情绪。","translationStatus":"GENERATED","confidence":"HIGH"}
@@ -8121,14 +8101,11 @@
 {"id":"2ndla:would love to do","canonicalPhrase":"would love to do","meaningZh":"非常想做……；很愿意做……","usageNoteZh":"表示强烈希望采取某项行动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:would love to do sth.","canonicalPhrase":"would love to do sth.","meaningZh":"很想做点什么","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:would rather","canonicalPhrase":"would rather","meaningZh":"宁愿；更愿意","usageNoteZh":"用于表达在不同选择中更偏好其中一个。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:would rather than","canonicalPhrase":"would rather than","meaningZh":"","usageNoteZh":"比较结构不完整，通常需要 would rather...than... 的对应成分。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:would rather...","canonicalPhrase":"would rather...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体选择内容，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:would rather...than","canonicalPhrase":"would rather...than","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体动作，无法作为完整词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:would rather...than...","canonicalPhrase":"would rather...than...","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体内容，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:would rather...","canonicalPhrase":"would rather...","meaningZh":"宁愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:would rather...than...","canonicalPhrase":"would rather...than...","meaningZh":"宁愿……而不愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:would sooner","canonicalPhrase":"would sooner","meaningZh":"宁愿；更愿意","usageNoteZh":"表示在不同选择中更偏好其中一个。","translationStatus":"GENERATED","confidence":"HIGH"}
-{"id":"2ndla:would sooner...","canonicalPhrase":"would sooner...","meaningZh":"","usageNoteZh":"含省略号模板，缺少具体选择内容，无法作为完整固定词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:would sooner...than","canonicalPhrase":"would sooner...than","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体动作，无法作为完整词条。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
-{"id":"2ndla:would...rather than...","canonicalPhrase":"would...rather than...","meaningZh":"","usageNoteZh":"含省略号的比较结构模板，缺少具体选择内容，无法确定完整语义。","translationStatus":"REVIEW_REQUIRED","confidence":"LOW"}
+{"id":"2ndla:would sooner...","canonicalPhrase":"would sooner...","meaningZh":"宁愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
+{"id":"2ndla:would sooner...than...","canonicalPhrase":"would sooner...than...","meaningZh":"宁愿……而不愿……","usageNoteZh":"","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:wound up","canonicalPhrase":"wound up","meaningZh":"最终处于；紧张不安的；上紧发条的","usageNoteZh":"可表示最终处于某状态，也可表示精神紧张或机械装置已上发条。","translationStatus":"GENERATED","confidence":"MEDIUM"}
 {"id":"2ndla:wrap up","canonicalPhrase":"wrap up","meaningZh":"总结；完成；包裹；结束","usageNoteZh":"可表示总结讨论、完成工作、包起来或结束活动。","translationStatus":"GENERATED","confidence":"HIGH"}
 {"id":"2ndla:write away","canonicalPhrase":"write away","meaningZh":"不停地写；写信寄出","usageNoteZh":"可表示持续写作，也可表示写信并寄出。","translationStatus":"GENERATED","confidence":"MEDIUM"}

@@ -547,6 +547,13 @@
   },
   {
     "list": "cet6",
+    "line": 648,
+    "value": "carve…out from",
+    "reason": "Unstable construction; the standard patterns use carve out ... of/from a source with a completed object.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "cet6",
     "line": 671,
     "value": "catch the drift of an argument"
   },
@@ -1740,6 +1747,13 @@
   },
   {
     "list": "npee",
+    "line": 432,
+    "value": "bear…a spite",
+    "reason": "Incomplete or obscure construction with no reliable intended meaning.",
+    "reviewAction": "EXCLUDE"
+  },
+  {
+    "list": "npee",
     "line": 551,
     "value": "by occasion of",
     "reason": "Uncertain correction: on the occasion of or another expression.",
@@ -1761,6 +1775,13 @@
     "list": "npee",
     "line": 849,
     "value": "elbow sb. out of the way"
+  },
+  {
+    "list": "npee",
+    "line": 1040,
+    "value": "get…by heart",
+    "reason": "Unstable construction; the standard expressions are know or learn by heart.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "npee",
@@ -1859,6 +1880,13 @@
     "list": "npee",
     "line": 1868,
     "value": "on the spur of the moment"
+  },
+  {
+    "list": "npee",
+    "line": 1925,
+    "value": "owe…a spite",
+    "reason": "Malformed or obscure construction with no reliable intended meaning.",
+    "reviewAction": "EXCLUDE"
   },
   {
     "list": "npee",

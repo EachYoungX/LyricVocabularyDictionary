@@ -41,8 +41,8 @@
     "toefl": 158,
     "npee": 2731
   },
-  "uniqueEntries": 8149,
-  "rejectedEntries": 332,
+  "uniqueEntries": 8126,
+  "rejectedEntries": 336,
   "normalization": {
     "case": "casefold",
     "whitespace": "collapse",
