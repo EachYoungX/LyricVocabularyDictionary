@@ -49,7 +49,8 @@ The ten lists contain 17,216 non-filtered source lines. The local pipeline:
   status fields.
 
 This produces 8,275 retained candidates and 218 rejected lines. The rejected
-lines are 191 overlong phrases and 27 unsupported punctuation/shape cases.
+lines are 191 overlong phrases and 27 non-phrase/shape cases: five contain
+unsupported commas and 22 are single-token words or compounds.
 Re-running
 `processing/scripts/prepare_2ndla.py` against `sources/2ndla/raw` reproduces
 the checked-in `entries.jsonl`, `rejected.json` and manifest byte-for-byte.
