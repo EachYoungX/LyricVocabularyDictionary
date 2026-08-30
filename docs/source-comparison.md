@@ -60,8 +60,8 @@ The decisions are recorded in
 Re-running
 `processing/scripts/prepare_2ndla.py --review-file sources/2ndla/review-decisions.json`
 against `sources/2ndla/raw` reproduces the checked-in `entries.jsonl`,
-`rejected.json` and manifest byte-for-byte. The review passes have processed
-The old 435-row review backlog is fully resolved. In the final pass, 44 of the
+`rejected.json` and manifest byte-for-byte. The old 435-row review backlog is
+fully resolved. In the final pass, 44 of the
 133 incomplete-structure rows were corrected or completed and 89 were
 explicitly excluded. The normalized entries and full translation output now
 contain 8,013 rows, all with `GENERATED` translation status; no
