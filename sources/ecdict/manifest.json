@@ -1,0 +1,20 @@
+{
+  "source": "skywind3000/ECDICT",
+  "sourceRepository": "https://github.com/skywind3000/ECDICT",
+  "sourceCommit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
+  "license": "MIT",
+  "licenseFile": "LICENSE",
+  "rawArtifact": {
+    "path": "raw/stardict.7z",
+    "bytes": 51577449,
+    "sha256": "f370a0ecb58ada758d9dfe739db1667fd4ed87ed3055a4a7cb6c7054ecdf83d6",
+    "contains": "stardict.csv"
+  },
+  "localArtifact": {
+    "path": "ecdict.sqlite",
+    "bytes": 411713536,
+    "sha256": "1ed98ab65528ecd8899843682934767774be10dea9e6227887f5efd82952182b",
+    "table": "dictionary",
+    "rows": 3402222
+  }
+}

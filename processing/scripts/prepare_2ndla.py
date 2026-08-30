@@ -8,6 +8,7 @@ translation inferred from ECDICT and no automatically generated word pairs.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import urllib.request
@@ -54,17 +55,22 @@ def normalize_phrase(line: str) -> str | None:
     return phrase.casefold().replace("’", "'")
 
 
-def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[dict]]:
+def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[dict], dict[str, str]]:
     memberships: defaultdict[str, set[str]] = defaultdict(set)
     source_forms: defaultdict[str, set[str]] = defaultdict(set)
     raw_counts: Counter = Counter()
+    raw_hashes: dict[str, str] = {}
     rejected: list[dict] = []
 
     for list_name in LISTS:
         if source_dir is None:
             content = fetch(f"{RAW_BASE_URL}/{list_name}.txt")
+            raw_hashes[list_name] = hashlib.sha256(content.encode("utf-8")).hexdigest()
         else:
-            content = (source_dir / f"{list_name}.txt").read_text(encoding="utf-8-sig")
+            source_path = source_dir / f"{list_name}.txt"
+            raw_bytes = source_path.read_bytes()
+            raw_hashes[list_name] = hashlib.sha256(raw_bytes).hexdigest()
+            content = raw_bytes.decode("utf-8-sig")
         lines = content.splitlines()
         raw_counts[list_name] = len(lines)
         for line_number, line in enumerate(lines, start=1):
@@ -94,7 +100,7 @@ def build_entries(source_dir: Path | None) -> tuple[list[dict], Counter, list[di
                 "meaningZh": None,
             }
         )
-    return entries, raw_counts, rejected
+    return entries, raw_counts, rejected, raw_hashes
 
 
 def write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -135,7 +141,7 @@ def main() -> None:
     parser.add_argument("--exclude-file", type=Path)
     args = parser.parse_args()
 
-    entries, raw_counts, rejected = build_entries(args.source_dir)
+    entries, raw_counts, rejected, raw_hashes = build_entries(args.source_dir)
     write_jsonl(args.output_dir / "entries.jsonl", entries)
     excluded_ids = read_ids(args.exclude_file)
     pilot_entries = [entry for entry in entries if entry["id"] not in excluded_ids]
@@ -153,7 +159,12 @@ def main() -> None:
                 "sourceRepository": "https://github.com/2ndLA/english-phrases",
                 "sourceCommit": args.source_commit,
                 "license": "CC BY-SA 4.0",
+                "licenseFile": "LICENSE",
                 "lists": list(LISTS),
+                "rawDirectory": "raw",
+                "rawFiles": {
+                    f"raw/{name}.txt": raw_hashes[name] for name in LISTS
+                },
                 "rawLineCounts": raw_counts,
                 "uniqueEntries": len(entries),
                 "rejectedEntries": len(rejected),

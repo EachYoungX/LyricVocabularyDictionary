@@ -6,8 +6,8 @@
 
 ```text
 sources/
-  ecdict/       # ECDICT 原始 SQLite 或导入快照
-  2ndla/        # 2ndLA 原始及初步整理数据
+  ecdict/       # ECDICT 原始压缩包、许可证和导入快照
+  2ndla/        # 2ndLA 原始列表、许可证及初步整理数据
 processing/
   scripts/      # 抓取、整理、校验脚本
   prompts/      # 翻译任务提示词
@@ -16,6 +16,8 @@ translations/
 release/
   *.sqlite      # 发布给 LyricVocabularyBuilder 的 SQLite
   manifest.json # 版本、来源、schema 和校验信息
+docs/
+  source-comparison.md # 上游原始数据与本地整理差异
 ```
 
 ## 数据边界

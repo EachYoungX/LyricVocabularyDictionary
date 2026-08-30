@@ -3,6 +3,7 @@
   "sourceRepository": "https://github.com/2ndLA/english-phrases",
   "sourceCommit": "4362d151decd8fd92e511bdd2cda31efbe63c8eb",
   "license": "CC BY-SA 4.0",
+  "licenseFile": "LICENSE",
   "lists": [
     "junior",
     "senior",
@@ -15,6 +16,19 @@
     "toefl",
     "npee"
   ],
+  "rawDirectory": "raw",
+  "rawFiles": {
+    "raw/junior.txt": "71932b1ce599d256a31e11ffbb337f2ee422aaf3ba1ab65a2dccabd7c4c4502c",
+    "raw/senior.txt": "34a82c3558e22901094dc006be30b0b09fbd19b61d3e344f9adf2de28a9c1603",
+    "raw/cet4.txt": "ab0a3810757d7397b7302dca0852102f6afe82087b835938a6c8afc05381f935",
+    "raw/cet6.txt": "44cd8687d3beb18cee260677c849448007d7e46554a63694983e0b2e33eda7d1",
+    "raw/tem4.txt": "70f18d136630e820a0909ef66b9891eef58b98fc3d0e2cf1755e7644b5df6e47",
+    "raw/tem8.txt": "469e9147d54b4c040aa2df49df294beea7f00680a1c36ebe7feb5db0553e2208",
+    "raw/gre.txt": "9095d40921535dd88641077033eeed6b956a0236a4c0c02e14dfda86f63383a2",
+    "raw/ielts.txt": "f512a6320739e1cd1681efd75225e34184cb141604fb1c3763f5a53080763e18",
+    "raw/toefl.txt": "2924585af24e6ca3d01ba693891e4cbebc06c4d08f0750203d7ee9684c6b53e1",
+    "raw/npee.txt": "a7f2ce96524683f68ed423cdadef282534d930adf7a8dfa103a5add0f737d45e"
+  },
   "rawLineCounts": {
     "junior": 1310,
     "senior": 2808,

@@ -1,6 +1,7 @@
 # Large local source databases and generated release files are distributed outside normal Git history.
 sources/**/*.sqlite
 sources/**/*.db
+sources/ecdict/raw/*
 release/*.sqlite
 release/*.db
 __pycache__/
