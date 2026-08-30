@@ -1,0 +1,9 @@
+# Large local source databases and generated release files are distributed outside normal Git history.
+sources/**/*.sqlite
+sources/**/*.db
+release/*.sqlite
+release/*.db
+__pycache__/
+*.pyc
+.idea/
+.vscode/

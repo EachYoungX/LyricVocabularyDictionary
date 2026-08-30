@@ -1,0 +1,26 @@
+{
+  "releaseVersion": "0.1.0",
+  "schemaVersion": "1",
+  "generatedAt": "",
+  "artifact": "lyric-dictionary.sqlite",
+  "sha256": "",
+  "sources": [
+    {
+      "name": "ECDICT",
+      "role": "word_dictionary",
+      "license": "MIT",
+      "url": "https://github.com/skywind3000/ECDICT"
+    },
+    {
+      "name": "2ndLA/english-phrases",
+      "role": "phrase_dictionary",
+      "license": "",
+      "url": "https://github.com/2ndLA/english-phrases"
+    }
+  ],
+  "tables": {
+    "dictionary": 0,
+    "phrase_entry": 0,
+    "phrase_pattern_token": 0
+  }
+}

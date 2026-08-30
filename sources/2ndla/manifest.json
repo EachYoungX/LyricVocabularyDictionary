@@ -1,0 +1,43 @@
+{
+  "source": "2ndLA/english-phrases",
+  "sourceRepository": "https://github.com/2ndLA/english-phrases",
+  "sourceCommit": "4362d151decd8fd92e511bdd2cda31efbe63c8eb",
+  "license": "CC BY-SA 4.0",
+  "lists": [
+    "junior",
+    "senior",
+    "cet4",
+    "cet6",
+    "tem4",
+    "tem8",
+    "gre",
+    "ielts",
+    "toefl",
+    "npee"
+  ],
+  "rawLineCounts": {
+    "junior": 1310,
+    "senior": 2808,
+    "cet4": 2744,
+    "cet6": 3482,
+    "tem4": 1219,
+    "tem8": 2429,
+    "gre": 130,
+    "ielts": 205,
+    "toefl": 158,
+    "npee": 2731
+  },
+  "uniqueEntries": 7200,
+  "rejectedEntries": 1612,
+  "normalization": {
+    "case": "casefold",
+    "whitespace": "collapse",
+    "tokenCount": "2-5",
+    "excluded": [
+      "slash templates",
+      "sb./sth. placeholders",
+      "unsupported punctuation"
+    ]
+  },
+  "translationPolicy": "meaningZh is populated only by an explicit phrase translation step; ECDICT is not used to infer phrases."
+}
