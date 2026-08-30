@@ -33,7 +33,7 @@ The local snapshot uses `2ndLA/english-phrases` commit
 `4362d151decd8fd92e511bdd2cda31efbe63c8eb`. The ten original list files and
 CC BY-SA 4.0 license are stored under [`sources/2ndla`](../sources/2ndla/).
 
-The ten lists contain 25,216 non-filtered source lines. The local pipeline:
+The ten lists contain 17,216 non-filtered source lines. The local pipeline:
 
 - applies NFKC normalization, trimming and whitespace collapsing;
 - converts curly apostrophes to straight apostrophes and case-folds keys;
