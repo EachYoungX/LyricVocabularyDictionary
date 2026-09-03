@@ -1066,11 +1066,4 @@ lemma.rules.version
 
 ### 18.8 存储组织选择
 
-`word_entry` 的 `WITHOUT ROWID` 方案已经通过同一批 ECDICT 数据完成 A/B 验证：
-
-```text
-普通 rowid 版：       336,109,568 bytes，单词精确查询中位数约 21.91 ms
-WITHOUT ROWID 版：    241,405,952 bytes，单词精确查询中位数约 15.47 ms
-```
-
-因此正式发布库采用 `WITHOUT ROWID`。批量查询测试约为 4.04 ms 对 4.55 ms，差异较小；完整性检查均为 `ok`。构建脚本保留 `--word-without-rowid` 参数，以便重建和复核。
+`word_entry` 正式采用 `WITHOUT ROWID`。`word` 直接作为主键组织完整词条记录，避免整数 rowid 与独立 `UNIQUE(word)` 索引重复保存。后续构建脚本不再提供旧 rowid 方案，所有新发布库必须使用该结构。
