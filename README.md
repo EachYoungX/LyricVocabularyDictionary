@@ -13,6 +13,7 @@ processing/
   prompts/      # 翻译任务提示词
 translations/
   2ndla/        # 机器翻译、复核和待处理结果
+build/          # 构建报告和错误，不进入发布 SQLite
 release/
   *.sqlite      # 发布给 LyricVocabularyBuilder 的 SQLite
   manifest.json # 版本、来源、schema 和校验信息
@@ -32,8 +33,7 @@ docs/
 发布 SQLite 至少应包含：
 
 ```text
-dictionary_entry       # ECDICT 单词表，使用明确字段名
-dictionary             # 兼容主项目旧字段名的只读视图
+word_entry             # ECDICT 单词表，使用明确字段名
 phrase_entry           # 短语主表
 phrase_pattern_token   # 短语匹配 token
 phrase_anchor          # 短语检索锚点
@@ -49,7 +49,7 @@ python3 processing/scripts/build_sqlite.py \
   --ecdict-csv /path/to/extracted/stardict.csv
 ```
 
-默认生成 `release/lyric-dictionary.sqlite` 和 `release/manifest.json`。构建脚本会在短语无法编译时生成 `release/build_error.jsonl` 并终止，不会静默丢弃条目。
+默认生成 `release/lyric-dictionary.sqlite` 和 `release/manifest.json`。构建脚本会在短语无法编译时生成构建侧的 `build/build-errors.jsonl` 并终止，不会静默丢弃条目。正式 SQLite 不包含 `build_error` 表或 `dictionary` 兼容视图。
 
 `sources/ecdict/ecdict.sqlite` 作为本地源文件保留并被 Git 忽略；由于文件体积较大，正式共享应使用 Git LFS、Release 附件或对象存储，并在 manifest 中记录下载地址和校验值。
 

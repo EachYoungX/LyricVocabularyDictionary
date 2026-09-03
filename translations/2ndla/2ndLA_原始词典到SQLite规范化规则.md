@@ -83,15 +83,17 @@ ATTRIBUTION.txt
 
 ## 4. 数据保留原则
 
-每个短语必须至少保留三层信息：
+每个短语在构建阶段必须保留三层信息：
 
 ```text
-raw_pattern
+source_pattern
 canonical_pattern
-compiled_pattern
+phrase_pattern_token
 ```
 
-### 4.1 raw_pattern
+其中 `phrase_pattern_token` 是唯一的运行时可执行结构。`compiled_pattern` 不写入发布数据库，避免序列化结果和 token 表出现两份不一致的真相。
+
+### 4.1 source_pattern
 
 原始词典字符串，例如：
 
@@ -129,9 +131,9 @@ as <GAP> as
 - 数据验证；
 - 版本迁移。
 
-### 4.3 compiled_pattern
+### 4.3 phrase_pattern_token
 
-拆分成数据库 pattern token，例如：
+构建阶段将模板拆分为 `phrase_pattern_token`，例如：
 
 ```text
 LITERAL(add)
@@ -140,7 +142,7 @@ LITERAL(to)
 SLOT(OBJECT)
 ```
 
-运行时匹配只依赖 compiled pattern。
+运行时匹配只依赖 `phrase_pattern_token`。发布库不再保存 `compiled_pattern`。
 
 ---
 
@@ -168,7 +170,7 @@ add…to…
 
 都应识别为同类模板。
 
-但 `raw_pattern` 必须保留输入原文。
+但 `source_pattern` 必须保留输入原文。
 
 ---
 
@@ -475,17 +477,18 @@ of
 ```sql
 CREATE TABLE phrase_entry (
     id INTEGER PRIMARY KEY,
-    raw_pattern TEXT NOT NULL,
+    source_pattern TEXT NOT NULL,
     canonical_pattern TEXT NOT NULL,
     definition_en TEXT,
     definition_zh TEXT,
-    phrase_type TEXT,
+    usage_note_zh TEXT,
+    phrase_type TEXT NOT NULL,
     source TEXT NOT NULL,
-    source_entry_id TEXT,
+    source_entry_id TEXT UNIQUE NOT NULL,
+    source_metadata_json TEXT,
     token_count_min INTEGER NOT NULL,
     token_count_max INTEGER NOT NULL,
-    priority INTEGER DEFAULT 0,
-    is_active INTEGER NOT NULL DEFAULT 1
+    match_priority INTEGER NOT NULL DEFAULT 0
 );
 ```
 
@@ -554,7 +557,7 @@ be all eyes
 phrase_entry：
 
 ```text
-raw_pattern       = be all eyes
+source_pattern    = be all eyes
 canonical_pattern = be all eyes
 phrase_type       = IDIOM
 ```
@@ -743,7 +746,7 @@ max = 11
 
 每个 entry 写库前必须验证：
 
-- `canonical_pattern` 非空；
+- `source_pattern` 和 `canonical_pattern` 非空；
 - 至少有一个 `LITERAL`；
 - GAP/SLOT 不允许无界；
 - `min_tokens >= 0`；
@@ -751,16 +754,17 @@ max = 11
 - 至少存在一个可用 anchor；
 - `pattern_position` 连续；
 - `source_entry_id` 可追溯；
+- `source_metadata_json` 可解析，且保留来源列表和 URL；
 - 中文翻译关联成功或明确为空；
 - 不生成伪 lemma。
 
-无法编译的条目：
+无法编译的条目写入构建侧产物：
 
 ```text
-写入 build_error.jsonl
+build/build-errors.jsonl
 ```
 
-不要静默丢弃。
+构建失败时终止发布，不将 `build_error` 表写入正式 SQLite。
 
 ---
 
@@ -779,7 +783,7 @@ max = 11
 
 ## 16. 版本管理
 
-`phrases.db` 必须有独立版本。
+`lyric-dictionary.sqlite` 必须有独立版本。
 
 manifest 推荐：
 
@@ -851,7 +855,7 @@ phrase_anchor
 
 ## 18. ECDICT 词典字段命名与映射
 
-本节用于约束与 2ndLA 短语数据并存的 ECDICT 单词词典表。
+本节用于约束与 2ndLA 短语数据并存的 ECDICT 单词词典表。发布数据库保持一个 `lyric-dictionary.sqlite`，但单词表和短语表的职责分开。
 
 2ndLA 的 `phrase_entry` 保存短语模板和中文释义；ECDICT 保存单词级词典信息。两者可以在应用层关联，但不应因为共用 SQLite 而复用含义模糊的字段名。
 
@@ -886,7 +890,7 @@ exchange    → morphology
 ### 18.2 推荐 ECDICT 单词表
 
 ```sql
-CREATE TABLE dictionary_entry (
+CREATE TABLE word_entry (
     id              INTEGER PRIMARY KEY,
     word            TEXT COLLATE NOCASE NOT NULL UNIQUE,
     phonetic        TEXT,
@@ -905,17 +909,19 @@ CREATE TABLE dictionary_entry (
 建议索引：
 
 ```sql
-CREATE UNIQUE INDEX idx_dictionary_word
-ON dictionary_entry(word COLLATE NOCASE);
+CREATE UNIQUE INDEX idx_word_word
+ON word_entry(word COLLATE NOCASE);
 
-CREATE INDEX idx_dictionary_bnc
-ON dictionary_entry(bnc_rank);
+CREATE INDEX idx_word_bnc
+ON word_entry(bnc_rank)
+WHERE bnc_rank IS NOT NULL;
 
-CREATE INDEX idx_dictionary_coca
-ON dictionary_entry(coca_rank);
+CREATE INDEX idx_word_coca
+ON word_entry(coca_rank)
+WHERE coca_rank IS NOT NULL;
 ```
 
-如果当前没有按 BNC 或 COCA 排序、筛选的功能，可以暂不创建后两个索引，但字段应保留。
+如果当前没有按 BNC 或 COCA 排序、筛选的功能，可以不创建后两个索引，但字段应保留。
 
 ### 18.3 大小写与规范化
 
@@ -932,22 +938,129 @@ word TEXT COLLATE NOCASE UNIQUE
 2ndLA 短语表继续使用：
 
 ```text
-raw_pattern
+source_pattern
 canonical_pattern
-compiled_pattern
 definition_en
 definition_zh
 ```
 
-其中 `definition_zh` 表示短语或句型的中文释义；ECDICT 的 `translation_zh` 表示单词词条的中文翻译。两者名称不同是有意区分，避免把单词翻译和短语释义混为一谈。
+其中 `definition_zh` 表示短语或句型的中文释义；ECDICT 的 `translation_zh` 表示单词词条的中文翻译。两者名称不同是有意区分，避免把单词翻译和短语释义混为一谈。短语运行时结构只来自 `phrase_pattern_token`，不再保存 `compiled_pattern`。
 
 ECDICT 的推荐表与 2ndLA 的推荐表关系如下：
 
 ```text
-dictionary_entry       → 单词、词性、词频、词形关系
+word_entry             → 单词、词性、词频、词形关系
 phrase_entry           → 短语模板、占位符、省略号结构
 phrase_pattern_token   → 短语运行时匹配结构
 phrase_anchor          → 短语检索锚点
 ```
 
 ECDICT 原始定义可参考 [ECDICT README](https://github.com/skywind3000/ECDICT/blob/master/README.md)，原始 SQLite 实现可参考 [ECDICT stardict.py](https://github.com/skywind3000/ECDICT/blob/master/stardict.py)。
+
+### 18.5 发布数据库收口规则
+
+正式发布库只保留以下五个实体：
+
+```text
+word_entry
+phrase_entry
+phrase_pattern_token
+phrase_anchor
+dictionary_meta
+```
+
+`phrase_entry` 的最终运行时字段为：
+
+```text
+id
+source_pattern
+canonical_pattern
+definition_en
+definition_zh
+usage_note_zh
+phrase_type
+source
+source_entry_id
+source_metadata_json
+token_count_min
+token_count_max
+match_priority
+```
+
+其中：
+
+- `compiled_pattern` 不进入发布库，`phrase_pattern_token` 是唯一的可执行匹配结构；
+- `translation_status`、`confidence` 属于构建 QA 信息，移入构建报告；
+- `is_active` 不进入版本化只读数据库，发布时只写入有效条目；
+- `phrase_entry.license` 不重复保存，来源许可证写入 `dictionary_meta`；
+- `source_forms_json`、`source_lists_json`、`source_urls_json` 合并为 `source_metadata_json`；
+- `priority` 改名为 `match_priority`，明确它只表示匹配优先级。
+
+`phrase_pattern_token` 必须增加以下唯一索引：
+
+```sql
+CREATE UNIQUE INDEX idx_phrase_pattern_position
+ON phrase_pattern_token(phrase_id, pattern_position);
+```
+
+检索索引使用组合字段：
+
+```sql
+CREATE INDEX idx_phrase_token_match
+ON phrase_pattern_token(match_type, match_value);
+
+CREATE INDEX idx_phrase_anchor_lookup
+ON phrase_anchor(anchor_type, anchor_value);
+```
+
+`phrase_anchor` 保留 `(phrase_id, anchor_position)` 作为主键，不限制一个短语只能有一个 anchor。这样可以支持未来为同一个模板保存多个候选锚点。
+
+### 18.6 发布库与构建产物边界
+
+发布库是干净的、只读的、可校验的运行时资源包。以下内容不写入正式 SQLite：
+
+```text
+build_error
+translation_status
+confidence
+构建日志
+```
+
+构建失败记录放在独立目录：
+
+```text
+build/
+├─ build-report.json
+├─ build-errors.jsonl
+└─ build-summary.json
+```
+
+构建成功后，数据库只包含可运行条目，不保留 `dictionary` 兼容视图。应用直接使用：
+
+```text
+word_entry
+phrase_entry
+```
+
+### 18.7 `dictionary_meta` 最低元数据
+
+`dictionary_meta` 继续使用 `key/value` 结构，至少记录：
+
+```text
+package.version
+schema.version
+build.time
+
+ecdict.commit
+ecdict.license
+ecdict.entry_count
+
+2ndla.commit
+2ndla.license
+2ndla.entry_count
+
+pattern.compiler.version
+lemma.rules.version
+```
+
+`pattern.compiler.version` 和 `lemma.rules.version` 用于确认词形处理、短语编译规则及数据库内容所对应的版本。

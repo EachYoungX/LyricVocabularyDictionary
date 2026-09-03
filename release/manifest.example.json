@@ -14,13 +14,12 @@
     {
       "name": "2ndLA/english-phrases",
       "role": "phrase_dictionary",
-      "license": "",
+      "license": "CC BY-SA 4.0",
       "url": "https://github.com/2ndLA/english-phrases"
     }
   ],
   "tables": {
-    "dictionary_entry": 0,
-    "dictionary": "compatibility_view",
+    "word_entry": 0,
     "phrase_entry": 0,
     "phrase_pattern_token": 0,
     "phrase_anchor": 0,
