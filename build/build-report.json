@@ -26,13 +26,13 @@
       "GENERIC": 138,
       "OBJECT": 2
     },
-    "fallback_generic_count": 0,
+    "fallback_generic_count": 138,
     "compilation_errors": 0
   },
   "ecdict_commit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
   "secondla_commit": "4362d151decd8fd92e511bdd2cda31efbe63c8eb",
   "schema_version": 1,
-  "pattern_compiler_version": "2",
+  "pattern_compiler_version": "3",
   "lemma_rules_version": "1",
   "word_storage": "WITHOUT ROWID"
 }

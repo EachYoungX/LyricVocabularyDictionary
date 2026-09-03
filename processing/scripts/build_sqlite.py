@@ -42,7 +42,7 @@ SLOT_RULES = {
 SUPPORTED_SLOT_HINTS = frozenset(SLOT_RULES)
 DEFAULT_LEMMA_LITERALS = frozenset({"be", "look", "give", "fall", "prevent"})
 FIXED_DOING_PATTERNS = frozenset({"up and doing"})
-PATTERN_COMPILER_VERSION = "2"
+PATTERN_COMPILER_VERSION = "3"
 LEMMA_RULES_VERSION = "1"
 
 
@@ -275,6 +275,33 @@ class PatternValidator:
             if item.get("pattern_position", expected) != expected:
                 raise ValueError("pattern_position is not continuous")
 
+    def validate_phrase(
+        self,
+        source_pattern: str,
+        source_entry_id: str,
+        canonical_pattern: str,
+        compiled: list[dict[str, object]],
+        anchors: list[tuple[str, str]],
+    ) -> None:
+        """Validate phrase-level fields that are outside token compilation."""
+        self.validate(compiled)
+        if not source_entry_id or not source_entry_id.strip():
+            raise ValueError("missing source_entry_id")
+        if not source_pattern or not source_pattern.strip():
+            raise ValueError("empty source_pattern")
+        if not canonical_pattern or not canonical_pattern.strip():
+            raise ValueError("empty canonical_pattern")
+        if not anchors:
+            raise ValueError("phrase has no anchor")
+        for anchor_position, anchor in enumerate(anchors):
+            if (
+                not isinstance(anchor, tuple)
+                or len(anchor) != 2
+                or not anchor[0]
+                or not anchor[1]
+            ):
+                raise ValueError(f"invalid anchor at position {anchor_position}")
+
 
 class PatternCompiler:
     """Compile one source phrase into canonical text and token records."""
@@ -486,6 +513,13 @@ def import_phrases(
             fallback_generic_count += compiler.fallback_generic_count
             phrase_type = classify_phrase(compiled, connection)
             anchors = make_anchors(compiled, connection)
+            compiler.validator.validate_phrase(
+                source_pattern,
+                entry_id,
+                canonical,
+                compiled,
+                anchors,
+            )
         except ValueError as error:
             errors.append({"source_entry_id": entry_id, "source_pattern": source_pattern, "error": str(error)})
             continue
@@ -545,7 +579,7 @@ def import_phrases(
         dict(confidence_counts),
         dict(token_type_counts),
         dict(slot_hint_counts),
-        compiler.fallback_generic_count,
+        fallback_generic_count,
     )
 
 

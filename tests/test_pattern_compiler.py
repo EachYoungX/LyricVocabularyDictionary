@@ -84,6 +84,16 @@ class PatternCompilerTests(unittest.TestCase):
                 {"token_type": "LITERAL", "match_value": "", "slot_hint": None, "min_tokens": 1, "max_tokens": 1},
             ])
 
+    def test_phrase_validator_requires_traceability_and_anchor(self):
+        validator = PatternValidator()
+        compiled = self.compile("on one's side")
+        with self.assertRaises(ValueError):
+            validator.validate_phrase("", "2ndla:1", "on <POSSESSIVE> side", compiled, [("NORMALIZED", "on")])
+        with self.assertRaises(ValueError):
+            validator.validate_phrase("on one's side", "2ndla:1", "on <POSSESSIVE> side", compiled, [])
+        with self.assertRaises(ValueError):
+            validator.validate_phrase("on one's side", "", "on <POSSESSIVE> side", compiled, [("NORMALIZED", "on")])
+
 
 if __name__ == "__main__":
     unittest.main()

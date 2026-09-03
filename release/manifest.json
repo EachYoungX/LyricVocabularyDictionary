@@ -1,11 +1,11 @@
 {
   "releaseVersion": "0.1.0",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T07:40:17.464221+00:00",
+  "generatedAt": "2026-09-03T09:33:13.505641+00:00",
   "artifact": "lyric-dictionary.sqlite",
-  "sha256": "97ab8bff0215863421f3860ec606364c046e63bb0a734af4c8a154343651077c",
+  "sha256": "be81f86edd21bd97efb5dc082e137d68a02f70e4b5bdd4515503b4adb8192481",
   "wordStorage": "WITHOUT ROWID",
-  "patternCompilerVersion": "2",
+  "patternCompilerVersion": "3",
   "lemmaRulesVersion": "1",
   "sources": [
     {
