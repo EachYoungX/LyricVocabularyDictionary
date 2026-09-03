@@ -891,8 +891,7 @@ exchange    → morphology
 
 ```sql
 CREATE TABLE word_entry (
-    id              INTEGER PRIMARY KEY,
-    word            TEXT COLLATE NOCASE NOT NULL UNIQUE,
+    word            TEXT COLLATE NOCASE PRIMARY KEY,
     phonetic        TEXT,
     definition_en   TEXT,
     translation_zh  TEXT,
@@ -903,7 +902,7 @@ CREATE TABLE word_entry (
     bnc_rank        INTEGER,
     coca_rank       INTEGER,
     morphology      TEXT
-);
+) WITHOUT ROWID;
 ```
 
 建议索引：
@@ -925,13 +924,13 @@ WHERE coca_rank IS NOT NULL;
 
 ### 18.3 大小写与规范化
 
-优先使用：
+词条表使用 `word` 直接作为主键并采用 `WITHOUT ROWID`：
 
 ```sql
-word TEXT COLLATE NOCASE UNIQUE
+word TEXT COLLATE NOCASE PRIMARY KEY
 ```
 
-这样可以支持大小写无关查询，不必额外增加 `normalized_word`。只有当运行时需要频繁读取预计算规范词形，或数据不再统一大小写时，才增加独立的 `normalized_word` 字段。
+这样可以支持大小写无关查询，并避免整数 rowid 与 `UNIQUE(word)` 双重存储。不额外增加 `normalized_word`。只有当运行时需要频繁读取预计算规范词形，或数据不再统一大小写时，才增加独立字段。
 
 ### 18.4 与 2ndLA 短语表的边界
 
@@ -1064,3 +1063,14 @@ lemma.rules.version
 ```
 
 `pattern.compiler.version` 和 `lemma.rules.version` 用于确认词形处理、短语编译规则及数据库内容所对应的版本。
+
+### 18.8 存储组织选择
+
+`word_entry` 的 `WITHOUT ROWID` 方案已经通过同一批 ECDICT 数据完成 A/B 验证：
+
+```text
+普通 rowid 版：       336,109,568 bytes，单词精确查询中位数约 21.91 ms
+WITHOUT ROWID 版：    241,405,952 bytes，单词精确查询中位数约 15.47 ms
+```
+
+因此正式发布库采用 `WITHOUT ROWID`。批量查询测试约为 4.04 ms 对 4.55 ms，差异较小；完整性检查均为 `ok`。构建脚本保留 `--word-without-rowid` 参数，以便重建和复核。

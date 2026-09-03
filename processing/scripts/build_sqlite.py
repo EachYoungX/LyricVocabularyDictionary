@@ -71,11 +71,25 @@ def normalized_word(value: str) -> str:
     return value.lstrip("'")
 
 
-def create_schema(connection: sqlite3.Connection) -> None:
-    connection.executescript(
+def create_schema(connection: sqlite3.Connection, word_without_rowid: bool = False) -> None:
+    if word_without_rowid:
+        word_table = """
+        CREATE TABLE word_entry (
+            word            TEXT COLLATE NOCASE PRIMARY KEY,
+            phonetic        TEXT,
+            definition_en   TEXT,
+            translation_zh  TEXT,
+            pos_profile     TEXT,
+            collins_star    INTEGER,
+            oxford_core     INTEGER,
+            tags            TEXT,
+            bnc_rank        INTEGER,
+            coca_rank       INTEGER,
+            morphology      TEXT
+        ) WITHOUT ROWID;
         """
-        PRAGMA foreign_keys = ON;
-
+    else:
+        word_table = """
         CREATE TABLE word_entry (
             id              INTEGER PRIMARY KEY,
             word            TEXT COLLATE NOCASE NOT NULL UNIQUE,
@@ -90,6 +104,12 @@ def create_schema(connection: sqlite3.Connection) -> None:
             coca_rank       INTEGER,
             morphology      TEXT
         );
+        """
+    connection.executescript(
+        f"""
+        PRAGMA foreign_keys = ON;
+
+        {word_table}
 
         CREATE TABLE phrase_entry (
             id                   INTEGER PRIMARY KEY,
@@ -438,6 +458,7 @@ def write_meta(
     secondla_commit: str,
     dictionary_count: int,
     phrase_count: int,
+    word_without_rowid: bool,
 ) -> None:
     values = {
         "package.version": "0.1.0",
@@ -451,6 +472,7 @@ def write_meta(
         "2ndla.entry_count": str(phrase_count),
         "pattern.compiler.version": "1",
         "lemma.rules.version": "1",
+        "word.storage": "WITHOUT ROWID" if word_without_rowid else "rowid + unique word index",
     }
     connection.executemany(
         "INSERT INTO dictionary_meta(key, value) VALUES (?, ?)",
@@ -474,6 +496,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("release/lyric-dictionary.sqlite"))
     parser.add_argument("--manifest", type=Path, default=Path("release/manifest.json"))
     parser.add_argument("--build-dir", type=Path, default=Path("build"))
+    parser.add_argument("--word-without-rowid", action="store_true")
     parser.add_argument("--ecdict-commit", default="bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b")
     parser.add_argument("--secondla-commit", default="4362d151decd8fd92e511bdd2cda31efbe63c8eb")
     args = parser.parse_args()
@@ -487,7 +510,7 @@ def main() -> None:
     connection.execute("PRAGMA journal_mode=OFF")
     connection.execute("PRAGMA synchronous=OFF")
     connection.execute("PRAGMA temp_store=MEMORY")
-    create_schema(connection)
+    create_schema(connection, word_without_rowid=args.word_without_rowid)
     dictionary_count = import_ecdict(connection, args.ecdict_csv)
     phrase_count, errors, status_counts, confidence_counts = import_phrases(
         connection, args.secondla_entries, args.secondla_translations
@@ -503,7 +526,14 @@ def main() -> None:
         temporary.unlink()
         raise SystemExit(f"build failed: {len(errors)} phrase compilation errors; see {error_path}")
 
-    write_meta(connection, args.ecdict_commit, args.secondla_commit, dictionary_count, phrase_count)
+    write_meta(
+        connection,
+        args.ecdict_commit,
+        args.secondla_commit,
+        dictionary_count,
+        phrase_count,
+        args.word_without_rowid,
+    )
     connection.commit()
     connection.execute("VACUUM")
     connection.close()
@@ -532,9 +562,10 @@ def main() -> None:
         json.dumps(
             {
                 "summary": summary,
-                "ecdict_commit": args.ecdict_commit,
-                "secondla_commit": args.secondla_commit,
-                "schema_version": 1,
+        "ecdict_commit": args.ecdict_commit,
+        "secondla_commit": args.secondla_commit,
+        "schema_version": 1,
+        "word_storage": "WITHOUT ROWID" if args.word_without_rowid else "rowid + unique word index",
             },
             ensure_ascii=False,
             indent=2,
@@ -549,6 +580,7 @@ def main() -> None:
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "artifact": args.output.name,
         "sha256": sha256(args.output),
+        "wordStorage": "WITHOUT ROWID" if args.word_without_rowid else "rowid + unique word index",
         "sources": [
             {
                 "name": "ECDICT",

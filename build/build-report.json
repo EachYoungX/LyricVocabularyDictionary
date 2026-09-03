@@ -16,5 +16,6 @@
   },
   "ecdict_commit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
   "secondla_commit": "4362d151decd8fd92e511bdd2cda31efbe63c8eb",
-  "schema_version": 1
+  "schema_version": 1,
+  "word_storage": "WITHOUT ROWID"
 }
