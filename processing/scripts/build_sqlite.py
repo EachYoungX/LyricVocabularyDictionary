@@ -496,7 +496,12 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("release/lyric-dictionary.sqlite"))
     parser.add_argument("--manifest", type=Path, default=Path("release/manifest.json"))
     parser.add_argument("--build-dir", type=Path, default=Path("build"))
-    parser.add_argument("--word-without-rowid", action="store_true")
+    parser.add_argument(
+        "--word-without-rowid",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="store word_entry as a WITHOUT ROWID table (default: enabled)",
+    )
     parser.add_argument("--ecdict-commit", default="bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b")
     parser.add_argument("--secondla-commit", default="4362d151decd8fd92e511bdd2cda31efbe63c8eb")
     args = parser.parse_args()
