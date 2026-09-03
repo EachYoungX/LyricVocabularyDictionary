@@ -9,6 +9,7 @@ import hashlib
 import json
 import re
 import sqlite3
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -75,7 +76,7 @@ def create_schema(connection: sqlite3.Connection) -> None:
         """
         PRAGMA foreign_keys = ON;
 
-        CREATE TABLE dictionary_entry (
+        CREATE TABLE word_entry (
             id              INTEGER PRIMARY KEY,
             word            TEXT COLLATE NOCASE NOT NULL UNIQUE,
             phonetic        TEXT,
@@ -91,26 +92,19 @@ def create_schema(connection: sqlite3.Connection) -> None:
         );
 
         CREATE TABLE phrase_entry (
-            id                  INTEGER PRIMARY KEY,
-            raw_pattern         TEXT NOT NULL,
-            canonical_pattern   TEXT NOT NULL,
-            compiled_pattern    TEXT NOT NULL,
-            definition_en       TEXT,
-            definition_zh       TEXT,
-            usage_note_zh       TEXT,
-            phrase_type         TEXT NOT NULL,
-            source              TEXT NOT NULL,
-            source_entry_id     TEXT NOT NULL UNIQUE,
-            source_forms_json   TEXT NOT NULL,
-            source_lists_json   TEXT NOT NULL,
-            source_urls_json    TEXT NOT NULL,
-            license             TEXT NOT NULL,
-            token_count_min     INTEGER NOT NULL,
-            token_count_max     INTEGER NOT NULL,
-            translation_status  TEXT NOT NULL,
-            confidence          TEXT,
-            priority            INTEGER NOT NULL DEFAULT 0,
-            is_active            INTEGER NOT NULL DEFAULT 1
+            id                   INTEGER PRIMARY KEY,
+            source_pattern       TEXT NOT NULL,
+            canonical_pattern    TEXT NOT NULL,
+            definition_en        TEXT,
+            definition_zh        TEXT,
+            usage_note_zh        TEXT,
+            phrase_type          TEXT NOT NULL,
+            source               TEXT NOT NULL,
+            source_entry_id      TEXT NOT NULL UNIQUE,
+            source_metadata_json TEXT,
+            token_count_min      INTEGER NOT NULL,
+            token_count_max      INTEGER NOT NULL,
+            match_priority       INTEGER NOT NULL DEFAULT 0
         );
 
         CREATE TABLE phrase_pattern_token (
@@ -140,48 +134,19 @@ def create_schema(connection: sqlite3.Connection) -> None:
             value TEXT NOT NULL
         );
 
-        CREATE TABLE build_error (
-            source_entry_id TEXT,
-            raw_pattern TEXT,
-            error TEXT NOT NULL
-        );
-
-        CREATE UNIQUE INDEX idx_dictionary_word
-            ON dictionary_entry(word COLLATE NOCASE);
-        CREATE INDEX idx_dictionary_bnc ON dictionary_entry(bnc_rank);
-        CREATE INDEX idx_dictionary_coca ON dictionary_entry(coca_rank);
-        CREATE INDEX idx_phrase_token_value
-            ON phrase_pattern_token(token_type, match_value);
-        CREATE INDEX idx_phrase_anchor_value
+        CREATE UNIQUE INDEX idx_phrase_pattern_position
+            ON phrase_pattern_token(phrase_id, pattern_position);
+        CREATE INDEX idx_phrase_token_match
+            ON phrase_pattern_token(match_type, match_value);
+        CREATE INDEX idx_phrase_anchor_lookup
             ON phrase_anchor(anchor_type, anchor_value);
-
-        -- Compatibility projection for the existing word-query contract.
-        CREATE VIEW dictionary AS
-        SELECT
-            word,
-            phonetic,
-            definition_en AS definition,
-            translation_zh AS translation,
-            pos_profile AS pos,
-            collins_star,
-            bnc_rank,
-            coca_rank AS frq_rank,
-            morphology AS forms,
-            oxford_core,
-            tags,
-            definition_en,
-            translation_zh,
-            pos_profile,
-            coca_rank,
-            morphology
-        FROM dictionary_entry;
         """
     )
 
 
 def import_ecdict(connection: sqlite3.Connection, csv_path: Path) -> int:
     insert_sql = """
-        INSERT OR IGNORE INTO dictionary_entry (
+        INSERT OR IGNORE INTO word_entry (
             word, phonetic, definition_en, translation_zh, pos_profile,
             collins_star, oxford_core, tags, bnc_rank, coca_rank, morphology
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -213,7 +178,7 @@ def import_ecdict(connection: sqlite3.Connection, csv_path: Path) -> int:
                 batch.clear()
         if batch:
             connection.executemany(insert_sql, batch)
-    return connection.execute("SELECT COUNT(*) FROM dictionary_entry").fetchone()[0]
+    return connection.execute("SELECT COUNT(*) FROM word_entry").fetchone()[0]
 
 
 def phrase_tokens(pattern: str) -> list[str]:
@@ -313,7 +278,7 @@ def compile_phrase(pattern: str) -> tuple[str, list[dict[str, object]], int, int
 
 def lookup_verb(connection: sqlite3.Connection, token: str) -> bool:
     row = connection.execute(
-        "SELECT pos_profile FROM dictionary_entry WHERE word = ? COLLATE NOCASE",
+        "SELECT pos_profile FROM word_entry WHERE word = ? COLLATE NOCASE",
         (token,),
     ).fetchone()
     return bool(row and row[0] and re.search(r"(?:^|/)v(?:[:/]|$)", row[0], re.IGNORECASE))
@@ -347,7 +312,7 @@ def make_anchors(compiled: list[dict[str, object]], connection: sqlite3.Connecti
         if not re.search(r"[a-z]", value):
             continue
         row = connection.execute(
-            "SELECT bnc_rank, coca_rank FROM dictionary_entry WHERE word = ? COLLATE NOCASE",
+            "SELECT bnc_rank, coca_rank FROM word_entry WHERE word = ? COLLATE NOCASE",
             (value,),
         ).fetchone()
         rank = max((row[0] or 0, row[1] or 0)) if row else 0
@@ -365,8 +330,10 @@ def import_phrases(
     connection: sqlite3.Connection,
     entries_path: Path,
     translations_path: Path,
-) -> int:
+) -> tuple[int, list[dict[str, str]], dict[str, int], dict[str, int]]:
     translations = {}
+    status_counts: Counter[str] = Counter()
+    confidence_counts: Counter[str] = Counter()
     with translations_path.open("r", encoding="utf-8") as source:
         for line in source:
             if line.strip():
@@ -379,11 +346,10 @@ def import_phrases(
 
     insert_phrase = """
         INSERT INTO phrase_entry (
-            raw_pattern, canonical_pattern, compiled_pattern, definition_en,
-            definition_zh, usage_note_zh, phrase_type, source, source_entry_id,
-            source_forms_json, source_lists_json, source_urls_json, license,
-            token_count_min, token_count_max, translation_status, confidence
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            source_pattern, canonical_pattern, definition_en, definition_zh,
+            usage_note_zh, phrase_type, source, source_entry_id,
+            source_metadata_json, token_count_min, token_count_max
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
     insert_token = """
         INSERT INTO phrase_pattern_token (
@@ -397,41 +363,44 @@ def import_phrases(
         ) VALUES (?, ?, ?, ?)
     """
 
+    errors: list[dict[str, str]] = []
     for entry in entries:
         entry_id = entry["id"]
         translation = translations.get(entry_id, {})
-        raw_pattern = (entry.get("sourceForms") or [entry["canonicalPhrase"]])[0]
+        source_pattern = (entry.get("sourceForms") or [entry["canonicalPhrase"]])[0]
+        status = translation.get("translationStatus", entry.get("translationStatus", "PENDING"))
+        confidence = translation.get("confidence") or ""
+        status_counts[status] += 1
+        if confidence:
+            confidence_counts[confidence] += 1
         try:
             canonical, compiled, minimum, maximum = compile_phrase(entry["canonicalPhrase"])
             phrase_type = classify_phrase(compiled, connection)
             anchors = make_anchors(compiled, connection)
         except ValueError as error:
-            connection.execute(
-                "INSERT INTO build_error(source_entry_id, raw_pattern, error) VALUES (?, ?, ?)",
-                (entry_id, raw_pattern, str(error)),
-            )
+            errors.append({"source_entry_id": entry_id, "source_pattern": source_pattern, "error": str(error)})
             continue
 
         cursor = connection.execute(
             insert_phrase,
             (
-                raw_pattern,
+                source_pattern,
                 canonical,
-                json_text(compiled),
                 None,
                 translation.get("meaningZh"),
                 translation.get("usageNoteZh") or None,
                 phrase_type,
                 entry["source"],
                 entry_id,
-                json_text(entry.get("sourceForms", [])),
-                json_text(entry.get("sourceLists", [])),
-                json_text(entry.get("sourceUrls", [])),
-                entry["license"],
+                json_text(
+                    {
+                        "forms": entry.get("sourceForms", []),
+                        "lists": entry.get("sourceLists", []),
+                        "urls": entry.get("sourceUrls", []),
+                    }
+                ),
                 minimum,
                 maximum,
-                translation.get("translationStatus", entry.get("translationStatus", "PENDING")),
-                translation.get("confidence"),
             ),
         )
         phrase_id = cursor.lastrowid
@@ -455,19 +424,33 @@ def import_phrases(
                 (phrase_id, position, anchor_type, anchor_value),
             )
 
-    return connection.execute("SELECT COUNT(*) FROM phrase_entry").fetchone()[0]
+    return (
+        connection.execute("SELECT COUNT(*) FROM phrase_entry").fetchone()[0],
+        errors,
+        dict(status_counts),
+        dict(confidence_counts),
+    )
 
 
-def write_meta(connection: sqlite3.Connection, ecdict_commit: str, secondla_commit: str) -> None:
+def write_meta(
+    connection: sqlite3.Connection,
+    ecdict_commit: str,
+    secondla_commit: str,
+    dictionary_count: int,
+    phrase_count: int,
+) -> None:
     values = {
-        "package_id": "lyric-dictionary",
-        "schema_version": "1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "ecdict_commit": ecdict_commit,
-        "secondla_commit": secondla_commit,
-        "ecdict_license": "MIT",
-        "secondla_license": "CC BY-SA 4.0",
-        "phrase_translation_status": "all source rows must be GENERATED",
+        "package.version": "0.1.0",
+        "schema.version": "1",
+        "build.time": datetime.now(timezone.utc).isoformat(),
+        "ecdict.commit": ecdict_commit,
+        "ecdict.license": "MIT",
+        "ecdict.entry_count": str(dictionary_count),
+        "2ndla.commit": secondla_commit,
+        "2ndla.license": "CC BY-SA 4.0",
+        "2ndla.entry_count": str(phrase_count),
+        "pattern.compiler.version": "1",
+        "lemma.rules.version": "1",
     }
     connection.executemany(
         "INSERT INTO dictionary_meta(key, value) VALUES (?, ?)",
@@ -490,6 +473,7 @@ def main() -> None:
     parser.add_argument("--secondla-translations", type=Path, default=Path("translations/2ndla/translation-full-output.jsonl"))
     parser.add_argument("--output", type=Path, default=Path("release/lyric-dictionary.sqlite"))
     parser.add_argument("--manifest", type=Path, default=Path("release/manifest.json"))
+    parser.add_argument("--build-dir", type=Path, default=Path("build"))
     parser.add_argument("--ecdict-commit", default="bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b")
     parser.add_argument("--secondla-commit", default="4362d151decd8fd92e511bdd2cda31efbe63c8eb")
     args = parser.parse_args()
@@ -505,19 +489,21 @@ def main() -> None:
     connection.execute("PRAGMA temp_store=MEMORY")
     create_schema(connection)
     dictionary_count = import_ecdict(connection, args.ecdict_csv)
-    phrase_count = import_phrases(connection, args.secondla_entries, args.secondla_translations)
-    error_count = connection.execute("SELECT COUNT(*) FROM build_error").fetchone()[0]
-    if error_count:
-        errors = connection.execute("SELECT * FROM build_error").fetchall()
+    phrase_count, errors, status_counts, confidence_counts = import_phrases(
+        connection, args.secondla_entries, args.secondla_translations
+    )
+    args.build_dir.mkdir(parents=True, exist_ok=True)
+    error_path = args.build_dir / "build-errors.jsonl"
+    error_path.write_text(
+        "".join(json_text(error) + "\n" for error in errors),
+        encoding="utf-8",
+    )
+    if errors:
         connection.close()
-        args.output.with_name("build_error.jsonl").write_text(
-            "".join(json_text({"source_entry_id": row[0], "raw_pattern": row[1], "error": row[2]}) + "\n" for row in errors),
-            encoding="utf-8",
-        )
         temporary.unlink()
-        raise SystemExit(f"build failed: {error_count} phrase compilation errors")
+        raise SystemExit(f"build failed: {len(errors)} phrase compilation errors; see {error_path}")
 
-    write_meta(connection, args.ecdict_commit, args.secondla_commit)
+    write_meta(connection, args.ecdict_commit, args.secondla_commit, dictionary_count, phrase_count)
     connection.commit()
     connection.execute("VACUUM")
     connection.close()
@@ -528,6 +514,34 @@ def main() -> None:
     anchor_count = check_connection.execute("SELECT COUNT(*) FROM phrase_anchor").fetchone()[0]
     meta_count = check_connection.execute("SELECT COUNT(*) FROM dictionary_meta").fetchone()[0]
     check_connection.close()
+
+    summary = {
+        "database": args.output.name,
+        "dictionary_entries": dictionary_count,
+        "phrase_entries": phrase_count,
+        "pattern_tokens": token_count,
+        "anchors": anchor_count,
+        "translation_status_counts": status_counts,
+        "confidence_counts": confidence_counts,
+        "compilation_errors": len(errors),
+    }
+    (args.build_dir / "build-summary.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    (args.build_dir / "build-report.json").write_text(
+        json.dumps(
+            {
+                "summary": summary,
+                "ecdict_commit": args.ecdict_commit,
+                "secondla_commit": args.secondla_commit,
+                "schema_version": 1,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
     manifest = {
         "releaseVersion": "0.1.0",
@@ -552,8 +566,7 @@ def main() -> None:
             },
         ],
         "tables": {
-            "dictionary_entry": dictionary_count,
-            "dictionary": "compatibility_view",
+            "word_entry": dictionary_count,
             "phrase_entry": phrase_count,
             "phrase_pattern_token": token_count,
             "phrase_anchor": anchor_count,

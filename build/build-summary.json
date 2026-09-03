@@ -1,0 +1,15 @@
+{
+  "database": "lyric-dictionary.sqlite",
+  "dictionary_entries": 3402141,
+  "phrase_entries": 8013,
+  "pattern_tokens": 23253,
+  "anchors": 8013,
+  "translation_status_counts": {
+    "GENERATED": 8013
+  },
+  "confidence_counts": {
+    "HIGH": 6066,
+    "MEDIUM": 1947
+  },
+  "compilation_errors": 0
+}

@@ -1,9 +1,9 @@
 {
   "releaseVersion": "0.1.0",
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T08:34:29.082402+00:00",
+  "generatedAt": "2026-09-03T04:29:59.327751+00:00",
   "artifact": "lyric-dictionary.sqlite",
-  "sha256": "0b7ead7527690bd4f84827afd3fc9e31dffa6853b311ae6c096c2618e394e1c0",
+  "sha256": "122aa24942afa60f7e58a1a54b49ef37fe771ff2fb97df0a0690edb2d8454cee",
   "sources": [
     {
       "name": "ECDICT",
@@ -21,11 +21,10 @@
     }
   ],
   "tables": {
-    "dictionary_entry": 3402141,
-    "dictionary": "compatibility_view",
+    "word_entry": 3402141,
     "phrase_entry": 8013,
     "phrase_pattern_token": 23253,
     "phrase_anchor": 8013,
-    "dictionary_meta": 8
+    "dictionary_meta": 11
   }
 }

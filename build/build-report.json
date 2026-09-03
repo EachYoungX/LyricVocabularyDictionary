@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "database": "lyric-dictionary.sqlite",
+    "dictionary_entries": 3402141,
+    "phrase_entries": 8013,
+    "pattern_tokens": 23253,
+    "anchors": 8013,
+    "translation_status_counts": {
+      "GENERATED": 8013
+    },
+    "confidence_counts": {
+      "HIGH": 6066,
+      "MEDIUM": 1947
+    },
+    "compilation_errors": 0
+  },
+  "ecdict_commit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
+  "secondla_commit": "4362d151decd8fd92e511bdd2cda31efbe63c8eb",
+  "schema_version": 1
+}
