@@ -11,5 +11,20 @@
     "HIGH": 6066,
     "MEDIUM": 1947
   },
+  "token_type_counts": {
+    "LITERAL": 21060,
+    "SLOT": 1864,
+    "GAP": 329
+  },
+  "slot_hint_counts": {
+    "THING": 637,
+    "PERSON": 401,
+    "POSSESSIVE": 444,
+    "GERUND": 145,
+    "REFLEXIVE": 97,
+    "GENERIC": 138,
+    "OBJECT": 2
+  },
+  "fallback_generic_count": 0,
   "compilation_errors": 0
 }

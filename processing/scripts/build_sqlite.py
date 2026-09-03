@@ -12,6 +12,7 @@ import sqlite3
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Callable
 
 
 FUNCTION_WORDS = {
@@ -29,15 +30,20 @@ PREPOSITIONS = {
 }
 
 SLOT_RULES = {
+    "POSSESSIVE": (1, 3),
+    "REFLEXIVE": (1, 1),
+    "PRONOUN": (1, 1),
+    "GERUND": (1, 3),
     "PERSON": (1, 4),
     "THING": (1, 5),
-    "POSSESSIVE": (1, 4),
-    "REFLEXIVE": (1, 3),
-    "VERB": (1, 3),
-    "GERUND": (1, 3),
     "OBJECT": (1, 4),
     "GENERIC": (1, 4),
 }
+SUPPORTED_SLOT_HINTS = frozenset(SLOT_RULES)
+DEFAULT_LEMMA_LITERALS = frozenset({"be", "look", "give", "fall", "prevent"})
+FIXED_DOING_PATTERNS = frozenset({"up and doing"})
+PATTERN_COMPILER_VERSION = "2"
+LEMMA_RULES_VERSION = "1"
 
 
 def json_text(value: object) -> str:
@@ -183,49 +189,134 @@ def import_ecdict(connection: sqlite3.Connection, csv_path: Path) -> int:
     return connection.execute("SELECT COUNT(*) FROM word_entry").fetchone()[0]
 
 
-def phrase_tokens(pattern: str) -> list[str]:
-    text = pattern.replace("……", "...").replace("…", "...")
-    text = re.sub(r"\.\.\.", " ... ", text)
-    return text.split()
+class PatternNormalizer:
+    """Normalize source spelling without changing its phrase semantics."""
+
+    def normalize(self, pattern: str) -> str:
+        text = pattern.replace("……", "...").replace("…", "...")
+        text = text.replace("’", "'").replace("‘", "'")
+        text = re.sub(r"\.\.\.", " ... ", text)
+        return re.sub(r"\s+", " ", text).strip()
 
 
-def slot_for_token(token: str) -> str | None:
-    lowered = token.casefold()
-    if lowered in {"sb.", "sb", "somebody", "someone"}:
-        return "PERSON"
-    if lowered in {"sth.", "sth", "something"}:
-        return "THING"
-    if lowered in {"sb.'s", "sb.s", "somebody's", "someone's"}:
-        return "POSSESSIVE"
-    if lowered in {"one's", "oneself"}:
-        return "POSSESSIVE" if lowered == "one's" else "REFLEXIVE"
-    if lowered == "doing":
-        return "GERUND"
-    return None
+class PatternParser:
+    """Split normalized phrase text into literal/template elements."""
+
+    def __init__(self, normalizer: PatternNormalizer | None = None) -> None:
+        self.normalizer = normalizer or PatternNormalizer()
+
+    def parse(self, pattern: str) -> list[str]:
+        normalized = self.normalizer.normalize(pattern)
+        if not normalized:
+            raise ValueError("empty pattern")
+        return normalized.split()
 
 
-def compile_phrase(pattern: str) -> tuple[str, list[dict[str, object]], int, int]:
-    raw_tokens = phrase_tokens(pattern)
-    if not raw_tokens:
-        raise ValueError("empty pattern")
+class SlotClassifier:
+    """Classify explicit source placeholders into the supported slot enum."""
 
-    compiled: list[dict[str, object]] = []
-    for index, token in enumerate(raw_tokens):
-        if token == "...":
-            previous = raw_tokens[index - 1] if index else None
-            following = raw_tokens[index + 1] if index + 1 < len(raw_tokens) else None
-            if previous and following and slot_for_token(previous) is None and slot_for_token(following) is None:
-                if previous.casefold() == "add":
-                    token_type, hint = "SLOT", "OBJECT"
-                    minimum, maximum = SLOT_RULES[hint]
-                else:
-                    token_type, hint = "GAP", None
-                    minimum, maximum = 1, 3
+    def classify(self, token: str, pattern: str) -> str | None:
+        lowered = token.casefold()
+        if lowered in {"sb.'s", "sb.s", "somebody's", "someone's", "sth.'s", "sth.s"}:
+            return "POSSESSIVE"
+        if lowered in {"one's"}:
+            return "POSSESSIVE"
+        if lowered in {"oneself"}:
+            return "REFLEXIVE"
+        if lowered in {"pron.", "pronoun"}:
+            return "PRONOUN"
+        if lowered in {"sb.", "sb", "somebody", "someone"}:
+            return "PERSON"
+        if lowered in {"sth.", "sth", "something"}:
+            return "THING"
+        if lowered == "doing" and pattern.casefold() not in FIXED_DOING_PATTERNS:
+            return "GERUND"
+        return None
+
+    def bounds(self, hint: str, previous_token: str | None = None) -> tuple[int, int]:
+        minimum, maximum = SLOT_RULES[hint]
+        if hint == "THING" and previous_token and previous_token.casefold() == "doing":
+            return 0, maximum
+        return minimum, maximum
+
+
+class PatternValidator:
+    """Enforce the invariants required before a pattern enters SQLite."""
+
+    def validate(self, compiled: list[dict[str, object]]) -> None:
+        if not compiled:
+            raise ValueError("empty compiled pattern")
+        if not any(item["token_type"] == "LITERAL" for item in compiled):
+            raise ValueError("pattern has no literal anchor")
+        for position, item in enumerate(compiled):
+            token_type = item.get("token_type")
+            minimum = item.get("min_tokens")
+            maximum = item.get("max_tokens")
+            if token_type not in {"LITERAL", "GAP", "SLOT"}:
+                raise ValueError(f"unsupported token_type at position {position}")
+            if not isinstance(minimum, int) or not isinstance(maximum, int):
+                raise ValueError(f"missing token bounds at position {position}")
+            if minimum < 0 or maximum < minimum:
+                raise ValueError(f"invalid token bounds at position {position}")
+            if token_type == "LITERAL":
+                if not item.get("match_value"):
+                    raise ValueError(f"empty literal match_value at position {position}")
+                if item.get("slot_hint") is not None:
+                    raise ValueError(f"literal has slot_hint at position {position}")
+            elif token_type == "GAP":
+                if item.get("slot_hint") is not None:
+                    raise ValueError(f"gap has slot_hint at position {position}")
             else:
-                token_type, hint = "SLOT", "GENERIC"
-                minimum, maximum = SLOT_RULES[hint]
-            compiled.append(
-                {
+                if item.get("slot_hint") not in SUPPORTED_SLOT_HINTS:
+                    raise ValueError(f"unsupported or missing slot_hint at position {position}")
+                if item.get("match_value") is not None:
+                    raise ValueError(f"slot has match_value at position {position}")
+        for expected, item in enumerate(compiled):
+            if item.get("pattern_position", expected) != expected:
+                raise ValueError("pattern_position is not continuous")
+
+
+class PatternCompiler:
+    """Compile one source phrase into canonical text and token records."""
+
+    def __init__(
+        self,
+        parser: PatternParser | None = None,
+        slots: SlotClassifier | None = None,
+        validator: PatternValidator | None = None,
+        match_type_resolver: Callable[[str], str] | None = None,
+    ) -> None:
+        self.parser = parser or PatternParser()
+        self.slots = slots or SlotClassifier()
+        self.validator = validator or PatternValidator()
+        self.match_type_resolver = match_type_resolver or self.default_match_type
+        self.fallback_generic_count = 0
+
+    @staticmethod
+    def default_match_type(token: str) -> str:
+        return "LEMMA" if token.casefold() in DEFAULT_LEMMA_LITERALS else "NORMALIZED"
+
+    def compile(self, pattern: str) -> tuple[str, list[dict[str, object]], int, int]:
+        tokens = self.parser.parse(pattern)
+        compiled: list[dict[str, object]] = []
+        self.fallback_generic_count = 0
+        normalized_pattern = self.parser.normalizer.normalize(pattern)
+        for index, token in enumerate(tokens):
+            if token == "...":
+                previous = tokens[index - 1] if index else None
+                following = tokens[index + 1] if index + 1 < len(tokens) else None
+                if previous and following and self.slots.classify(previous, normalized_pattern) is None and self.slots.classify(following, normalized_pattern) is None:
+                    if previous.casefold() == "add":
+                        token_type, hint = "SLOT", "OBJECT"
+                        minimum, maximum = SLOT_RULES[hint]
+                    else:
+                        token_type, hint = "GAP", None
+                        minimum, maximum = 1, 3
+                else:
+                    token_type, hint = "SLOT", "GENERIC"
+                    minimum, maximum = SLOT_RULES[hint]
+                    self.fallback_generic_count += 1
+                item = {
                     "token_type": token_type,
                     "match_type": None,
                     "match_value": None,
@@ -233,49 +324,50 @@ def compile_phrase(pattern: str) -> tuple[str, list[dict[str, object]], int, int
                     "min_tokens": minimum,
                     "max_tokens": maximum,
                 }
-            )
-            continue
+            else:
+                hint = self.slots.classify(token, normalized_pattern)
+                if hint:
+                    minimum, maximum = self.slots.bounds(
+                        hint, tokens[index - 1] if index else None
+                    )
+                    item = {
+                        "token_type": "SLOT",
+                        "match_type": None,
+                        "match_value": None,
+                        "slot_hint": hint,
+                        "min_tokens": minimum,
+                        "max_tokens": maximum,
+                    }
+                else:
+                    item = {
+                        "token_type": "LITERAL",
+                        "match_type": self.match_type_resolver(token),
+                        "match_value": token.casefold(),
+                        "slot_hint": None,
+                        "min_tokens": 1,
+                        "max_tokens": 1,
+                    }
+            item["pattern_position"] = index
+            compiled.append(item)
 
-        hint = slot_for_token(token)
-        if hint:
-            minimum, maximum = SLOT_RULES[hint]
-            compiled.append(
-                {
-                    "token_type": "SLOT",
-                    "match_type": None,
-                    "match_value": None,
-                    "slot_hint": hint,
-                    "min_tokens": minimum,
-                    "max_tokens": maximum,
-                }
-            )
-            continue
+        self.validator.validate(compiled)
+        canonical_parts = []
+        for item in compiled:
+            if item["token_type"] == "LITERAL":
+                canonical_parts.append(str(item["match_value"]))
+            elif item["token_type"] == "GAP":
+                canonical_parts.append("<GAP>")
+            else:
+                canonical_parts.append(f"<{item['slot_hint']}>")
+        minimum = sum(int(item["min_tokens"]) for item in compiled)
+        maximum = sum(int(item["max_tokens"]) for item in compiled)
+        for item in compiled:
+            item.pop("pattern_position", None)
+        return " ".join(canonical_parts), compiled, minimum, maximum
 
-        compiled.append(
-            {
-                "token_type": "LITERAL",
-                "match_type": "NORMALIZED",
-                "match_value": token.casefold(),
-                "slot_hint": None,
-                "min_tokens": 1,
-                "max_tokens": 1,
-            }
-        )
 
-    if not any(item["token_type"] == "LITERAL" for item in compiled):
-        raise ValueError("pattern has no literal anchor")
-
-    canonical_parts = []
-    for item in compiled:
-        if item["token_type"] == "LITERAL":
-            canonical_parts.append(str(item["match_value"]))
-        elif item["token_type"] == "GAP":
-            canonical_parts.append("<GAP>")
-        else:
-            canonical_parts.append(f"<{item['slot_hint']}>")
-    minimum = sum(int(item["min_tokens"]) for item in compiled)
-    maximum = sum(int(item["max_tokens"]) for item in compiled)
-    return " ".join(canonical_parts), compiled, minimum, maximum
+def compile_phrase(pattern: str) -> tuple[str, list[dict[str, object]], int, int]:
+    return PatternCompiler().compile(pattern)
 
 
 def lookup_verb(connection: sqlite3.Connection, token: str) -> bool:
@@ -332,10 +424,24 @@ def import_phrases(
     connection: sqlite3.Connection,
     entries_path: Path,
     translations_path: Path,
-) -> tuple[int, list[dict[str, str]], dict[str, int], dict[str, int]]:
+) -> tuple[
+    int,
+    list[dict[str, str]],
+    dict[str, int],
+    dict[str, int],
+    dict[str, int],
+    dict[str, int],
+    int,
+]:
     translations = {}
     status_counts: Counter[str] = Counter()
     confidence_counts: Counter[str] = Counter()
+    token_type_counts: Counter[str] = Counter()
+    slot_hint_counts: Counter[str] = Counter()
+    fallback_generic_count = 0
+    compiler = PatternCompiler(
+        match_type_resolver=lambda token: "LEMMA" if lookup_verb(connection, token) else "NORMALIZED"
+    )
     with translations_path.open("r", encoding="utf-8") as source:
         for line in source:
             if line.strip():
@@ -376,12 +482,18 @@ def import_phrases(
         if confidence:
             confidence_counts[confidence] += 1
         try:
-            canonical, compiled, minimum, maximum = compile_phrase(entry["canonicalPhrase"])
+            canonical, compiled, minimum, maximum = compiler.compile(entry["canonicalPhrase"])
+            fallback_generic_count += compiler.fallback_generic_count
             phrase_type = classify_phrase(compiled, connection)
             anchors = make_anchors(compiled, connection)
         except ValueError as error:
             errors.append({"source_entry_id": entry_id, "source_pattern": source_pattern, "error": str(error)})
             continue
+
+        for item in compiled:
+            token_type_counts[item["token_type"]] += 1
+            if item["slot_hint"]:
+                slot_hint_counts[item["slot_hint"]] += 1
 
         cursor = connection.execute(
             insert_phrase,
@@ -431,6 +543,9 @@ def import_phrases(
         errors,
         dict(status_counts),
         dict(confidence_counts),
+        dict(token_type_counts),
+        dict(slot_hint_counts),
+        compiler.fallback_generic_count,
     )
 
 
@@ -451,8 +566,8 @@ def write_meta(
         "2ndla.commit": secondla_commit,
         "2ndla.license": "CC BY-SA 4.0",
         "2ndla.entry_count": str(phrase_count),
-        "pattern.compiler.version": "1",
-        "lemma.rules.version": "1",
+        "pattern.compiler.version": PATTERN_COMPILER_VERSION,
+        "lemma.rules.version": LEMMA_RULES_VERSION,
         "word.storage": "WITHOUT ROWID",
     }
     connection.executemany(
@@ -492,7 +607,15 @@ def main() -> None:
     connection.execute("PRAGMA temp_store=MEMORY")
     create_schema(connection)
     dictionary_count = import_ecdict(connection, args.ecdict_csv)
-    phrase_count, errors, status_counts, confidence_counts = import_phrases(
+    (
+        phrase_count,
+        errors,
+        status_counts,
+        confidence_counts,
+        token_type_counts,
+        slot_hint_counts,
+        fallback_generic_count,
+    ) = import_phrases(
         connection, args.secondla_entries, args.secondla_translations
     )
     args.build_dir.mkdir(parents=True, exist_ok=True)
@@ -532,6 +655,9 @@ def main() -> None:
         "anchors": anchor_count,
         "translation_status_counts": status_counts,
         "confidence_counts": confidence_counts,
+        "token_type_counts": token_type_counts,
+        "slot_hint_counts": slot_hint_counts,
+        "fallback_generic_count": fallback_generic_count,
         "compilation_errors": len(errors),
     }
     (args.build_dir / "build-summary.json").write_text(
@@ -543,8 +669,10 @@ def main() -> None:
                 "summary": summary,
                 "ecdict_commit": args.ecdict_commit,
                 "secondla_commit": args.secondla_commit,
-                "schema_version": 1,
-                "word_storage": "WITHOUT ROWID",
+        "schema_version": 1,
+        "pattern_compiler_version": PATTERN_COMPILER_VERSION,
+        "lemma_rules_version": LEMMA_RULES_VERSION,
+        "word_storage": "WITHOUT ROWID",
             },
             ensure_ascii=False,
             indent=2,
@@ -560,6 +688,8 @@ def main() -> None:
         "artifact": args.output.name,
         "sha256": sha256(args.output),
         "wordStorage": "WITHOUT ROWID",
+        "patternCompilerVersion": PATTERN_COMPILER_VERSION,
+        "lemmaRulesVersion": LEMMA_RULES_VERSION,
         "sources": [
             {
                 "name": "ECDICT",

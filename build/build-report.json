@@ -12,10 +12,27 @@
       "HIGH": 6066,
       "MEDIUM": 1947
     },
+    "token_type_counts": {
+      "LITERAL": 21060,
+      "SLOT": 1864,
+      "GAP": 329
+    },
+    "slot_hint_counts": {
+      "THING": 637,
+      "PERSON": 401,
+      "POSSESSIVE": 444,
+      "GERUND": 145,
+      "REFLEXIVE": 97,
+      "GENERIC": 138,
+      "OBJECT": 2
+    },
+    "fallback_generic_count": 0,
     "compilation_errors": 0
   },
   "ecdict_commit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
   "secondla_commit": "4362d151decd8fd92e511bdd2cda31efbe63c8eb",
   "schema_version": 1,
+  "pattern_compiler_version": "2",
+  "lemma_rules_version": "1",
   "word_storage": "WITHOUT ROWID"
 }

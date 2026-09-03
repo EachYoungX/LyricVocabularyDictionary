@@ -245,16 +245,17 @@ doing sth.
 第一版 `slot_hint` 可支持：
 
 ```text
+POSSESSIVE
+REFLEXIVE
+PRONOUN
+GERUND
 PERSON
 THING
-POSSESSIVE
-VERB
-GERUND
 OBJECT
 GENERIC
 ```
 
-`slot_hint` 第一版主要用于描述和后续扩展，不作为严格语义判定依据。
+其中 `POSSESSIVE`、`REFLEXIVE`、`PRONOUN`、`GERUND` 是硬约束类型；`PERSON`、`THING`、`OBJECT`、`GENERIC` 是软约束类型。构建端必须写入准确的 `slot_hint` 和长度范围，不负责运行时 NLP 语义判断。
 
 ---
 
