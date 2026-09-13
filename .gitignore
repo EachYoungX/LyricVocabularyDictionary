@@ -4,6 +4,7 @@ sources/**/*.db
 sources/ecdict/raw/*
 release/*.sqlite
 release/*.db
+release/*.zip
 __pycache__/
 *.pyc
 .idea/
