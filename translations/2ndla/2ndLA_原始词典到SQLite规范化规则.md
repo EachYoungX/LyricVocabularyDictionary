@@ -784,7 +784,7 @@ build/build-errors.jsonl
 
 ## 16. 版本管理
 
-`lyric-dictionary.sqlite` 必须有独立版本。
+`dictionary.sqlite` 必须有独立版本。
 
 manifest 推荐：
 
@@ -856,7 +856,7 @@ phrase_anchor
 
 ## 18. ECDICT 词典字段命名与映射
 
-本节用于约束与 2ndLA 短语数据并存的 ECDICT 单词词典表。发布数据库保持一个 `lyric-dictionary.sqlite`，但单词表和短语表的职责分开。
+本节用于约束与 2ndLA 短语数据并存的 ECDICT 单词词典表。发布数据库保持一个 `dictionary.sqlite`，但单词表和短语表的职责分开。
 
 2ndLA 的 `phrase_entry` 保存短语模板和中文释义；ECDICT 保存单词级词典信息。两者可以在应用层关联，但不应因为共用 SQLite 而复用含义模糊的字段名。
 

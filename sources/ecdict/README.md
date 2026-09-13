@@ -6,7 +6,7 @@ The archive contains the upstream `stardict.csv` export. The upstream license
 is retained in [`LICENSE`](LICENSE).
 
 `ecdict.sqlite` is the application-facing local projection. It keeps the
-fields needed by Lyric Vocabulary Builder in a smaller `dictionary` table and
+fields needed by IyricVocabularyBuilder in a smaller `dictionary` table and
 is intentionally ignored by Git because of its size.
 
 The reproducible comparison command is:

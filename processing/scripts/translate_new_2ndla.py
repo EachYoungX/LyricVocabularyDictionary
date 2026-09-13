@@ -230,7 +230,7 @@ def translate(phrase: str, email: str | None = None) -> str:
     )
     request = urllib.request.Request(
         f"{API_URL}?{params}",
-        headers={"User-Agent": "LyricVocabularyDictionary/2ndla-translation"},
+        headers={"User-Agent": "IyricVocabularyBuilder-Dictionary/2ndla-translation"},
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = json.loads(response.read().decode("utf-8"))

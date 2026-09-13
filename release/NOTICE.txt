@@ -1,0 +1,10 @@
+IyricVocabularyBuilder Dictionary data notice
+
+The combined dictionary dataset is distributed under CC BY-SA 4.0.
+
+Sources:
+- ECDICT, MIT, https://github.com/skywind3000/ECDICT
+- 2ndLA/english-phrases, CC BY-SA 4.0, https://github.com/2ndLA/english-phrases
+
+See the repository NOTICE.md and source LICENSE files for full attribution and
+license details.

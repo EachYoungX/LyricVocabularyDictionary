@@ -1,9 +1,12 @@
 {
-  "releaseVersion": "0.1.0",
+  "releaseVersion": "1.0.0",
   "schemaVersion": "1",
   "generatedAt": "",
-  "artifact": "lyric-dictionary.sqlite",
+  "artifact": "dictionary.sqlite",
   "sha256": "",
+  "wordStorage": "WITHOUT ROWID",
+  "patternCompilerVersion": "3",
+  "lemmaRulesVersion": "1",
   "sources": [
     {
       "name": "ECDICT",

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "database": "lyric-dictionary.sqlite",
+    "database": "dictionary.sqlite",
     "dictionary_entries": 3402141,
     "phrase_entries": 8013,
     "pattern_tokens": 23253,

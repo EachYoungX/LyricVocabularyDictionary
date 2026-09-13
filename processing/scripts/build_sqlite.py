@@ -44,6 +44,7 @@ DEFAULT_LEMMA_LITERALS = frozenset({"be", "look", "give", "fall", "prevent"})
 FIXED_DOING_PATTERNS = frozenset({"up and doing"})
 PATTERN_COMPILER_VERSION = "3"
 LEMMA_RULES_VERSION = "1"
+RELEASE_VERSION = "1.0.0"
 
 
 def json_text(value: object) -> str:
@@ -591,7 +592,7 @@ def write_meta(
     phrase_count: int,
 ) -> None:
     values = {
-        "package.version": "0.1.0",
+        "package.version": RELEASE_VERSION,
         "schema.version": "1",
         "build.time": datetime.now(timezone.utc).isoformat(),
         "ecdict.commit": ecdict_commit,
@@ -623,7 +624,7 @@ def main() -> None:
     parser.add_argument("--ecdict-csv", type=Path, required=True)
     parser.add_argument("--secondla-entries", type=Path, default=Path("sources/2ndla/entries.jsonl"))
     parser.add_argument("--secondla-translations", type=Path, default=Path("translations/2ndla/translation-full-output.jsonl"))
-    parser.add_argument("--output", type=Path, default=Path("release/lyric-dictionary.sqlite"))
+    parser.add_argument("--output", type=Path, default=Path("release/dictionary.sqlite"))
     parser.add_argument("--manifest", type=Path, default=Path("release/manifest.json"))
     parser.add_argument("--build-dir", type=Path, default=Path("build"))
     parser.add_argument("--ecdict-commit", default="bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b")
@@ -716,7 +717,7 @@ def main() -> None:
     )
 
     manifest = {
-        "releaseVersion": "0.1.0",
+        "releaseVersion": RELEASE_VERSION,
         "schemaVersion": 1,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "artifact": args.output.name,

@@ -1,6 +1,6 @@
-# Lyric Vocabulary Dictionary
+# IyricVocabularyBuilder Dictionary
 
-独立维护 Lyric Vocabulary Builder 使用的单词与短语词典。本项目负责保存词典来源、清洗结果、翻译审核结果，并生成供应用读取的 SQLite 发布包。
+独立维护 IyricVocabularyBuilder 使用的单词与短语词典数据集。本项目保存词典来源、清洗结果、翻译结果，并生成供应用读取的 SQLite 发布包。
 
 ## 目录
 
@@ -15,7 +15,7 @@ translations/
   2ndla/        # 机器翻译、复核和待处理结果
 build/          # 构建报告和错误，不进入发布 SQLite
 release/
-  *.sqlite      # 发布给 LyricVocabularyBuilder 的 SQLite
+  *.sqlite      # 发布给 IyricVocabularyBuilder 的 SQLite
   manifest.json # 版本、来源、schema 和校验信息
 docs/
   source-comparison.md # 上游原始数据与本地整理差异
@@ -49,7 +49,7 @@ python3 processing/scripts/build_sqlite.py \
   --ecdict-csv /path/to/extracted/stardict.csv
 ```
 
-默认生成 `release/lyric-dictionary.sqlite` 和 `release/manifest.json`。构建脚本会在短语无法编译时生成构建侧的 `build/build-errors.jsonl` 并终止，不会静默丢弃条目。正式 SQLite 不包含 `build_error` 表或 `dictionary` 兼容视图。
+默认生成 `release/dictionary.sqlite` 和 `release/manifest.json`。构建脚本会在短语无法编译时生成构建侧的 `build/build-errors.jsonl` 并终止，不会静默丢弃条目。正式 SQLite 不包含 `build_error` 表或 `dictionary` 兼容视图。
 
 `sources/ecdict/ecdict.sqlite` 作为本地源文件保留并被 Git 忽略；由于文件体积较大，正式共享应使用 Git LFS、Release 附件或对象存储，并在 manifest 中记录下载地址和校验值。
 
@@ -57,13 +57,17 @@ python3 processing/scripts/build_sqlite.py \
 
 主项目：`IyricVocabularyBuilder`
 
+公开发布页：<https://github.com/EachYoungX/IyricVocabularyBuilder-Dictionary/releases>
+
+用户下载 Release 压缩包后，解压得到 `dictionary.sqlite`，打开 IyricVocabularyBuilder 的“词库设置”页面，点击“打开默认词库目录”，将文件放入该目录，再点击“重新扫描”。也可以在词库设置中选择其他位置的 `dictionary.sqlite`；外部文件移动、重命名或删除后，需要重新选择。
+
 - 不保存原始 JSON、处理中间文件或翻译批次。
 - 主项目开发环境默认读取本地 Git 忽略的 ECDICT SQLite 副本；无词库运行仍可使用 no-dictionary profile。
 - 带词典运行时，将发布 SQLite 放在本地目录，并设置：
 
 ```text
 APP_DICTIONARY_ENABLED=true
-APP_DICTIONARY_DB_URL=jdbc:sqlite:/absolute/path/lyric-dictionary.sqlite
+APP_DICTIONARY_DB_URL=jdbc:sqlite:/absolute/path/dictionary.sqlite
 ```
 
 无词典运行：
